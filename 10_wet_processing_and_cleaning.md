@@ -90,3 +90,33 @@ The cleaning roadmap is defined by the imperative of **doing more cleaning, more
 - **Pattern-collapse mitigation:** as aspect ratios climb further (3D NAND toward 1000 layers, taller capacitors and nanosheet stacks), supercritical and surface-tension-free drying methods become ever more essential.
 
 Cleaning thus exemplifies a recurring theme of this database: a process that appears mundane and mature is, at the leading edge, a continually innovating, yield-critical enabler — performed hundreds of times per wafer, and increasingly the difference between a working chip and a scrapped one.
+
+---
+
+## Extended Analysis: Mechanisms, Single-Wafer Transition, and New-Material Cleaning
+
+### A. The Physics and Chemistry of Particle Removal
+
+Removing a sub-100nm particle from a wafer is harder than it sounds, because the **adhesion forces** (van der Waals, electrostatic, and capillary) that bind a tiny particle to the surface scale down more slowly than the **removal forces** available, so as particles shrink they become proportionally *harder* to remove. The classic SC-1 chemistry removes particles partly by **etching a thin layer of the underlying surface** (undercutting the particle so it lifts off) while the hydrogen peroxide re-grows a protective chemical oxide — an elegant mechanism, but one that consumes a little material each time, which becomes problematic when the structures are only atoms thick. Megasonic agitation adds a **physical** removal force (acoustic streaming and controlled cavitation), but the same energy that dislodges particles can **damage fragile fine patterns** — so the megasonic power must be carefully tuned, and at the leading edge the process window between "removes the particle" and "breaks the pattern" narrows to the point where new approaches (gentler chemistries, controlled cavitation, alternative energy sources) are required.
+
+### B. Why Single-Wafer Cleaning Won
+
+The historical immersion **wet bench** — dunking batches of 25–50 wafers in a sequence of chemical and rinse tanks — offered high throughput but suffered cross-contamination (every wafer shares the bath, so a contaminant from one spreads to all) and limited process control (the whole batch gets the same treatment). The modern **single-wafer cleaner** processes each wafer individually: chemicals are precisely dispensed onto the spinning wafer, reacted for a controlled time, rinsed, and the wafer is spin-dried, all with per-wafer recipe control and no shared bath. This gives better uniformity, tighter control, reduced chemical consumption per wafer (chemicals are dispensed, not maintained in large baths), and elimination of batch cross-contamination — at the cost of lower throughput, which is mitigated by multi-chamber tools running many wafers in parallel. The transition to single-wafer cleaning, led by SCREEN and TEL, parallels the broader industry shift from batch to single-wafer processing for control-critical steps, and it is essential at the leading edge where contamination and uniformity tolerances are unforgiving.
+
+### C. Drying — The Underappreciated Critical Step
+
+Drying is deceptively difficult and a frequent source of defects. As a rinse liquid evaporates, it can leave behind **watermarks** (residue from dissolved species), can **collapse fragile high-aspect-ratio patterns** via capillary force (Section 3), and can re-deposit particles. Advanced drying methods — **Marangoni drying** (using a surface-tension gradient created by an IPA/alcohol vapor to pull liquid cleanly off the surface) and **supercritical-CO₂ drying** (eliminating surface tension entirely) — address these problems, and the choice of drying method becomes more critical as features grow taller and thinner. The fact that an entire wafer's worth of perfect processing can be ruined in the final drying step underscores how unforgiving cleaning is.
+
+### D. Cleaning for New Materials
+
+Each new material introduced at the leading edge brings new cleaning challenges, because a chemistry that safely cleans one material may corrode or damage another:
+- **Cobalt, ruthenium, and molybdenum interconnects** (Files 04, 15) are more chemically reactive or differently reactive than copper, requiring cleaning chemistries that remove residue and post-etch byproducts without galvanic corrosion or excessive metal loss — a significant reformulation challenge.
+- **High-k and ferroelectric materials** require cleans that do not degrade the dielectric.
+- **2D channel materials** (File 23) are damaged by aggressive plasma and many wet chemistries, demanding extremely gentle cleaning.
+- **Low-k and ultra-low-k dielectrics** are porous and fragile, easily damaged by the plasma ashing used for resist strip — driving the shift to **reducing (H₂-based) chemistries** and gentler strip methods that protect the dielectric.
+
+This material-specific cleaning co-development — matching the clean to each new material — is a continual, often-overlooked enabling activity, performed hand-in-hand with the deposition and etch process owners.
+
+### E. The Cleaning Roadmap in Context
+
+The throughline is that cleaning, performed hundreds of times per wafer, must continually become **gentler, more selective, and more material-aware** even as it remains thorough — a tension that intensifies at every node. Damage-free cleaning for fragile sub-2nm structures, EUV-specific post-develop cleaning, low-temperature resist strip for 3D-integration thermal budgets, pattern-collapse-free drying for ever-higher aspect ratios, and new-material-compatible chemistries together define a roadmap in which a process once regarded as mundane is, in fact, a continually innovating, yield-critical frontier — and one where the deep process know-how of the Japanese and Korean wet-clean leaders (SCREEN, TEL, Semes) constitutes a durable competitive moat.

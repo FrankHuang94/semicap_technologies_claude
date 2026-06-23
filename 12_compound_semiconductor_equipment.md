@@ -75,3 +75,37 @@ The compound-semiconductor markets are driven by powerful secular trends:
 The compound-semiconductor equipment market is notably distinct from mainstream silicon WFE: it is led by epitaxy specialists (Aixtron, Veeco) and a constellation of materials and device companies, rather than by the silicon-CMOS giants (though Applied Materials and others supply some implant, etch, and deposition tools adapted for these materials). Crystal growth — PVT furnaces for SiC, bulk GaN and InP growth — is served by a small, specialized supplier base, and substrate supply remains the key bottleneck and value driver across the compound-semiconductor world.
 
 As electrification and optical interconnect accelerate, compound semiconductors represent one of the most attractive growth areas adjacent to mainstream silicon — with their own equipment ecosystem, their own roadmaps (SiC's 150-to-200mm transition, vertical GaN, InP photonics integration), and their own strategic significance in the energy transition and the AI-driven bandwidth explosion.
+
+---
+
+## Extended Analysis: Device Physics, Markets, and Equipment Detail
+
+### A. Why Wide-Bandgap Physics Wins in Power and RF
+
+The advantages of SiC and GaN over silicon trace directly to material properties. The **critical breakdown field** of SiC (~3 MV/cm) and GaN (~3.3 MV/cm) is roughly ten times that of silicon (~0.3 MV/cm), which means a wide-bandgap device of a given voltage rating can be **ten times thinner** in its drift region and far more highly doped — drastically reducing the on-resistance that wastes energy as heat. This is captured by figures of merit such as the **Baliga Figure of Merit (BFOM)** for power and the **Johnson Figure of Merit (JFOM)** for RF, on which SiC and GaN score hundreds of times higher than silicon. The practical consequences are transformative: a SiC traction inverter in an electric vehicle can be smaller, lighter, and a few percent more efficient than its silicon-IGBT predecessor — and in an EV, a few points of inverter efficiency translate directly into extended range or a smaller, cheaper battery, which is why automakers (led by Tesla's pioneering adoption) drove SiC into the mainstream.
+
+SiC's high thermal conductivity (~3–4× silicon) also lets devices run hotter and dissipate heat more easily, important for high-power and harsh-environment use. GaN's very high electron velocity and the two-dimensional electron gas (2DEG) at the AlGaN/GaN interface give it exceptional high-frequency performance, which is why GaN-on-SiC HEMTs have displaced older LDMOS and GaAs technologies in 5G base-station and radar power amplifiers.
+
+### B. SiC Manufacturing Challenges in Depth
+
+The SiC value chain is bottlenecked at the substrate. PVT crystal growth is slow (sub-millimeter per hour versus the centimeters-per-hour pull rate of silicon CZ) and prone to defects — **micropipes** (hollow core defects, now largely controlled), **basal-plane dislocations** (which cause bipolar degradation), and **threading dislocations**. Boules are short (a few centimeters), limiting wafers per boule, and SiC's extreme hardness makes slicing and polishing slow and costly (diamond wire sawing, with significant kerf loss, though laser-based "cold split" techniques such as Halo/Infineon's and the use of laser-assisted slicing are improving yield). The **150mm-to-200mm transition** roughly doubles usable die area and is the central cost-reduction lever, with Wolfspeed, Coherent, Bosch, STMicro, and Chinese suppliers (SICC, TankeBlue) racing to qualify 200mm. Substrate cost remains the single largest component of SiC device cost, which is why vertical integration (device makers securing or owning substrate supply) is a defining strategic theme.
+
+### C. GaN Manufacturing and Reliability
+
+GaN-on-Si power devices are typically **lateral HEMTs** (the current flows laterally in the 2DEG), normally-on by nature and engineered to be **normally-off (enhancement-mode)** for safe power switching via p-GaN gate, cascode, or recessed-gate structures. The buffer-layer engineering to bridge the large GaN/Si lattice and thermal mismatch (using AlN nucleation and graded AlGaN transition layers) is the heart of GaN epitaxy and a key MOCVD challenge. **Reliability** — dynamic on-resistance (current collapse from trapped charge), gate reliability, and the absence of an intrinsic body diode — drove years of qualification before GaN won broad adoption; **SiN passivation** and field-plate engineering are central to controlling surface traps. Vertical GaN (on bulk GaN substrates) promises higher voltages and better reliability but awaits affordable, large bulk-GaN substrates.
+
+### D. Market Sizing and Outlook
+
+| Segment | Primary material | Key applications | Growth driver |
+|---|---|---|---|
+| High-voltage power (650–1700V+) | SiC | EV traction inverters, charging, grid, rail | EV electrification |
+| Mid-voltage power (100–650V) | GaN | Chargers, data-center PSUs, consumer, automotive | Efficiency, power density |
+| RF power | GaN-on-SiC | 5G base stations, radar, defense, satcom | 5G/defense |
+| RF front-end (handset) | GaAs | Power amplifiers, switches | Mobile |
+| Data-center optics | InP | Lasers, modulators, detectors | AI bandwidth |
+
+The SiC power-device market has grown rapidly on the back of EV adoption (with Infineon, STMicroelectronics, onsemi, ROHM, and Wolfspeed the leading device makers), while GaN power is expanding from chargers into data-center and automotive applications. The AI-driven boom in optical interconnect is a powerful tailwind for InP photonics. A recurring theme across all three is that the **equipment and substrate ecosystem is the value-determining bottleneck** — epitaxy reactors (Aixtron, Veeco), crystal-growth furnaces, and substrate supply gate the industry's growth more than device design does.
+
+### E. Equipment Detail
+
+Compound-semiconductor fabs use smaller wafers (100–200mm) and a distinct toolset: **MOCVD and MBE** for epitaxy (the highest-value tools); **high-temperature implant and anneal** (1,600–1,800°C for SiC activation, far beyond silicon); **specialized dry and wet etch** chemistries (BCl₃/Cl₂ for GaN/III-V, fluorine-based for SiC, with III-V materials sensitive to many silicon-fab chemistries); **dielectric deposition** (SiN passivation critical for GaN); and **ohmic-contact and metallization** processes tailored to each material. Because volumes are lower and wafers smaller than mainstream silicon, the equipment is often adapted from older silicon-tool generations or purpose-built by specialists, and the fabs (Wolfspeed, Infineon, STMicro, plus pure-play foundries like WIN Semiconductors and Tower) form a distinct ecosystem from the leading-edge silicon-logic world — even as the strategic importance of compound semiconductors, driven by electrification and AI-driven optics, continues to rise.
