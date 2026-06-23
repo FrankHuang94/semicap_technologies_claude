@@ -45,6 +45,7 @@ The unifying thesis of the database is that the slowing of classical dimensional
 | 23 | [Research and Emerging Technologies ⭐](23_research_and_emerging_technologies.md) | **Primary deep-dive (15k+ words).** CFET; 2D/TMD channels; carbon nanotubes; backside power research; advanced EUV and stochastics; DSA; quantum-device fabrication; ferroelectrics; SOT-MRAM; silicon photonics/CPO; neuromorphic/in-memory compute; institutions and conferences; consolidated frontier-equipment requirements. |
 | 24 | [Cleanroom and Fab Infrastructure](24_cleanroom_and_fab_infrastructure.md) | Cleanroom classification and air handling; vibration/temperature/humidity control; chemical and gas distribution; ultrapure water; waste; power; ESD; AMHS; fab layout; construction. |
 | 25 | [Test and Characterization](25_test_and_characterization.md) | Wafer sort and probe; logic/memory ATE; device and reliability characterization; package- and system-level test; 3D/chiplet (KGD) test; failure analysis; vendors; rising test cost. |
+| 26 | [Glossary](26_glossary.md) | Consolidated reference of terms, acronyms, companies, and institutions used throughout the database, grouped by theme with file pointers to fuller treatment. |
 
 ---
 
@@ -69,10 +70,10 @@ This database was generated as a structured, comprehensive knowledge synthesis o
 
 ## Glossary Pointer
 
-Key acronyms are defined inline throughout, and the two deep-dive files include dedicated acronym appendices (File 15, Appendix; File 23, Appendix). A consolidated standalone glossary could be added as a future **File 26** to gather all terms in one place.
+A consolidated standalone glossary is provided in **[File 26](26_glossary.md)**, gathering the database's terms, acronyms, companies, and institutions in one place, grouped by theme with file pointers. Key acronyms are also defined inline throughout, and the two deep-dive files include dedicated acronym appendices (File 15, Appendix; File 23, Appendix).
 
 ---
 
 ## Scope Summary
 
-This database comprises **25 thematic content files plus this master index**, covering the full breadth of semiconductor capital equipment: the manufacturing process, every major equipment category, the memory and compound-semiconductor specializations, the vendor and market landscape, the materials and subsystem supply chains, the patent and geopolitical dimensions, sustainability and AI, fab infrastructure and test, and — in the two primary deep-dives — the node-by-node technology roadmap and the frontier research that will define the industry's next decade. Together the files form a comprehensive map of the most strategically consequential machinery on the planet, with the two learning-target files (15 and 23) each exceeding 15,000 words of in-depth technical analysis.
+This database comprises **26 thematic content files (including a glossary) plus this master index**, covering the full breadth of semiconductor capital equipment: the manufacturing process, every major equipment category, the memory and compound-semiconductor specializations, the vendor and market landscape, the materials and subsystem supply chains, the patent and geopolitical dimensions, sustainability and AI, fab infrastructure and test, and — in the two primary deep-dives — the node-by-node technology roadmap and the frontier research that will define the industry's next decade. Together the files form a comprehensive map of the most strategically consequential machinery on the planet, with the two learning-target files (15 and 23) each exceeding 15,000 words of in-depth technical analysis.
