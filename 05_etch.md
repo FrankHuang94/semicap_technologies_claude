@@ -4,6 +4,48 @@ Etch is the subtractive counterpart to deposition and lithography: it removes ma
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**Anisotropic plasma etch — directional ions + sidewall passivation (cross-section)**
+
+```
+        ↓ ↓ ↓   directional ions (set anisotropy)
+   ═══ mask ═══
+   ║          ║   ← passivation film blocks LATERAL etch
+   ║   etch   ║
+   ║    ↓     ║   ← ion-activated chemistry etches DOWNWARD
+   ‾‾‾‾‾‾‾‾‾‾‾‾
+   Balance of chemical (selective, isotropic) + physical (directional) action
+```
+
+**The ALE cycle — atomic-scale, self-limiting removal**
+
+```mermaid
+flowchart LR
+    A["1. Modify top layer<br/>(self-limiting adsorption)"] --> B["2. Purge"]
+    B --> C["3. Remove modified layer<br/>(low-energy ion bombardment)"]
+    C --> D["4. Purge"]
+    D -->|"~1 atomic layer / cycle"| A
+    style A fill:#cfe2ff
+    style C fill:#d1e7dd
+```
+
+**3D NAND high-aspect-ratio (HAR) channel-hole etch — AR > 60:1 through 100s of layers**
+
+```
+   ── oxide ── nitride ── oxide ── nitride ──     ◄ top of stack
+   ─────────────────────────────────────────
+        │  one continuous deep etch  │
+        │   diameter ~tens of nm     │   defects to avoid:
+        │   depth ~microns           │   bowing · twisting · tapering
+   ─────────────────────────────────────────
+   ── oxide ── nitride ── oxide ── nitride ──     ◄ bottom (must fully clear)
+```
+
+---
+
 ## 1. Dry-Etch Fundamentals
 
 Dry (plasma) etch uses a glow-discharge plasma to generate chemically reactive species and energetic ions that, together, remove material from the wafer surface. The power of plasma etch lies in its ability to combine two mechanisms:

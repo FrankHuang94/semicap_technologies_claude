@@ -4,6 +4,47 @@ Deposition is the family of processes that *add* material to the wafer — build
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**The ALD cycle — self-limiting, one sub-monolayer per cycle**
+
+```mermaid
+flowchart LR
+    A["1. Precursor A pulse<br/>(saturates surface, self-limiting)"] --> B["2. Purge"]
+    B --> C["3. Co-reactant pulse<br/>(forms sub-monolayer)"]
+    C --> D["4. Purge"]
+    D -->|"repeat N cycles → N × thickness"| A
+    style A fill:#cfe2ff
+    style C fill:#d1e7dd
+```
+
+**Choosing a deposition method**
+
+```mermaid
+flowchart TD
+    Q{"What is needed?"}
+    Q -->|"atomic-thickness + conformality<br/>(high-k, barriers, GAA)"| ALD["ALD / PEALD"]
+    Q -->|"thick dielectric, lower-T BEOL"| CVD["PECVD / CVD"]
+    Q -->|"metal layers, seeds, barriers"| PVD["PVD / iPVD"]
+    Q -->|"single-crystal channel / S-D"| EPI["Epitaxy (CVD / MOCVD / MBE)"]
+```
+
+**Why ALD is unique — conformality in a high-aspect-ratio feature (cross-section)**
+
+```
+   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓   ← ALD film: equal thickness on top,
+   ▓░░░░░░░░░░░░▓      sidewall, and bottom (AR > 50:1 OK)
+   ▓░          ░▓
+   ▓░  trench  ░▓     PVD/CVD would thin or pinch off here;
+   ▓░          ░▓     ALD's surface-saturating reaction does not.
+   ▓░░░░░░░░░░░░▓
+   ▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+```
+
+---
+
 ## 1. Chemical Vapor Deposition (CVD)
 
 In chemical vapor deposition, gaseous precursors react at or near the wafer surface to deposit a solid film, with volatile byproducts pumped away. CVD is the most versatile and widely used deposition method, and it exists in numerous variants distinguished by pressure, energy source, and temperature, each trading off film quality, conformality, throughput, and thermal budget.

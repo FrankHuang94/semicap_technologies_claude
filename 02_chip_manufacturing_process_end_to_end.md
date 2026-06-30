@@ -6,6 +6,45 @@ For each module the discussion covers the underlying physics/chemistry, why the 
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**End-to-end manufacturing flow (raw silicon → packaged device)**
+
+```mermaid
+flowchart TD
+    W["Wafer prep<br/>CZ crystal · slice · polish · epi"] --> FEOL
+    subgraph FEOL["FEOL — build the transistors"]
+        F1["STI isolation"] --> F2["Well implant"] --> F3["Gate stack (HKMG)"] --> F4["S/D epi + anneal"] --> F5["Contacts / silicide"]
+    end
+    FEOL --> MOL["MOL — local interconnect<br/>self-aligned contacts · M0/V0"]
+    MOL --> BEOL["BEOL — 15-20 metal layers<br/>Cu/Ru damascene · low-k · CMP"]
+    BEOL --> PKG["Advanced packaging<br/>2.5D · 3D · hybrid bonding"]
+    PKG --> TST["Sort · assembly · final test"]
+    TST --> SHIP["Shipped device"]
+    style FEOL fill:#fff3cd
+    style BEOL fill:#cfe2ff
+```
+
+**The repeating unit of manufacturing — the deposit-pattern-etch-clean cycle (run 30-70× per wafer)**
+
+```mermaid
+flowchart LR
+    D["Deposit film"] --> L["Pattern<br/>(lithography)"] --> E["Etch"] --> C["Strip & clean"] --> M["Measure / inspect"]
+    M -->|"repeat for every layer"| D
+```
+
+**Thermal-budget logic that orders the whole flow**
+
+```
+HIGH temperature ───────────────────────────────► LOW temperature
+Crystal/well/gate/S&D   →   contacts/silicide   →   BEOL (≤400°C)   →   packaging
+(silicon tolerates heat)                          (Cu & low-k limit)   (assembled parts)
+```
+
+---
+
 ## 1. Wafer Preparation
 
 Everything begins with an extraordinarily pure, defect-free single crystal of silicon.

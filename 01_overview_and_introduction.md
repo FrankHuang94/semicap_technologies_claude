@@ -1,5 +1,49 @@
 # Semiconductor Capital Equipment — Overview and Strategic Context
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**The semiconductor value chain — and where SemiCap sits beneath it**
+
+```mermaid
+flowchart LR
+    A["Design<br/>(Fabless / IDM)<br/>Apple · NVIDIA · AMD · Qualcomm"] --> B["Fabrication<br/>(Foundry / IDM fab)<br/>TSMC · Samsung · Intel · SMIC"]
+    B --> C["Packaging & Test<br/>(OSAT / foundry)<br/>ASE · Amkor · JCET"]
+    D["SemiCap equipment OEMs<br/>ASML · AMAT · Lam · TEL · KLA"] -->|"tools"| B
+    E["Materials & subsystems<br/>Shin-Etsu · Entegris · MKS"] -->|"consumables"| B
+    D -.->|"tools"| C
+    style D fill:#cfe2ff,stroke:#084298
+    style E fill:#d1e7dd,stroke:#0f5132
+```
+
+**Global wafer-fab-equipment (WFE) spending by segment (approximate share)**
+
+```mermaid
+pie showData
+    title WFE Spending by Segment (%)
+    "Lithography" : 22
+    "Deposition" : 23
+    "Etch" : 20
+    "Process control" : 12
+    "Clean" : 6
+    "Implant / Thermal" : 8
+    "CMP" : 5
+    "Other" : 4
+```
+
+**What drives an equipment-generation transition**
+
+```mermaid
+flowchart TD
+    P["Physical / cost scaling limit reached"] --> T{"New approach<br/>cheaper per good transistor?"}
+    T -->|"yes"| N["Adopt: new wavelength /<br/>architecture / material / tool"]
+    T -->|"no"| X["Extend incumbent<br/>(multi-patterning, '+' refreshes)"]
+    N --> R["R&D → alpha tool → beta/JDA → qualification → HVM<br/>(5-7 years)"]
+```
+
+---
+
 ## 1. What Is Semiconductor Capital Equipment (SemiCap)?
 
 Semiconductor capital equipment — universally abbreviated "SemiCap" and sometimes referred to as **Wafer Fab Equipment (WFE)** when narrowed to front-end tools — comprises the machinery, instrumentation, and subsystems used to manufacture integrated circuits (ICs) from raw silicon wafers. These are the multi-million-dollar tools that perform lithography, deposition, etch, implantation, planarization, cleaning, metrology, and test inside a semiconductor fabrication plant ("fab"). A single leading-edge logic fab deploys 500–1,200 process tools, and the combined equipment bill for a modern 3nm/2nm-class fab routinely exceeds **US$20 billion** — frequently representing 75–80% of the total greenfield fab construction cost.

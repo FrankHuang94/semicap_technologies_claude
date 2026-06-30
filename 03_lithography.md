@@ -4,6 +4,54 @@ Lithography is the patterning heart of semiconductor manufacturing — the step 
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**How an EUV scanner makes light and prints a pattern (entire path in vacuum)**
+
+```mermaid
+flowchart LR
+    L["CO2 drive laser<br/>(TRUMPF, ~30 kW)"] --> P["Tin droplet plasma<br/>~220,000 K"]
+    P --> S["13.5 nm EUV light"]
+    S --> COL["Collector mirror"]
+    COL --> ILL["Illuminator"]
+    ILL --> RET["Reflective mask<br/>Mo/Si + TaN absorber"]
+    RET --> PO["Projection optics<br/>(ZEISS Mo/Si mirrors)"]
+    PO --> WAF["Wafer (resist)"]
+    style RET fill:#ffe5b4,stroke:#b35900
+    style PO fill:#cfe2ff,stroke:#084298
+```
+
+**Resolution = k₁ · λ / NA — the wavelength/NA progression**
+
+```mermaid
+timeline
+    title Lithography Generation Progression
+    g-line 436nm : 1980s
+    i-line 365nm : early 1990s
+    KrF 248nm : late 1990s
+    ArF 193nm dry : ~2003
+    ArF immersion 193i NA1.35 : ~2007
+    EUV 13.5nm NA0.33 : 2019 HVM
+    High-NA EUV NA0.55 : 2025+
+```
+
+**Why EUV beat multi-patterning: passes per critical layer**
+
+```mermaid
+flowchart TB
+    subgraph A["DUV 193i multi-patterning (one layer)"]
+        a1["Litho"] --> a2["Etch"] --> a3["Deposit spacer"] --> a4["Litho"] --> a5["Etch"] --> a6["...3-4 passes + overlay error"]
+    end
+    subgraph B["EUV (one layer)"]
+        b1["Single exposure"] --> b2["Etch"]
+    end
+    style B fill:#d1e7dd
+```
+
+---
+
 ## 1. Fundamentals of Optical Lithography
 
 Photolithography projects an image of a mask (reticle) onto a photoresist-coated wafer, then chemically develops the exposed pattern. The achievable resolution is governed by the **Rayleigh criterion**:
