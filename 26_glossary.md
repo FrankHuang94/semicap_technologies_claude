@@ -4,6 +4,49 @@ A consolidated reference for the terms, acronyms, companies, and concepts used t
 
 ---
 
+## 📊 Concept Map
+
+*The database's themes at a glance (Mermaid mindmap renders natively on GitHub).*
+
+```mermaid
+mindmap
+  root((SemiCap))
+    Process steps
+      Lithography
+      Deposition
+      Etch
+      CMP
+      Implant / anneal
+      Clean / thermal
+    Process control
+      Metrology
+      Inspection
+      APC / yield
+    Devices & roadmap
+      FinFET
+      GAA nanosheet
+      CFET
+      Backside power
+    Memory & emerging
+      3D NAND
+      DRAM / HBM
+      MRAM / PCM / ReRAM
+    Packaging
+      2.5D / CoWoS
+      3D stacking
+      Hybrid bonding
+    Ecosystem
+      Vendors
+      Materials
+      Subsystems
+    Business
+      Market / finance
+      Geopolitics
+      Sustainability
+```
+
+---
+
 ## 1. Process Steps and Equipment Categories
 
 - **ALD (Atomic Layer Deposition):** Deposition by self-limiting, surface-saturating reactions that add one sub-monolayer per cycle, giving angstrom-level thickness control and near-perfect conformality. The enabling technology for high-k gate stacks, FinFET/GAA, DRAM capacitors, and 3D NAND. (File 04)

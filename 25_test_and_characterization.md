@@ -4,6 +4,43 @@ After a wafer has passed through a thousand process steps and the dies are fully
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**The test flow — and why Known-Good-Die gating matters for chiplets**
+
+```mermaid
+flowchart LR
+    WS["Wafer sort / probe<br/>parametric · IDDQ · bin"] --> KGD{"Known-good die?"}
+    KGD -->|"yes"| PKG["Package / stack"]
+    KGD -->|"no"| SCRAP["Discard"]
+    PKG --> FT["Final test"]
+    FT --> BI["Burn-in / System-Level Test"]
+    BI --> SHIP["Ship"]
+    style KGD fill:#fff3cd
+    style SHIP fill:#d1e7dd
+```
+
+**Why KGD is critical in a multi-die package**
+
+```
+ If each die is 95% good, a package of 8 dies yields only 0.95^8 ≈ 66%
+ — and one bad die wastes ALL the good dies + the costly package.
+ → Test each die thoroughly BEFORE assembly.
+```
+
+**Test cost is rising structurally**
+
+```
+ Drivers ↑ :  more functions per SoC · high-speed I/O · KGD/3D test ·
+              AI + automotive reliability (parts-per-billion defects)
+ Responses :  more parallelism · Design-for-Test (scan/BIST) ·
+              adaptive/AI test · System-Level Test replacing burn-in
+```
+
+---
+
 ## 1. Wafer Sort / Probe
 
 The first test occurs at **wafer level**, before the wafer is diced — called **wafer sort**, **probe**, or **wafer test**. Every die on the wafer is electrically tested in place to determine whether it functions, so that defective dies are identified before the cost of packaging is incurred.

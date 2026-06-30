@@ -6,6 +6,46 @@ The tension at the heart of the story: the industry's products **enable** enormo
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**Resource flows through a fab — inputs and the waste streams to manage**
+
+```mermaid
+flowchart LR
+    E["Energy<br/>100-500 MW continuous"] --> FAB["FAB"]
+    W["Ultrapure water<br/>millions of L/day"] --> FAB
+    G["Process gases<br/>(incl. F-GHGs)"] --> FAB
+    FAB --> CHIP["Chips"]
+    FAB --> EM["GHG emissions → abatement"]
+    FAB --> WW["Wastewater → reclaim 60-90%"]
+    FAB --> HW["Hazardous waste → treatment"]
+    style CHIP fill:#d1e7dd
+    style EM fill:#f8d7da
+```
+
+**The decoupling challenge — growth must outpace impact**
+
+```
+ Output (AI-driven)        ↗↗↗ rising fast
+ Footprint per wafer       ↗  rising (more steps, EUV, tighter cleanroom)
+ GOAL: efficiency + renewables + recycling + abatement must bend impact DOWN
+       faster than output rises  →  decoupling
+```
+
+**Fluorinated greenhouse gases — tiny leaks, huge warming potential (GWP vs CO₂)**
+
+```
+ SF6    ~24,000×   ████████████████████████
+ NF3    ~17,000×   █████████████████
+ C2F6   ~12,000×   ████████████
+ CF4     ~7,400×   ███████
+ → abatement (destroy unreacted gas) + better utilization + substitution
+```
+
+---
+
 ## 1. Energy Intensity
 
 Fabs are extraordinarily energy-hungry. A single leading-edge fab can consume **100–500 MW** of continuous power, and the largest manufacturers consume electricity at national scale: **TSMC alone uses on the order of ~20+ TWh per year**, a significant fraction of Taiwan's total electricity consumption. The energy goes to running thousands of process tools (EUV scanners are notably power-hungry — each can draw on the order of a megawatt), to the enormous HVAC and air-handling systems that maintain cleanroom conditions, to ultrapure-water generation, to vacuum and abatement systems, and to chillers.

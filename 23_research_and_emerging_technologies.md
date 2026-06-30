@@ -6,6 +6,69 @@ The research frontier matters because, as detailed in File 15, the production ro
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**CFET — two ways to stack nMOS over pMOS**
+
+```mermaid
+flowchart TB
+    subgraph MONO["Monolithic CFET (one wafer)"]
+        m1["Grow tall superlattice"] --> m2["Pattern both tiers"] --> m3["Release + dual gates"] --> m4["Constrained thermal budget"]
+    end
+    subgraph SEQ["Sequential CFET (bonded)"]
+        s1["Process bottom tier"] --> s2["Bond top wafer (<20nm overlay)"] --> s3["Thin + process top tier"] --> s4["Inter-tier vias"]
+    end
+    style MONO fill:#fff3cd
+    style SEQ fill:#cfe2ff
+```
+
+**2D channel material — a monolayer is far thinner than a silicon nanosheet**
+
+```
+ Silicon nanosheet body : ████ 4-7 nm
+ MoS2 monolayer body    : ▏ ~0.65 nm   → shorter gate length before short-channel effects
+ Key blockers: contact resistance (Fermi-level pinning), defects, 300mm uniformity
+```
+
+**The research-to-production pipeline (~5-10 years per concept)**
+
+```mermaid
+flowchart LR
+    R["Concept / lab demo<br/>(Nature, Science)"] --> P["300mm pilot line<br/>(IMEC, Leti)"]
+    P --> AB["Alpha / beta tool<br/>(OEMs + JDA)"]
+    AB --> RP["Risk production"]
+    RP --> HVM["High-volume manufacturing"]
+    style R fill:#f8d7da
+    style HVM fill:#d1e7dd
+```
+
+**Frontier map — what is being researched**
+
+```mermaid
+mindmap
+  root((Frontier R&D))
+    Devices
+      CFET
+      Forksheet
+      2D / TMD channels
+      Carbon nanotubes
+    Memory / compute
+      FeFET / FeRAM
+      SOT-MRAM
+      In-memory compute
+    Integration
+      Backside power
+      Monolithic 3D
+      Hybrid bonding
+    New domains
+      Quantum devices
+      Silicon photonics / CPO
+```
+
+---
+
 ## SECTION 1: CFET (Complementary FET) — Deep Research Coverage
 
 The Complementary FET, introduced in File 15 as the next architecture transition after GAA nanosheets, is the subject of intense research at IMEC, Intel, TSMC, Samsung, and the academic community. This section covers the process flows and research results in depth.

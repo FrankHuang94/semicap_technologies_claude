@@ -6,6 +6,44 @@ There is also a striking **virtuous circle**: AI demand drives the need for adva
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**The recursive loop — AI both drives and runs on advanced chips**
+
+```mermaid
+flowchart LR
+    AI["AI demand"] --> CHIP["Advanced chips<br/>(GPU / HBM)"]
+    CHIP --> MFG["AI-driven manufacturing<br/>(inspection, litho, yield, maintenance)"]
+    MFG --> CHIP
+    CHIP --> AI
+    style MFG fill:#cfe2ff
+```
+
+**Where ML is applied across the fab**
+
+```mermaid
+flowchart TB
+    ML["Machine learning in the fab"]
+    ML --> A["Defect classification<br/>(CNN / ViT, nuisance filtering)"]
+    ML --> B["Virtual metrology<br/>(predict measurements from sensors)"]
+    ML --> C["Computational litho<br/>(cuLitho, ILT acceleration)"]
+    ML --> D["Predictive maintenance<br/>(digital twins)"]
+    ML --> E["Yield analytics<br/>(root-cause, prediction)"]
+    ML --> F["Materials discovery<br/>(ML potentials, generative)"]
+```
+
+**Toward the autonomous fab — advisory today, closed-loop tomorrow**
+
+```
+ Advisory  ──────────────────────────────────► Autonomous
+ (engineer decides)   closed-loop control   self-optimizing "lights-out" fab
+ Gated by: explainability · trust · data integration · cost of errors
+```
+
+---
+
 ## 1. Process Control and Advanced Process Control (APC)
 
 The earliest and most mature application of ML in the fab is in **advanced process control**. Traditional **run-to-run (R2R) control** used linear models to adjust each tool's recipe based on prior results; modern APC increasingly uses **machine-learning models** that capture the nonlinear, multi-variable relationships between process inputs and outputs, holding processes on target more tightly than linear control allows.

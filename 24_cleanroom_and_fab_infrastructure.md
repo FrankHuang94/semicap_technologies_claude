@@ -4,6 +4,44 @@ A semiconductor fabrication plant is one of the most demanding built environment
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**Fab cross-section — clean air falls, returns through the floor, services live below**
+
+```
+   ┌──────── Fan Filter Units (HEPA / ULPA) ────────┐
+   │   ↓ ↓ ↓   laminar downflow of clean air   ↓ ↓ ↓ │
+   │   [tool]   [tool]   CLEANROOM (ISO 1-3)   [tool] │
+   │   ══════ perforated raised floor ══════          │  ← air returns downward
+   │   SUBFAB: pumps · RF · gas/chem · abatement       │
+   └───────────────────────────────────────────────────┘
+   Mini-environments (FOUPs + load ports) keep the wafer cleanest of all.
+```
+
+**Utilities are tightly interdependent — any one failing can scrap wafers**
+
+```mermaid
+flowchart LR
+    PWR["Clean power<br/>100-500 MW + UPS"] --> FAB["Tools"]
+    HVAC["HVAC ±0.01°C + filtration"] --> FAB
+    UPW["Ultrapure water"] --> FAB
+    GAS["Gas / chemical distribution"] --> FAB
+    FAB --> YIELD["Yield"]
+    style YIELD fill:#d1e7dd
+```
+
+**Building a fab — scale and timeline**
+
+```
+ Cost:   $20-30B+   |   Tools ≈ 70-80% of that
+ Time:   2-4 years groundbreaking → first wafer (longer to full ramp)
+ Built by: Exyte (M+W), Turner, Samsung C&T, ... ; construction is now itself a bottleneck
+```
+
+---
+
 ## 1. Cleanroom Classification and Air Handling
 
 The defining feature of a fab is **cleanliness**. Airborne particles only tens of nanometers across can land on a wafer and destroy a device, so the air must be extraordinarily clean. Cleanrooms are classified under **ISO 14644-1**, which specifies the maximum allowed particle concentration by particle size. The cleanest semiconductor environments — the immediate vicinity of the wafer in the most critical process and lithography areas — approach **ISO Class 1–3** (the older U.S. Federal Standard 209E equivalents being Class 1 to Class 10), meaning essentially no particles above ~0.1μm per cubic meter.
