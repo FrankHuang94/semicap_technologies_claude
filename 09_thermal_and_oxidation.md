@@ -4,6 +4,34 @@ Thermal processing is one of the oldest and most fundamental pillars of semicond
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**Thermal oxidation grows by consuming silicon (Deal-Grove kinetics)**
+
+```
+   Before:                 After (oxide grows INTO the wafer):
+   ┌──────────────┐        ┌──────────────┐
+   │              │        │░░░ SiO2 ░░░░░│  ← ~46% above original surface
+   │   silicon    │   →    ├──────────────┤  ← original surface line
+   │              │        │   silicon    │  ← interface moves down as Si is consumed
+   └──────────────┘        └──────────────┘
+   Thin oxide: linear in time.  Thick oxide: parabolic (diffusion-limited).
+```
+
+**Two roles of thermal processing — batch throughput vs. single-wafer precision**
+
+```mermaid
+flowchart TB
+    Q{"Thermal step"}
+    Q -->|"high throughput, less variable<br/>(oxidation, LPCVD, batch ALD)"| BATCH["Vertical batch furnace<br/>(Kokusai, TEL) — memory"]
+    Q -->|"precise, shallow, low-budget<br/>(activation, contact R)"| SW["Single-wafer RTP / laser<br/>(Applied Materials) — logic"]
+    style SW fill:#d1e7dd
+```
+
+---
+
 ## 1. Thermal Oxidation
 
 Thermal oxidation grows silicon dioxide by reacting silicon with oxygen (dry oxidation) or water vapor (wet oxidation) at high temperature, typically 800–1,100°C. Uniquely, the oxide grows by *consuming* the underlying silicon — the silicon-oxide interface moves into the wafer as oxygen diffuses through the already-grown oxide to react at the interface. This produces an exceptionally clean, electrically excellent Si/SiO₂ interface, which is precisely why silicon (rather than other semiconductors with better intrinsic transport) came to dominate microelectronics: no other material system offered such a high-quality native oxide.

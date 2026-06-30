@@ -4,6 +4,43 @@ Chemical Mechanical Planarization — universally abbreviated CMP — is the pro
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**CMP tool — chemical softening + mechanical abrasion (cross-section)**
+
+```
+        │ down-force ↓   (rotating carrier head)
+   ▒▒▒▒▒ wafer — face down ▒▒▒▒▒
+   ~~~ slurry: abrasive (silica/ceria) + chemistry ~~~
+   ███████ polishing pad (rotating, diamond-conditioned) ███████
+
+   Removal rate = Kp × Pressure × Velocity   (Preston's equation)
+   High points see more pressure → planarize, not just thin
+```
+
+**Hybrid bonding — CMP as the enabler of 3D integration (cross-section)**
+
+```
+   ░░ Cu pad ░░  dielectric  ░░ Cu pad ░░     ◄ wafer A
+   ─────────────  bond plane  ─────────────
+   ░░ Cu pad ░░  dielectric  ░░ Cu pad ░░     ◄ wafer B
+
+   Needs: sub-nm CMP roughness + slight Cu dishing + <100 nm alignment
+   Dielectric bonds at room temp; Cu fuses on anneal → bond pitch < 10 µm
+```
+
+**Where CMP fits — repeated after every layer**
+
+```mermaid
+flowchart LR
+    DEP["Deposit (overfill)"] --> CMP["CMP planarize"] --> CLN["Post-CMP clean"] --> NEXT["Next litho layer"]
+    NEXT -.->|"x dozens of layers"| DEP
+```
+
+---
+
 ## 1. CMP Fundamentals
 
 In CMP the wafer is held face-down on a rotating carrier and pressed against a rotating polishing **pad** flooded with a chemically active **slurry** containing abrasive nanoparticles. Two mechanisms act together:

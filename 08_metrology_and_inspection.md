@@ -6,6 +6,47 @@ A useful distinction underlies everything that follows: **metrology** answers "i
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**Metrology vs. inspection — two distinct questions**
+
+```mermaid
+flowchart TB
+    PC["Process control"] --> MET["METROLOGY<br/>Is it the right size / thickness / position?<br/>CD-SEM · OCD · ellipsometry · overlay"]
+    PC --> INS["INSPECTION<br/>Is there a defect that shouldn't be there?<br/>bright/dark-field · e-beam · reticle"]
+    style MET fill:#cfe2ff
+    style INS fill:#fff3cd
+```
+
+**The Advanced Process Control (APC) feedback loop — the fab's nervous system**
+
+```mermaid
+flowchart LR
+    T["Process tool"] --> W["Wafer"]
+    W --> M["Metrology / inspection"]
+    M --> A["APC controller<br/>R2R · FDC · virtual metrology"]
+    A -->|"feedback: adjust this tool's recipe"| T
+    A -->|"feed-forward to next step"| T2["Next tool"]
+```
+
+**The inspection trade-off triangle**
+
+```
+              SENSITIVITY
+             (find smallest defects)
+                  /\
+                 /  \
+                /    \      pick any point — gaining one
+               /      \     costs the others; different
+              /        \    modalities sit at different corners
+   THROUGHPUT ▔▔▔▔▔▔▔▔▔▔ NUISANCE
+   (wafers/hr)            (false events)
+```
+
+---
+
 ## 1. Critical Dimension (CD) Metrology
 
 CD metrology measures the physical dimensions of patterned features — line widths, space widths, contact diameters, fin and nanosheet dimensions — with sub-nanometer precision. Several complementary techniques are used:

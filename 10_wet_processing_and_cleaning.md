@@ -6,6 +6,44 @@ The defining tension of modern cleaning is **removing contamination and residue 
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**Cleaning is the most-repeated operation — done after almost every step**
+
+```mermaid
+flowchart LR
+    DEP["Deposit"] --> CL1["clean"] --> ETCH["Etch"] --> CL2["clean"] --> IMP["Implant"] --> CL3["clean"] --> CMP["CMP"] --> CL4["clean"]
+    CL4 -.->|"hundreds of cleans per wafer"| DEP
+    style CL1 fill:#cfe2ff
+    style CL2 fill:#cfe2ff
+    style CL3 fill:#cfe2ff
+    style CL4 fill:#cfe2ff
+```
+
+**RCA-derived clean chemistries — each targets a different contaminant**
+
+```mermaid
+flowchart TB
+    SC1["SC-1 (NH4OH/H2O2/H2O)<br/>particles + organics"]
+    SC2["SC-2 (HCl/H2O2/H2O)<br/>metallic ions"]
+    PIR["Piranha (H2SO4/H2O2)<br/>organics / resist"]
+    DHF["DHF (dilute HF)<br/>native oxide"]
+```
+
+**The pattern-collapse problem and its fix (high-aspect-ratio features)**
+
+```
+ Liquid drying:                  Supercritical CO2 drying:
+   ║  ║  ║  ║                       ║  ║  ║  ║
+   ║  ║  ║  ║  capillary force →    ║  ║  ║  ║   zero surface tension
+   ╲  ╲  ╱  ╱  pulls features        ║  ║  ║  ║   → no collapse
+    ╲▼▼▼▼▼╱   together (COLLAPSE)    ║  ║  ║  ║
+```
+
+---
+
 ## 1. Wet-Bench Chemistry
 
 The foundational cleaning chemistries date to the **RCA clean**, developed at RCA Laboratories in the 1960s and still the conceptual basis of wafer cleaning today:

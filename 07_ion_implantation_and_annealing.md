@@ -4,6 +4,43 @@ Doping — the deliberate introduction of impurity atoms to control the electric
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**Implanted dopant depth profile (roughly Gaussian)**
+
+```
+ dopant
+ conc.  │        ____
+        │      /      \      Rp  = projected range (set by ion energy)
+        │     /        \     ΔRp = straggle (spread)
+        │   /            \   tail extended by channeling
+        │_/               \____
+        └────────────────────────── depth into wafer →
+```
+
+**Annealing — "hotter but shorter" to activate dopants without diffusion**
+
+```
+ Furnace    minutes-hours  ████████████████████  (much diffusion)
+ Spike RTP  seconds        ████
+ Flash      milliseconds   ██
+ Laser      micro/nano-s   ▏  (least diffusion, highest activation, layer-selective)
+```
+
+**Implant → anneal flow, and the modern shift to in-situ doping**
+
+```mermaid
+flowchart LR
+    IMP["Ion implant<br/>(wells, Vt, halo)"] --> ANN["Anneal<br/>(RTP / flash / laser)"]
+    ANN --> ACT["Activated junction"]
+    EPI["In-situ doped epitaxy<br/>(S/D: SiGe:B, Si:P)"] -.->|"now does the critical<br/>S/D doping at the leading edge"| ACT
+    style EPI fill:#d1e7dd
+```
+
+---
+
 ## 1. Ion Implantation Physics
 
 In ion implantation, a dopant source (a gas such as BF₃, PH₃, or AsH₃, or a solid source) is ionized in a plasma, the desired ion species is selected by a mass-analyzing magnet, and the resulting beam is accelerated and scanned across the wafer. As each energetic ion penetrates the silicon, it loses energy through collisions with electrons (electronic stopping) and with atomic nuclei (nuclear stopping), finally coming to rest at a depth determined by its energy and mass. The statistical distribution of stopping depths produces a roughly Gaussian dopant profile characterized by:
