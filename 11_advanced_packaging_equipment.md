@@ -4,6 +4,56 @@ For most of the industry's history, packaging was an afterthought — a low-valu
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**2.5D integration (e.g., CoWoS) — dies side-by-side on a silicon interposer (cross-section)**
+
+```
+   ┌──────────┐   ┌─────────┐   ┌─────────┐
+   │ Logic die│   │HBM stack│   │HBM stack│
+   └────┬┬────┘   └───┬┬────┘   └───┬┬────┘   ← micro-bumps / hybrid bond
+   ████████ Silicon interposer: fine RDL wiring + TSV ████████
+   ────────────────────────────────────────────────
+   ░░░░░░░░░░ Package substrate ░░░░░░░░░░░░░░░░░░░░
+```
+
+**3D stacking with hybrid bonding (cross-section)**
+
+```
+   ┌─────────────────┐   top die (SRAM / compute)
+   ╞═════════════════╡   hybrid bond — Cu-Cu, bond pitch < 10 µm (→ 1 µm)
+   ┌─────────────────┐   bottom die (logic) with TSVs
+   └─────────────────┘
+   No solder bump; lower resistance/capacitance; much higher I/O density
+```
+
+**Packaging taxonomy — from cheapest to most advanced**
+
+```mermaid
+flowchart LR
+    WB["Wire bond"] --> FC["Flip-chip<br/>(C4 bumps)"]
+    FC --> FO["Fan-out<br/>(InFO / eWLB)"]
+    FO --> D25["2.5D interposer<br/>(CoWoS)"]
+    D25 --> D3["3D micro-bump<br/>(Foveros / TCB)"]
+    D3 --> HB["Hybrid bonding<br/>(SoIC / Foveros Direct)"]
+    style HB fill:#d1e7dd
+    style D25 fill:#cfe2ff
+```
+
+**Bond-pitch trend — the density race**
+
+```
+ Micro-bump   ~40 µm  ████████████████████████████████████████
+ Micro-bump   ~10 µm  ██████████
+ Hybrid bond  <10 µm  ████
+ Hybrid bond  ~1 µm   ▏   ← approaching on-chip wiring density
+ (smaller pitch = more I/O, more bandwidth, less power per bit)
+```
+
+---
+
 ## 1. Why Advanced Packaging Matters
 
 Three forces have elevated packaging from afterthought to centerpiece:

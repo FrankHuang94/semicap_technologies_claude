@@ -4,6 +4,60 @@
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**Transistor architecture evolution — more gate control at every step (cross-sections)**
+
+```
+ PLANAR (≤28nm)     FinFET (22-5nm)      GAA NANOSHEET (3-2nm)    CFET (research)
+                                                                   ┌─ gate (p) ─┐
+    gate               ┌ gate ┐            ┌──── gate ────┐        │═══ pMOS ═══│
+  ┌──────┐            ┌┴──────┴┐           │ ═══ sheet ═══ │       ├─ gate (n) ─┤
+  │ chan │            │  fin   │           │ ═══ sheet ═══ │       │═══ nMOS ═══│
+  └──────┘            │ (chan) │           │ ═══ sheet ═══ │       (n over p,
+  ─substrate─         └────────┘           └──────────────┘        stacked)
+  gate on 1 side     gate on 3 sides       gate wraps all 4        ~50% smaller cell
+```
+
+**Leading-edge architecture & power-delivery roadmap**
+
+```mermaid
+timeline
+    title Leading-Edge Roadmap
+    Planar CMOS : up to 28nm
+    FinFET : 22nm (2011) to 5nm (2020)
+    GAA Nanosheet : 3nm (2022) to 2nm
+    GAA plus Backside Power : ~2025-2026 (Intel 18A, TSMC A16)
+    CFET : ~2027-2029 research to early HVM
+    2D-channel / Beyond-CMOS : 2030+
+```
+
+**Backside power delivery (BSPDN) — power moves to the wafer backside (cross-section)**
+
+```
+   ░░░░ backside power network (Vdd / Vss planes) ░░░░
+        │ nano-TSV ↑ lands directly on transistor source/drain
+   ████ transistors (RibbonFET / nanosheet) ████
+   ════ frontside BEOL: SIGNAL ROUTING ONLY (power rails removed) ════
+   Result: less IR-drop, ~10-15% denser standard cells, freed routing
+```
+
+**The node-naming problem — names are marketing; compare physical metrics instead**
+
+```mermaid
+flowchart LR
+    NAME["Node name<br/>(7nm, 3nm, 2nm, A16...)"] -.->|"NOT a physical dimension"| X["⚠"]
+    REAL["Compare these instead:"] --> M1["CPP (contacted gate pitch)"]
+    REAL --> M2["MMP (metal pitch)"]
+    REAL --> M3["Density (MTr/mm²)"]
+    REAL --> M4["SRAM cell size"]
+    style REAL fill:#d1e7dd
+```
+
+---
+
 ## SECTION 1: Roadmap Frameworks and Governing Bodies
 
 ### 1.1 The ITRS — Origins and the Logic of Consensus Roadmapping

@@ -6,6 +6,42 @@ The fundamental reason these materials matter is the **bandgap** and related pro
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**Wide bandgap → higher voltage, temperature, and frequency (relative scale)**
+
+```
+ Bandgap (eV):  Si 1.1 ██████    GaAs 1.4 ███████    SiC 3.3 ████████████████    GaN 3.4 █████████████████
+ Breakdown field ~10× silicon → thinner, lower-loss power devices
+```
+
+**Material → application map**
+
+```mermaid
+flowchart LR
+    SIC["SiC"] --> PWR["High-voltage power<br/>EV inverters · grid · charging"]
+    GAN["GaN"] --> PWR2["Power 100-650V<br/>chargers · data-center PSU"]
+    GAN --> RF["RF power amplifiers<br/>5G base stations · radar"]
+    INP["InP"] --> OPT["Data-center optics<br/>lasers · modulators · detectors"]
+    GAAS["GaAs"] --> RFFE["Handset RF front-end"]
+    style PWR fill:#fff3cd
+    style OPT fill:#cfe2ff
+```
+
+**Why SiC is expensive — the crystal-growth bottleneck**
+
+```mermaid
+flowchart LR
+    A["PVT sublimation growth<br/>~2200-2400°C, mm/hour (slow)"] --> B["Short, defect-prone boule"]
+    B --> C["Hard to slice (diamond saw)"]
+    C --> D["150mm → 200mm transition<br/>= key cost-down lever"]
+    style D fill:#d1e7dd
+```
+
+---
+
 ## 1. Silicon Carbide (SiC)
 
 Silicon carbide is the leading wide-bandgap material for **high-voltage power electronics** (typically 650V–1700V and above), where its low conduction and switching losses dramatically improve the efficiency of EV traction inverters, on-board chargers, solar inverters, and industrial drives. SiC's manufacturing challenges begin at the very first step: the crystal.

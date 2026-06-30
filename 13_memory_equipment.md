@@ -4,6 +4,54 @@ Memory manufacturing follows a different logic from logic manufacturing. Where l
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**3D NAND — scaling by stacking layers, not shrinking features (cross-section)**
+
+```
+   ══ word line (W) ══ │ ░ │ ══ word line ══     ◄ each pair = one memory cell
+   ══ word line (W) ══ │ ░ │ ══ word line ══       ░ = vertical channel
+   ══ word line (W) ══ │ ░ │ ══ word line ══           (poly-Si + ONO charge trap)
+   ══ word line (W) ══ │ ░ │ ══ word line ══
+        ...  100s of stacked layers (96 → 300+)  ...
+   One HAR channel-hole etch (AR > 60:1) defines the whole tower.
+```
+
+**DRAM — the 1T1C cell with a tall capacitor**
+
+```mermaid
+flowchart LR
+    BL["Bit line"] --> T["Access transistor (1T)<br/>buried word line"]
+    T --> C["Storage capacitor (1C)<br/>HAR cylinder, AR > 50:1<br/>ZrO2/Al2O3 high-k + TiN"]
+    WL["Word line"] -.->|"gate"| T
+```
+
+**NAND layer-count scaling (string-stacking joins towers)**
+
+```mermaid
+timeline
+    title 3D NAND Layer Count
+    24-32L : early 3D NAND
+    64-96L : mid 2010s
+    128-176L : ~2020
+    232L : ~2022
+    300L+ : 2024+ (string-stacked)
+```
+
+**The two memory scaling paradigms drive different equipment**
+
+```mermaid
+flowchart TB
+    NAND["3D NAND — vertical"] --> NE["Heavy: batch deposition,<br/>HAR etch, W fill, CMP"]
+    DRAM["DRAM — in-plane + EUV"] --> DE["Heavy: lithography (now EUV),<br/>HAR capacitor etch, high-k ALD"]
+    style NE fill:#fff3cd
+    style DE fill:#cfe2ff
+```
+
+---
+
 ## 1. 3D NAND Flash
 
 ### Architecture Evolution

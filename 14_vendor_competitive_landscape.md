@@ -6,6 +6,52 @@ A unifying theme: most SemiCap categories are **oligopolies or monopolies**, def
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**Who leads what — category leadership at a glance**
+
+```mermaid
+flowchart TB
+    LITHO["Lithography → ASML (EUV monopoly)"]
+    OPT["EUV optics → ZEISS (sole supplier)"]
+    TRACK["Coater/developer → TEL"]
+    ETCH["Etch → Lam (then TEL, AMAT)"]
+    DEP["Deposition → AMAT (then Lam, TEL, ASM)"]
+    ALD["ALD → ASM International"]
+    PC["Process control → KLA (dominant)"]
+    CMP["CMP → AMAT, Ebara"]
+    CLEAN["Wet clean → SCREEN"]
+    style LITHO fill:#cfe2ff
+    style PC fill:#cfe2ff
+    style OPT fill:#cfe2ff
+```
+
+**Concentration spectrum — from monopoly to competitive**
+
+```
+ MONOPOLY ─────────────────────────────────────────► COMPETITIVE
+ ASML(EUV)   ZEISS   TEL(track)   KLA   ASM(ALD)   Lam(etch)   AMAT   |   packaging · subsystems · materials
+ (highest margins & most defensible)                                  (more players)
+```
+
+**Leading WFE vendors by ~2023 revenue (US$B, approx.)**
+
+```mermaid
+pie showData
+    title Leading WFE Vendor Revenue (US$B, approx.)
+    "ASML" : 28
+    "Applied Materials" : 26
+    "Lam Research" : 14
+    "Tokyo Electron" : 14
+    "KLA" : 10
+    "ASM Intl" : 3
+    "SCREEN" : 3
+```
+
+---
+
 ## 1. ASML (Netherlands)
 
 The single most strategically important company in SemiCap, and arguably in all of technology. ASML is the **sole supplier of EUV and High-NA EUV lithography** worldwide and the leading supplier of DUV immersion scanners. Its EUV monopoly — built over two decades and €10B+ of R&D, in partnership with ZEISS (optics), TRUMPF (drive laser), and Cymer (light source, acquired 2013) — gates the entire leading edge: no fab can make advanced logic or DRAM below ~7nm economically without ASML. Key products: NXE/EXE EUV scanners (~$150–200M for EUV, ~$380M+ for High-NA), TWINSCAN DUV immersion scanners, YieldStar metrology, and (via HMI) e-beam inspection. **Moat:** an essentially unassailable monopoly resting on an irreproducible supply ecosystem and integration know-how. **Customers:** TSMC, Samsung, Intel, SK Hynix, Micron. **Outlook:** secular growth from rising EUV layer counts, High-NA adoption, and the AI capex cycle, tempered by China export restrictions (no EUV to China since 2018; DUV restrictions tightening) and cyclicality.
