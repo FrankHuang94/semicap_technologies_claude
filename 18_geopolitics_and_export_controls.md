@@ -4,6 +4,45 @@ Since roughly 2018, semiconductor capital equipment has moved from the periphery
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**How equipment export controls work — and China's response**
+
+```mermaid
+flowchart TD
+    US["US BIS / EAR + Foreign Direct Product Rule (FDPR)"] --> NL["Netherlands (ASML)"]
+    US --> JP["Japan (TEL, Nikon, materials)"]
+    US -->|"thresholds: ≤14nm logic,<br/>≤18nm DRAM, ≥128L NAND"| CN["China fabs (SMIC, CXMT, YMTC)"]
+    NL -->|"no EUV since 2018;<br/>DUV restricted 2023-24"| CN
+    JP -->|"23 tool categories (2023)"| CN
+    CN --> DOM["Domestic response:<br/>Big Fund + NAURA · AMEC · SMEE"]
+    style US fill:#cfe2ff
+    style DOM fill:#fff3cd
+```
+
+**Why equipment is the perfect chokepoint**
+
+```
+ Chips:     made by the billions, designed by hundreds of firms → hard to control
+ Equipment: a few hundred EUV tools, ~1 supplier, one tool gates many chips,
+            and needs ongoing service/parts → IDEAL control point
+```
+
+**Subsidy programs (approximate headline size, US$B)**
+
+```mermaid
+pie showData
+    title Major Semiconductor Subsidy Programs (US$B, approx.)
+    "US CHIPS Act" : 52
+    "EU Chips Act" : 46
+    "China Big Fund III" : 47
+    "Japan (Rapidus, TSMC etc.)" : 25
+```
+
+---
+
 ## 1. The Legal Architecture: ITAR, EAR, and the FDPR
 
 U.S. control over semiconductor technology rests on two regimes. **ITAR (International Traffic in Arms Regulations)** governs a narrow set of defense-grade and radiation-hardened items. Far more consequential is the **EAR (Export Administration Regulations)**, administered by the **Bureau of Industry and Security (BIS)**, which controls dual-use technology — including essentially all advanced semiconductor equipment.

@@ -6,6 +6,44 @@ A recurring theme is **purity and its supply-chain implications**. A single part
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**Critical materials feed the fab — and several are dangerously concentrated**
+
+```mermaid
+flowchart LR
+    SI["Silicon wafers<br/>Shin-Etsu · SUMCO"] --> FAB["FAB"]
+    PR["Photoresist<br/>JSR · TOK · Shin-Etsu"] --> FAB
+    MB["EUV mask blanks<br/>AGC · Shin-Etsu · Hoya (only 3)"] --> FAB
+    GAS["Process gases & precursors<br/>Air Liquide · Linde · Merck"] --> FAB
+    WET["Wet chemicals (HF...)<br/>Stella Chemifa · Kanto"] --> FAB
+    SLU["CMP slurry/pad<br/>Entegris · DuPont · Fujimi"] --> FAB
+    style MB fill:#f8d7da,stroke:#842029
+```
+
+**The purity requirement — semiconductor grade vs. industrial grade**
+
+```
+ Industrial HF        ████████████████  (impurities OK)
+ Semiconductor HF     ▏  purified to parts-per-BILLION / TRILLION
+ One ppb of Fe, Cu, or Na can create killer defects in the silicon.
+```
+
+**Concentration = strategic vulnerability (illustrated by past shocks)**
+
+```mermaid
+flowchart TB
+    C1["EUV mask blanks: 3 suppliers"] --> RISK["A single disruption ripples<br/>through the whole chip industry"]
+    C2["Japan dominates resist, wafers, HF"] --> RISK
+    C3["2019 Japan-Korea materials dispute"] --> RISK
+    C4["Neon shortage (Ukraine war)"] --> RISK
+    style RISK fill:#fff3cd
+```
+
+---
+
 ## 1. Silicon and Substrates
 
 The starting material is **electronic-grade polysilicon**, purified to 9N–11N (99.9999999%+). It is grown into single-crystal ingots by the **Czochralski (CZ)** method (the mainstream) or **float-zone (FZ)** method (higher purity/resistivity, used for power and detectors), then sliced, lapped, and polished into wafers (File 02). **Epitaxial wafers** add a defect-free, precisely doped epi layer; **SOI (silicon-on-insulator)** wafers — made by **Soitec's Smart Cut** layer-transfer process — provide a thin silicon device layer over a buried oxide for FD-SOI, RF-SOI, and photonics. The leading wafer suppliers are **Shin-Etsu and SUMCO (Japan, together a majority of the market), GlobalWafers (Taiwan), Siltronic (Germany), and SK Siltron (Korea)**, with **Soitec** dominant in SOI. Silicon-wafer supply is highly concentrated and a periodic source of tightness.

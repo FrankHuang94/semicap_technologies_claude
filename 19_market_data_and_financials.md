@@ -6,6 +6,46 @@ The semiconductor-equipment industry is a large, fast-growing, violently cyclica
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**Global semiconductor equipment market growth (US$B, approximate)**
+
+```
+ 2015   ███████████████████ 37
+ 2018   ████████████████████████████████ 64
+ 2021   ████████████████████████████████████████████████████ 103
+ 2024   █████████████████████████████████████████████████████████ 113
+ 2030e  ████████████████████████████████████████████████████████████████████████████████ 160-200
+```
+
+**The cyclicality engine — the WFE boom-bust loop**
+
+```mermaid
+flowchart LR
+    UP["End demand tightens → prices rise"] --> CAPEX["Fabs add capacity (esp. memory)"]
+    CAPEX --> PEAK["Equipment orders peak"]
+    PEAK --> GLUT["Oversupply → prices crash"]
+    GLUT --> CUT["Capex slashed → orders collapse"]
+    CUT --> TROUGH["Trough → inventory clears"]
+    TROUGH --> UP
+    style PEAK fill:#d1e7dd
+    style TROUGH fill:#f8d7da
+```
+
+**Tool price spans orders of magnitude (approx. ASP)**
+
+```
+ High-NA EUV scanner   $380M+   ████████████████████████████████████████
+ EUV scanner (NXE)     ~$180M   ███████████████████
+ DUV immersion         ~$75M    ████████
+ e-beam inspection     ~$50M    █████
+ etch / ALD chamber    ~$2-6M   ▏
+```
+
+---
+
 ## 1. Global SemiCap TAM, 2015–2030
 
 Total semiconductor equipment spending has roughly tripled over fifteen years, growing through a series of cycles:

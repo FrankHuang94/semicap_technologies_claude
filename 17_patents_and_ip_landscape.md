@@ -4,6 +4,40 @@ Intellectual property is the invisible architecture of the semiconductor-equipme
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**The real moat is tacit know-how, not just patents**
+
+```mermaid
+flowchart TB
+    subgraph MOAT["Layers of competitive protection"]
+        P["Patents (deter copying, enable cross-licensing)"]
+        T["Trade secrets (recipes, tool-tuning, integration)"]
+        K["Tacit know-how (people, accumulated wafer learning)"]
+        E["Ecosystem control (suppliers, customer JDAs)"]
+    end
+    K --> WHY["Why China cannot quickly build an EUV scanner<br/>even with expired/public patents"]
+    style K fill:#d1e7dd
+    style WHY fill:#fff3cd
+```
+
+**Selected IP milestones and disputes (timeline)**
+
+```mermaid
+timeline
+    title SemiCap IP Milestones
+    1970s : Suntola ALD patents
+    1990s-2004 : ASML vs Nikon (settled, cross-license)
+    late 1990s : EUV LLC consortium IP
+    2013 : ASML acquires Cymer (EUV source IP)
+    2018-2019 : ASML/Brion vs XTAL trade-secret verdict (~$845M)
+    2025-2030 : foundational EUV-era patents begin to expire
+```
+
+---
+
 ## 1. Patent Landscape by Technology Area
 
 ### Lithography

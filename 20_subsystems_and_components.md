@@ -6,6 +6,37 @@ The economic logic is significant: the major OEMs (Applied Materials, Lam, TEL, 
 
 ---
 
+## 📊 Visual Overview
+
+*Original schematics; Mermaid diagrams render natively on GitHub.*
+
+**Anatomy of a process tool — the subsystems that make it work**
+
+```mermaid
+flowchart TB
+    subgraph TOOL["Process tool (etch / deposition chamber)"]
+        CH["Vacuum chamber + electrostatic chuck (wafer)"]
+    end
+    RF["RF power + match<br/>MKS · Advanced Energy"] --> CH
+    MFC["Mass flow controllers<br/>Brooks · Horiba · Fujikin"] --> CH
+    VAC["Turbo + dry pumps<br/>Edwards · Pfeiffer · Ebara"] --> CH
+    ROB["Robotics / EFEM<br/>Brooks · Rorze"] --> CH
+    SEN["Sensors: OES · RGA · manometers"] --> CH
+    CH --> AB["Abatement (Ebara, Edwards)"]
+    style CH fill:#cfe2ff
+```
+
+**Subsystem innovation enables process innovation — and gates tool output**
+
+```
+ Better RF pulsing      → enables advanced etch / ALE
+ Faster mass-flow ctrl  → enables ALD dose precision
+ Better ESC uniformity  → enables tight CD across the wafer
+ (A subsystem shortage can halt tool shipments — as the 2021-22 crunch showed)
+```
+
+---
+
 ## 1. RF Power Supplies and Matching Networks
 
 Plasma-based processes — etch, PECVD, PEALD, sputtering — require **radio-frequency (RF) power** to generate and sustain the plasma, delivered through a **matching network** that couples the generator to the constantly-changing plasma load. RF power is among the most critical subsystems: the precision, stability, and pulsing capability of the RF supply directly determine etch and deposition performance. **ICP (inductively coupled)** and **CCP (capacitively coupled)** plasmas use different excitation schemes, and modern processes increasingly rely on **pulsed RF** (rapidly modulating the power) to control radical-to-ion ratios and reduce charging damage. The leading suppliers are **MKS Instruments, Advanced Energy, and Comdel/XP Power**, with RF power a high-value, performance-critical category.
