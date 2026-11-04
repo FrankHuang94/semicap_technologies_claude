@@ -1,6 +1,6 @@
 # Metrology, Inspection, and Process Control
 
-If lithography, deposition, and etch *build* the chip, then metrology and inspection are what make it possible to build the chip **reliably and profitably**. Process control — the combined disciplines of metrology (measuring dimensions, films, and overlay), inspection (finding defects), and advanced process control (using those measurements to steer the process) — is the nervous system of the fab. It is also one of the fastest-growing and most yield-critical segments of wafer-fab equipment, typically representing 11–13% of WFE spending and rising, because the difficulty of catching tiny, often stochastic defects and of holding atomic-scale dimensions has escalated dramatically with EUV and gate-all-around. This file covers CD metrology, film metrology, overlay metrology, defect inspection, computational and AI-driven inspection, in-situ and APC control, the vendor landscape (overwhelmingly dominated by KLA), and the roadmap.
+If lithography, deposition, and etch *build* the chip, then metrology and inspection are what make it possible to build the chip **reliably and profitably**. Process control — the combined disciplines of metrology (measuring dimensions, films, and overlay), inspection (finding defects), and advanced process control (using those measurements to steer the process) — is the nervous system of the fab. It is also one of the fastest-growing and most yield-critical segments of wafer-fab equipment, typically representing 11–13% of WFE spending and rising (with advanced packaging now a fast-growing additional source of demand), because the difficulty of catching tiny, often stochastic defects and of holding atomic-scale dimensions has escalated dramatically with EUV and gate-all-around. This file covers CD metrology, film metrology, overlay metrology, defect inspection, computational and AI-driven inspection, in-situ and APC control, the vendor landscape (overwhelmingly dominated by KLA), and the roadmap.
 
 A useful distinction underlies everything that follows: **metrology** answers "is the feature the right size, thickness, and position?", while **inspection** answers "is there a defect that shouldn't be there?". Both are essential, and both have become harder at every node.
 
@@ -119,14 +119,15 @@ APC is what converts raw measurements into yield: it closes the loop so that the
 
 | Vendor | Position |
 |---|---|
-| **KLA Corporation** | The **dominant** process-control company, with leading positions in optical and e-beam defect inspection, reticle inspection, overlay (Archer), film and OCD metrology, and yield-management software; KLA's broad, deep portfolio and data-analytics franchise give it one of the strongest moats in all of SemiCap, with industry-leading margins. |
-| **Applied Materials (AMAT)** | A significant process-control player, especially in **e-beam** inspection/review and in select metrology, leveraging its breadth across process and control. |
+| **KLA Corporation** | The **dominant** process-control company, with leading positions in optical and e-beam defect inspection, reticle inspection, overlay (Archer), film and OCD metrology, and yield-management software; KLA's broad, deep portfolio and data-analytics franchise give it one of the strongest moats in all of SemiCap, with industry-leading margins. Process control was ~91% of revenue in the Sep-2026 quarter (reported), and KLA expects ~$1.1B of advanced-packaging process-control revenue in 2026. |
+| **Applied Materials (AMAT)** | A significant process-control player, especially in **e-beam** inspection/review and in select metrology, leveraging its breadth across process and control; its cold-field-emission e-beam generation includes the SEMVision H20 defect-review system (Feb 2025) and PROVision 10 e-beam metrology (2025). |
 | **ASML** | Provides **YieldStar** (overlay/CD metrology tightly integrated with its scanners) and, via its **HMI** acquisition, e-beam inspection — using metrology to close the loop on its own lithography. |
-| **Onto Innovation** | Formed from the Rudolph/Nanometrics merger; strong in OCD, thin-film, overlay, and packaging/advanced-node inspection and lithography systems. |
+| **Onto Innovation** | Formed from the Rudolph/Nanometrics merger; strong in OCD, thin-film, overlay, and packaging/advanced-node inspection (Dragonfly) and lithography systems; posted record revenue in 2026 on AI-packaging and HBM demand, with backlog above $1B (reported). |
 | **Nova Measuring Instruments** | Specialist in OCD/scatterometry, materials metrology, and XPS-based composition metrology; a focused, fast-growing pure-play. |
 | **ZEISS** | Provides EUV **actinic mask inspection** (AIMS EUV) and electron microscopy, alongside its lithography-optics role. |
 | **Hitachi High-Tech** | The CD-SEM leader, plus FIB-SEM and process-analysis tools. |
 | **SCREEN** | Inspection and review tools, alongside its wet-process franchise. |
+| **Chinese domestic suppliers** (e.g., Skyverse) | Optical bright-/dark-field, macro-defect and packaging inspection plus film metrology for China's fabs; process control remains one of the least-localized tool categories in China (reportedly ~10% or less at leading domestic memory fabs). |
 
 The standout feature of this landscape is KLA's dominance: in a SemiCap industry generally characterized by category-specific leaders, KLA holds a commanding, broad position across nearly the whole of inspection and much of metrology, making process control one of the most concentrated and profitable corners of the equipment world.
 
@@ -137,7 +138,7 @@ The standout feature of this landscape is KLA's dominance: in a SemiCap industry
 The process-control roadmap is shaped by the device transitions and the data deluge:
 
 - **AI-native metrology and inspection:** machine learning moves from a bolt-on classifier to the core of how measurements are made, predicted, and interpreted — virtual metrology, generative defect modeling, and AI-driven recipe optimization become standard.
-- **Actinic EUV mask inspection:** as 2nm-class pitches make stochastic mask defects decisive, faster actinic inspection (next-generation AIMS EUV) becomes a gating capability for HVM mask qualification.
+- **Actinic EUV mask inspection:** as 2nm-class pitches (now in volume production) and High-NA EUV make stochastic mask defects decisive, faster actinic inspection (next-generation AIMS EUV) becomes a gating capability for HVM mask qualification.
 - **In-cell 3D metrology for GAA and CFET:** measuring the dimensions of nanosheets and dual-tier CFET channels *buried inside* the device — the width of a sheet hidden within a stack, the profile of an inner spacer — requires new model-based optical, X-ray, and e-beam techniques capable of seeing in three dimensions inside the cell.
 - **High-throughput e-beam:** multi-beam e-beam inspection and review aim to break the resolution-versus-throughput trade-off, bringing e-beam-class sensitivity to a larger sampled area to catch the smallest stochastic defects in production.
 - **Tighter overlay and CD control:** sub-2nm overlay and angstrom-level CD control demand denser sampling, better targets, and faster feedback to the scanner — making metrology and lithography ever more tightly co-engineered.
@@ -183,3 +184,48 @@ A defining dynamic is the **co-evolution** of process control with the processes
 ### C. The Data Dimension
 
 A final, increasingly important dimension of process control is **data**. The flood of measurements and images from high-sensitivity, densely-sampled metrology and inspection constitutes one of the richest data sets in manufacturing, and turning that data into yield insight — through classification, correlation, root-cause analysis, and prediction — is increasingly where the value lies. This is the foundation of the **yield-management and analytics** franchises (KLA's software, PDF Solutions' Exensio, and others), and it is increasingly powered by machine learning (File 22). The data dimension creates a compounding advantage for the process-control leaders: more tools generate more data, which trains better algorithms, which deliver more value, which sells more tools — a virtuous cycle that further entrenches the leaders (KLA above all) and makes process control as much a data-and-software business as a hardware business. As fabs grow more data-driven and more AI-native (File 22), the data dimension of process control grows in importance, and the ability to extract yield insight from the vast process-control data set becomes an ever-more-decisive competitive factor — completing the picture of process control as the nervous system, the yield engine, and increasingly the data brain of the modern fab.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+### A. Process control in a record WFE year
+
+The process-control segment has ridden the AI-driven equipment upcycle. SEMI's July 2026 mid-year forecast raised 2026 total equipment sales to a record $165.9B (+23.2%), with WFE at $143.9B. KLA, the bellwether of this file, raised its 2026 WFE view to roughly the low-$150B range (from "$140B+") and said it expects "significant growth" in 2027; Lam Research, reporting on 21 Oct 2026, preliminarily sees 2027 WFE above $200B, led by DRAM. Because process-control intensity rises with node complexity, HBM stacking and advanced packaging, the segment has been growing at least in line with WFE.
+
+| Company / item | Latest data point | Source / status |
+|---|---|---|
+| KLA, Sep-2026 quarter (FQ1 FY2027, reported 28 Oct 2026) | Revenue ~$4.14B; process control ~$3.75B (~91% of revenue), wafer inspection ~$2.1B (+37% YoY) | Company results as summarized by press; segment figures vary slightly across reports |
+| KLA advanced-packaging process control | ~**$1.1B** in CY2026 (~+70%) | KLA guidance, reiterated Oct 2026 |
+| Onto Innovation, Jun-2026 quarter | Record revenue ~$343M (+35% YoY); backlog >$1B; advanced-packaging growth view raised to ~80% for 2026 | Company results (Q3 results pending at time of writing) |
+| Applied Materials e-beam | SEMVision H20 review (Feb 2025); PROVision 10 cold-field-emission e-beam metrology (2025) | Product launches |
+
+### B. Advanced packaging becomes a major process-control market
+
+The single biggest change since this file was first written is the rise of **advanced-packaging process control**. AI accelerators built on CoWoS-class 2.5D packaging, HBM stacks (HBM4 in mass production in 2026 for Nvidia's Rubin platform) and hybrid-bonded SoIC structures all require dense inspection and metrology of bumps, micro-bumps, through-silicon vias, redistribution layers, bond interfaces and warpage. KLA expects ~$1.1B of packaging process-control revenue in 2026, and Onto reported that one OSAT alone placed more than $200M of Dragonfly packaging-inspection orders, mostly for 2027 delivery (per press reports of its Q2 call). New measurement problems include:
+
+- **Hybrid-bonding surface metrology and overlay** — sub-micron die-to-wafer alignment, nanometer-scale copper recess and surface topography; TSMC SoIC production pitches are reportedly ~6 µm.
+- **HBM stack inspection** — die-level defects and stack height control; JEDEC's increase of the HBM4 package-height limit to 775 µm eased the near-term push to hybrid bonding, keeping TC/MR-MUF stacking (and its inspection needs) dominant for now.
+- **Panel-level and glass-core substrates** (e.g., TSMC's CoPoS roadmap) and **co-packaged optics** (TSMC COUPE entering mass production in 2H 2026), which introduce new formats and optical-alignment metrology; ASE has warned that CPO lacks established test standards.
+
+### C. Leading-edge logic and memory drivers
+
+- **2nm GAA ramps** (TSMC N2 in volume since Q4 2025; Intel 18A in HVM with PowerVia backside power; Samsung SF2) have made in-cell 3D metrology of nanosheets and inner spacers, and backside-via alignment, production problems rather than roadmap items (Section E above).
+- **High-NA EUV**: ASML's Q3 2026 EUV sales included a High-NA system; per call summaries, Samsung and TSMC plan High-NA high-volume use around 2028 and 2030 respectively, and Intel's 14A is planned as the first node to use it. Smaller High-NA fields and thinner resists intensify stochastic-defect inspection and mask-qualification requirements.
+- **DRAM-led spending** (HBM and the "memory supercycle") favors film, overlay and defect-inspection tools at memory fabs, a segment where process-control intensity has historically been lower than in logic but is now rising with 4F²/vertical DRAM development and HBM.
+
+### D. AI inside the inspection loop
+
+AI is now both the demand driver and an embedded tool. Deep-learning defect classification and nuisance filtering are standard on new inspection and review systems (Applied's SEMVision H20, for example, pairs cold-field-emission imaging with deep-learning classification), and fabs are expanding virtual metrology, digital twins and "autonomous fab" programs — themes showcased in the Smart Fab Zone at SEMICON Taiwan 2026 (see File 22).
+
+### E. China and export controls
+
+China remains an important market for process-control vendors (reportedly around 30% of KLA's fiscal-2026 revenue), but US controls on advanced-node tools to China remain in force and the Affiliates ("50%") Rule, suspended from 10 Nov 2025 under the US–China truce, could return when the suspension ends (the truce was reportedly extended to 10 Jan 2027). Chinese domestic suppliers such as Skyverse are growing in optical inspection and film metrology, but process control remains among the least-localized equipment categories in China — reportedly ~10% or less at leading domestic memory fabs — compared with ~35% localization across all equipment used in China in 2025 (industry-body figure).
+
+**What to watch (late 2026–2027)**
+
+- Whether advanced-packaging process control continues to grow faster than front-end process control in 2027.
+- Production adoption of multi-beam e-beam inspection for stochastic EUV defects, especially with High-NA.
+- Hybrid-bonding adoption in HBM4E/HBM5 and its effect on bonding-overlay and surface-metrology demand.
+- Expiry or extension of the Affiliates Rule suspension and its impact on China process-control sales.
+- Progress of Chinese inspection/metrology vendors beyond mature nodes.

@@ -104,10 +104,11 @@ The CFET research record is rich and specific:
 - **Intel, IEDM 2021:** a **sequential CFET** concept with **inter-tier via (ITV)** resistance measurements, establishing the feasibility of the bonded approach.
 - **TSMC, VLSI 2023:** a CFET scaling trajectory toward **CPP ≈ 30nm**, co-simulated with BEOL metallization.
 - **Samsung, IEDM 2022:** MBCFET evolution toward CFET, with the **forksheet** discussed as an intermediate step.
+- **TSMC and IMEC, IEDM 2025:** TSMC reported what it described as the first working CFET *circuits* — a 101-stage monolithic CFET ring oscillator and a very small 6T SRAM bit-cell — while IMEC showed a hybrid-orientation monolithic CFET; at **VLSI 2026**, Intel showed CFET inverters combined with PowerVia and direct backside contacts (see the 2025–2026 Update section below).
 
 ### 1.5 The Forksheet as an Intermediate Step
 
-Between GAA nanosheet and full CFET lies the **forksheet**, researched primarily at **IMEC**. In a forksheet, nMOS and pMOS are not stacked but are separated by a single **dielectric wall** built between them, allowing tighter n-to-p spacing and independent gate patterning on each side of the wall. This yields roughly a **20% density improvement** over GAA nanosheet — less than CFET's ~50% but with substantially lower process complexity — and offers a possible **2026–2028 insertion window** as a bridge technology before full CFET matures.
+Between GAA nanosheet and full CFET lies the **forksheet**, researched primarily at **IMEC**. In a forksheet, nMOS and pMOS are not stacked but are separated by a single **dielectric wall** built between them, allowing tighter n-to-p spacing and independent gate patterning on each side of the wall. This yields roughly a **20% density improvement** over GAA nanosheet — less than CFET's ~50% but with substantially lower process complexity — and was once seen as offering a possible **2026–2028 insertion window** as a bridge technology before full CFET matures. As of 2026, no foundry has put a forksheet into production; IMEC's more recent roadmaps instead position an "outer-wall" forksheet variant around the A10 generation, i.e. late in the decade, ahead of CFET.
 
 ### 1.6 Equipment Implications of CFET
 
@@ -174,7 +175,7 @@ A second major challenge is depositing a high-quality **gate dielectric** on a T
 
 ### 2.6 Roadmap to Integration
 
-The IRDS "Beyond CMOS" outlook places TMD FETs in **early research now**, **technology development around 2028**, and **first HVM no earlier than ~2031** (most optimistic). The most likely integration path is **not** full TMD logic but **selective use** — for example, a **top-tier pMOS in a sequential CFET using WSe₂**, while the bottom nMOS remains silicon nanosheet — exploiting the thermal-budget freedom of sequential bonding to add a 2D tier without compromising the silicon tier. The key unsolved problems remain **grain size and uniformity, contact resistance, dielectric-interface quality, the 300mm MOCVD process, and balancing complementary n/p performance** — a formidable list, but one being attacked systematically by IMEC, TSMC, the academic community, and the equipment makers (Aixtron, Veeco, ASM, Applied) developing the deposition tools.
+The IRDS "Beyond CMOS" outlook places TMD FETs in **early research now**, **technology development around 2028**, and **first HVM no earlier than ~2031** (most optimistic). The most likely integration path is **not** full TMD logic but **selective use** — for example, a **top-tier pMOS in a sequential CFET using WSe₂**, while the bottom nMOS remains silicon nanosheet — exploiting the thermal-budget freedom of sequential bonding to add a 2D tier without compromising the silicon tier. The key unsolved problems remain **grain size and uniformity, contact resistance, dielectric-interface quality, the 300mm MOCVD process, and balancing complementary n/p performance** — a formidable list, but one being attacked systematically by IMEC, TSMC, the academic community, and the equipment makers (Aixtron, Veeco, ASM, Applied) developing the deposition tools. Recent results cut both ways: IMEC demonstrated an EUV-patterned 300mm integration route for 2D n- and pMOS at 50nm pitch (VLSI 2026), but a July 2026 IMEC benchmarking paper found that 2D-channel CFETs offer no contacted-poly-pitch advantage over silicon CFET at the A2 generation unless contacts and parasitics are co-optimized (see the 2025–2026 Update section).
 
 ---
 
@@ -224,7 +225,7 @@ Despite the spectacular intrinsic properties, CNFETs face severe manufacturing b
 
 ## SECTION 4: Backside Power Delivery — Detailed Research Landscape
 
-Backside power delivery (BSPDN), covered as a production technology in File 15, has a deep research literature that illuminates how it moved from concept to (near-)production in just a few years.
+Backside power delivery (BSPDN), covered as a production technology in File 15, has a deep research literature that illuminates how it moved from concept to production in just a few years — Intel 18A with PowerVia entered high-volume manufacturing in 2025–2026 (Panther Lake), and TSMC's A16 with Super Power Rail is ramping from 2H 2026.
 
 ### 4.1 Research and Publication Landscape
 
@@ -282,12 +283,12 @@ Resist is where much of the stochastic battle is fought:
 
 ### 5.4 High-NA EUV (0.55 NA) Research Status
 
-- **Tools:** the first **ASML EXE:5000** was installed at **IMEC (2023)** and at **Intel (first customer tool, 2024)**.
+- **Tools:** the first **ASML EXE:5000** systems went to **Intel (first customer tool, 2024)** and to the joint **ASML–IMEC High-NA lab** in Veldhoven (2024). The production-grade **EXE:5200B** followed: Intel reportedly completed acceptance of an EXE:5200B at its Oregon D1X fab in early 2026, and IMEC installed an EXE:5200 in its own Leuven cleanroom, expecting full qualification by Q4 2026.
 - **Anamorphic optics:** to control mask shadowing at 0.55 NA, the optics use **8× demagnification along the scan direction and 4× across the slit**. The reticle is still made at 4× magnification, but the printable **field halves** to **26mm × 16.5mm** — meaning large chips (e.g., big GPU compute arrays) must be **stitched** from multiple exposures.
 - **Resolution:** at k1≈0.33, the minimum pitch is approximately λ/(2·NA) = 13.5/(2·0.55) ≈ 12.3nm, with ~16nm half-pitch achievable in practice.
 - **Resist and stitching challenges:** the resist must resolve <16nm pitch (requiring metal-oxide resist) at thicknesses below ~20nm (to control mask-3D and absorption); and for chips exceeding 16.5mm in one dimension, **pattern stitching** with sub-1nm stitching error is required at the field boundary — a real design constraint for large dies.
 - **IMEC High-NA results:** IMEC printed **16nm-pitch patterns (SPIE 2023)** with LER ~2.8nm, and reported significantly reduced mask-3D effects versus standard-NA EUV.
-- **Intel 18A High-NA:** Intel targets the **first HVM High-NA insertion** on specific critical layers (e.g., cut and contact layers), with most layers still on standard EUV; the **$380M+ tool cost** limits early adoption to a few layers at the most advanced fabs.
+- **Intel 14A High-NA:** Intel ultimately kept 18A on standard (0.33 NA) EUV and targets the **first HVM High-NA insertion** with its **14A** node, on specific critical layers, with most layers still on standard EUV; the **$380M+ tool cost** limits early adoption to a few layers at the most advanced fabs. Per ASML's Q3 2026 call commentary, Samsung and TSMC plan High-NA high-volume use around 2028 and 2030 respectively.
 
 Advanced EUV research thus spans physics (stochastics), chemistry (resists), materials (absorbers, pellicles, blanks), and optics (High-NA) — a multidisciplinary frontier on which the continued scaling of the entire industry depends.
 
@@ -310,7 +311,7 @@ The workhorse material is the **block copolymer (BCP)** — a polymer chain made
 - **Samsung** has the most advanced DSA in (limited) production, using it for **contact-hole shrink in DRAM** (reported at IEDM 2018) and via-hole patterning via graphoepitaxy, and researching DSA for Kioxia-style 3D NAND staircase contacts.
 - **Leading-edge logic** at TSMC and Intel does **not** yet use DSA in production.
 - **Defect density** is the central barrier: BCP assembly produces defects — **dislocations, disclinations, and grain boundaries** in the ordered domains — at densities of ~10–100/cm², while logic requires below ~0.01/cm². Closing this gap is the primary research thrust.
-- **The IMEC DSA program** (joint development with Dow, JSR, Merck, and TEL) demonstrated 10nm-pitch patterns with PS-b-PDMS on an EUV guide and drove defect density down from ~1000/cm² to ~10/cm² over 2019–2023, targeting below ~1/cm² by ~2026.
+- **The IMEC DSA program** (joint development with Dow, JSR, Merck, and TEL) demonstrated 10nm-pitch patterns with PS-b-PDMS on an EUV guide and drove defect density down from ~1000/cm² to ~10/cm² over 2019–2023, targeting below ~1/cm² by ~2026 (whether that target has been met has not been publicly confirmed as of late 2026).
 - **High-χ BCPs:** PS-b-PDMS (χ≈0.26 versus PS-b-PMMA's χ≈0.04) enables much smaller L₀, and TEL is working to integrate PS-b-PDMS into the coat-and-develop track.
 
 ### 6.3 Equipment for DSA
@@ -319,7 +320,7 @@ The workhorse material is the **block copolymer (BCP)** — a polymer chain made
 - **Inspection:** SEM-based defect inspection capable of detecting sub-5nm domain defects at DSA pitch — requiring e-beam inspection (HMI/ASML or KLA).
 - **Overlay metrology:** BCP-to-guide overlay below ~5nm (3σ), measured with tools such as ASML YieldStar in research settings.
 
-DSA's likely role, per the IRDS, is **insertion for specific layers (contacts, vias, line cuts) around 2026–2028**, complementing EUV (graphoepitaxy on an EUV guide) rather than replacing it — gated entirely by the defect-density challenge.
+DSA's likely role, per the IRDS, is **insertion for specific layers (contacts, vias, line cuts) around 2026–2028** — although, as of late 2026, no leading-edge logic production insertion has been publicly confirmed — complementing EUV (graphoepitaxy on an EUV guide) rather than replacing it — gated entirely by the defect-density challenge.
 
 ---
 
@@ -343,7 +344,7 @@ The **transmon** is currently the dominant superconducting qubit type, used by *
 
 - **Fabrication:** **surface-electrode ion traps** on silicon or quartz substrates, with gold or aluminum electrodes patterned by standard lithography (~1μm features). **DRIE-etched windows** in the silicon provide optical access for laser beams, and connections route to a cryogenic PCB via wirebonds.
 - **Materials:** low-outgassing electrodes (gold preferred for ultra-high vacuum), alumina dielectric under the electrodes, SiO₂ ILD, and etched-Si surfaces with roughness below ~5nm (to minimize laser scatter).
-- **Companies:** **IonQ, Quantinuum (Honeywell), and Oxford Ionics**; trap-chip fabrication is typically outsourced to **MEMS fabs** (e.g., specialized foundries, IMEC) rather than leading-edge logic fabs.
+- **Companies:** **IonQ (which acquired Oxford Ionics in 2025) and Quantinuum (Honeywell)**; trap-chip fabrication is typically outsourced to **MEMS fabs** (e.g., specialized foundries, IMEC) rather than leading-edge logic fabs.
 - **Photonic integration:** trap chips increasingly include **integrated photonics** (Si₃N₄ waveguides, grating couplers) for on-chip laser delivery — MIT/Lincoln Laboratory has pioneered integrated photonic trap chips.
 
 ### 7.3 Silicon Spin Qubits
@@ -455,7 +456,7 @@ As electrical interconnects approach their bandwidth limits, **silicon photonics
 - **CPO assembly:** a silicon-photonic chiplet (from Broadcom, Intel, Marvell, OpenLight, Ayar Labs) is bonded to a switch or accelerator ASIC (e.g., Broadcom Tomahawk, Cisco Silicon One) using **flip-chip micro-bumps or hybrid bonding**.
 - **Fiber attach:** a multi-fiber connector is **edge-coupled** to the photonic chip, requiring **active alignment** to below ~1μm (using MEMS or piezo stages) and hermetic sealing for reliability — fiber attach is a key cost and yield driver.
 - **Manufacturing challenges:** both the photonic components (waveguide, Ge detector, modulator) and the electrical ASIC must yield well simultaneously; Ge-detector dark-current uniformity, athermal modulator design for wavelength stability, and **laser reliability (>10 years at 70°C)** are central concerns.
-- **Market and publications:** **Ayar Labs** (in-package optical I/O), **Intel** (CPO switch), **Broadcom** (production Si-photonic transceivers), and **Marvell/Coherent** are leaders. Representative results: **IMEC (OFC 2023)** demonstrated 300mm Si-photonic wafers with Ge-detector arrays; **Intel (Hot Chips 2023)** showed a 51.2 Tb/s CPO switch; **Broadcom (ECOC 2023)** reported production Si-photonic transceiver data.
+- **Market and publications:** **Ayar Labs** (in-package optical I/O), **Intel** (CPO switch), **Broadcom** (production Si-photonic transceivers), and **Marvell/Coherent** are leaders. Representative results: **IMEC (OFC 2023)** demonstrated 300mm Si-photonic wafers with Ge-detector arrays; **Intel (Hot Chips 2023)** showed a 51.2 Tb/s CPO switch; **Broadcom (ECOC 2023)** reported production Si-photonic transceiver data. By 2025–2026 CPO crossed into products: **Nvidia** announced its **Spectrum-X Photonics (Ethernet) and Quantum-X Photonics (InfiniBand)** CPO switches in March 2025 for 2026 availability, built on **TSMC's COUPE** (Compact Universal Photonic Engine, an EIC stacked on a PIC with SoIC-X), which is entering mass production in 2H 2026.
 
 Silicon photonics brings a new set of process requirements — ultra-smooth waveguide etch, Ge epitaxy, modulator doping, grating patterning, hybrid laser bonding, and active fiber alignment — into the semiconductor flow, and as AI drives insatiable bandwidth demand, it is becoming one of the fastest-growing frontiers adjacent to mainstream logic.
 
@@ -481,7 +482,7 @@ The dominant operation in neural-network inference is **matrix-vector multiplica
 - **Mechanism:** **HfOx RRAM** (HfO₂ deposited by ALD) forms a conductive **oxygen-vacancy filament** during a FORMING step; SET grows the filament (low resistance ~kΩ), RESET partially dissolves it (high resistance ~MΩ), with filament diameter below ~5nm.
 - **Analog conductance:** controlling the SET pulse varies the filament, giving continuous (analog) conductance; the target is 256 levels (8-bit) per cell, though ~8–16 levels (3–4 bit) are reliable today.
 - **Key challenge:** **cycle-to-cycle and device-to-device variability** (the filament formation is stochastic, varying conductance 10–30% per cycle), mitigated by compliance-current control, series resistors, and write-verify feedback.
-- **Commercialization:** **TSMC/Weebit Nano** developed 28nm embedded RRAM (a Weebit selector + RRAM in BEOL), with production targeted ~2024–2025 for embedded NVM.
+- **Commercialization:** embedded RRAM is now a production option for microcontroller/IoT non-volatile memory: TSMC offers its own embedded RRAM on mature nodes (40/28/22nm-class), and **Weebit Nano** licenses its HfOx-based ReRAM to foundries such as SkyWater and DB HiTek. Analog-compute use of RRAM remains at the research and early-product stage.
 
 ### 11.4 MRAM and Ferroelectric Devices for Analog
 
@@ -502,7 +503,7 @@ The frontier research surveyed in this file is produced by a global ecosystem of
 
 - **IMEC (Leuven, Belgium):** the largest independent semiconductor research center (5,000+ researchers, ~€900M annual budget), running a 300mm pilot line co-funded by TSMC, Samsung, Intel, ASML, Applied, Lam, and TEL. Its annual **ITF (IMEC Technology Forum)** is a key industry event, and its programs span advanced CMOS (GAA → CFET), 2D materials, EUV, DSA, quantum, neuromorphic, and advanced packaging. IMEC is the single most influential pre-competitive hub.
 - **CEA-Leti (Grenoble, France):** focused on FD-SOI, **3D sequential integration**, quantum computing, silicon photonics, and bioelectronics, in close partnership with STMicroelectronics and Soitec.
-- **IBM Research (Albany, NY):** co-located with the GlobalFoundries Albany NanoTech complex; pioneered the **2nm nanosheet test chip (2021)**, leads CFET and post-silicon (CNT, TMD) research, and drives the **IBM Quantum** roadmap (Heron, Condor, and beyond). Key CFET partnerships with Samsung and Intel.
+- **IBM Research (Albany, NY):** co-located with the GlobalFoundries Albany NanoTech complex; pioneered the **2nm nanosheet test chip (2021)**, leads CFET and post-silicon (CNT, TMD) research, and drives the **IBM Quantum** roadmap (Heron, Condor, and — announced November 2025 — the 120-qubit **Nighthawk** and the experimental fault-tolerance processor **Loon**), with IBM having moved primary quantum-processor wafer fabrication to a **300mm** line at Albany NanoTech. Key CFET partnerships with Samsung and Intel.
 - **MIT Microsystems Technology Laboratories (MTL):** home of Max Shulaker's **CNFET** research, silicon spin qubits, photonic neural networks, and novel transistor architectures.
 - **Stanford Nanofabrication Facility (SNF):** university fab supporting III-V photonics, MEMS, quantum, and 2D-material research; home of Sayeef Salahuddin's **negative-capacitance** group.
 - **NIMS (Japan):** materials research in 2D materials, oxide electronics, and topological materials.
@@ -567,7 +568,7 @@ The organic substrates that have carried packages for decades are reaching their
 
 ### 14.2 Panel-Level Packaging
 
-Fan-out packaging (File 11) traditionally uses round reconstituted wafers, but moving to large **rectangular panels** (e.g., 300mm × 300mm or larger, akin to display-industry formats) dramatically improves area utilization and reduces cost for large packages. **Panel-level packaging (PLP)** is being pursued by ASE, Samsung, Powertech, and others, and it requires panel-format versions of molding, RDL lithography, plating, and inspection equipment — a significant equipment-development effort drawing partly on display-manufacturing technology.
+Fan-out packaging (File 11) traditionally uses round reconstituted wafers, but moving to large **rectangular panels** (e.g., 300mm × 300mm or larger, akin to display-industry formats) dramatically improves area utilization and reduces cost for large packages. **Panel-level packaging (PLP)** is being pursued by ASE, Samsung, Powertech, and others — and TSMC has put **CoPoS** (chip-on-panel-on-substrate, a rectangular, glass-core-compatible panel version of CoWoS) on its roadmap — and it requires panel-format versions of molding, RDL lithography, plating, and inspection equipment — a significant equipment-development effort drawing partly on display-manufacturing technology.
 
 ### 14.3 Co-Packaged Optics Maturation
 
@@ -579,7 +580,7 @@ As stacked 3D logic and high-power AI accelerators push power densities to extre
 
 ### 14.5 Hybrid Bonding at Ever-Finer Pitch
 
-The hybrid-bonding pitch race (File 11) continues toward and below **1μm** bond pitch, and ultimately toward sub-micron pitches that approach the density of on-chip wiring — blurring the line between "packaging" and "monolithic" integration. Achieving these pitches demands ever-better CMP (sub-nanometer roughness over large areas), ever-tighter alignment (well below 100nm, toward the tens of nanometers), and pristine surface preparation and cleanliness, pulling front-end-grade process control into the bonding flow. This trajectory — toward bond pitches fine enough that two bonded dies behave almost like one — is one of the most important in all of semiconductor technology, because it is the physical enabler of the "system of chiplets" that is replacing the monolithic SoC.
+The hybrid-bonding pitch race (File 11) — with production SoIC die-to-wafer bonding at TSMC reportedly around **6μm** pitch in 2026, and hybrid bonding for HBM pushed out to HBM4E/HBM5 after JEDEC relaxed the HBM4 package-height limit to 775μm — continues toward and below **1μm** bond pitch, and ultimately toward sub-micron pitches that approach the density of on-chip wiring — blurring the line between "packaging" and "monolithic" integration. Achieving these pitches demands ever-better CMP (sub-nanometer roughness over large areas), ever-tighter alignment (well below 100nm, toward the tens of nanometers), and pristine surface preparation and cleanliness, pulling front-end-grade process control into the bonding flow. This trajectory — toward bond pitches fine enough that two bonded dies behave almost like one — is one of the most important in all of semiconductor technology, because it is the physical enabler of the "system of chiplets" that is replacing the monolithic SoC.
 
 ---
 
@@ -770,6 +771,71 @@ The consolidated view confirms the thesis that runs through this entire database
 
 ---
 
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+The eighteen months from mid-2025 to November 2026 moved several frontiers in this file a decisive step closer to manufacturing: CFET went from single devices to working circuits, backside power entered high-volume production, High-NA EUV moved into production-grade tools at both chipmakers and IMEC, and co-packaged optics shipped in commercial switches. At the same time, some results were sobering — most notably for 2D channels — and several timelines (CFET, hybrid bonding for HBM) were clarified to be later than earlier hype suggested. IEDM 2026 takes place in December 2026, so its results are not yet public.
+
+### CFET: from devices to circuits
+
+- **IEDM 2025 (6–10 December 2025, San Francisco):** TSMC reported what it described as the first integrated circuits on CFET — a **101-stage monolithic CFET ring oscillator** operating across a ~0.5–0.95 V supply range and what it called the **world's smallest 6T SRAM bit-cell** — building on its 2024 CFET inverter. Per Japanese trade-press coverage, TSMC targets practical CFET logic and memory in the **2030s**. IMEC presented a **hybrid-orientation monolithic CFET** pairing a (110) silicon pMOS with a (100) silicon nMOS.
+- **VLSI Symposium 2026 (14–18 June, Honolulu):** Intel demonstrated **CFET inverters on Si(110) with 2×2 RibbonFETs at 45nm gate pitch, combined with PowerVia and direct backside contacts** — the first public merging of stacked transistors and backside power in one flow. Per the symposium tip sheet, Samsung showed a CFET with three stacked nanosheets per device tier at a 42nm gate pitch (details not yet confirmed from full papers).
+- **IMEC's 2026 roadmap** (as reported) places CFET as viable around the **A7 (0.7nm-class)** generation and extends the logic roadmap to roughly the **0.3nm class around 2038** — consistent with CFET being an early-2030s, not late-2020s, production technology.
+
+### 2D channels: real progress, sobering benchmarks
+
+- At **IEDM 2025**, IMEC reported record-performing **monolayer WSe₂ pFETs** together with new fab-compatible process modules developed with industry partners — addressing the long-standing weakness of p-type 2D devices (Section 2).
+- At **VLSI 2026**, IMEC presented what it called the **first EUV-enabled integration route for 50nm-pitch n- and pMOS transistors with 2D-material channels from a 300mm fab**, and related work showed quasi-CMOS with **MoS₂ nMOS and WSe₂ pMOS side by side** on one wafer via die/small-wafer transfer.
+- A **July 2026 IMEC paper** delivered a reality check: in benchmarking, **2D-channel GAA CFETs showed no contacted-poly-pitch advantage over silicon CFET at the A2 generation**, because a floor of roughly **36nm CPP is set by contacts** rather than by channel electrostatics. The conclusion is that 2D channels only pay off with aggressive contact and parasitic co-optimization — shifting the equipment emphasis toward contact metallization, MOL resistance, and low-damage deposition rather than the channel film alone.
+
+### Backside power: from research paper to HVM
+
+The BSPDN literature surveyed in Section 4 has become production reality. **Intel 18A** — the first node with PowerVia — is in high-volume manufacturing, with Panther Lake launched in early 2026, and **18A-P** entered risk production in June 2026 (reported up to ~9% better performance). At VLSI 2026 TSMC detailed **A16** with **Super Power Rail** (backside direct contact), claiming **8–10% higher speed at the same power versus N2P**; A16 volume production is expected from 2H 2026 into 2027 (sources differ). The equipment cascade described in Section 4 — wafer thinning, nano-TSV etch, backside ALD, temporary and permanent bonding, IR alignment — is now a volume market.
+
+### Lithography: High-NA research progress and China's EUV prototype
+
+- **High-NA in the field:** ASML's Q3 2026 results (14 October 2026) included one High-NA system within €4.1B of EUV system sales. Intel reportedly completed acceptance of an **EXE:5200B** at D1X in Oregon in early 2026 and plans High-NA for **14A**; per call summaries, Samsung and TSMC plan High-NA high-volume use around 2028 and 2030 respectively. IMEC installed an **EXE:5200** in its Leuven 300mm cleanroom and expects it to be fully qualified by Q4 2026.
+- **Resist results:** At SPIE Advanced Lithography + Patterning (February 2026), IMEC reported improved **metal-oxide-resist dose response** when the post-exposure bake is run at elevated oxygen concentration — a dose-reduction (throughput) lever. Later in 2026 IMEC reported that **chemically amplified resist can be extended to High-NA**, single-patterning random-logic lines/spaces down to **22nm pitch** and vias at **28nm** centre-to-centre, targeting critical A14/A10 layers — notable because it suggests CAR, not only MOR, will be used at High-NA.
+- **China:** Reuters reported in December 2025 that a **prototype EUV machine** had been assembled in Shenzhen by a team including former ASML engineers, partly using components from older ASML systems. It reportedly generates EUV light but has not produced working chips; the stated chip target is 2028, with insiders suggesting ~2030 is more realistic. This is unconfirmed by official sources and should be treated as an early-stage research effort rather than a production threat in this decade.
+
+### Packaging and photonics: CPO ships, hybrid bonding timing clarifies
+
+- **Co-packaged optics in production:** Nvidia's **Spectrum-X Photonics** (Ethernet) and **Quantum-X Photonics** (InfiniBand) CPO switches, announced in March 2025 for 2026 availability, are built on **TSMC's COUPE**, whose first generation stacks a 65nm electronic IC on a photonic IC using SoIC-X. COUPE is entering mass production in 2H 2026, with later generations planned for integration into CoWoS packages. ASE and others have warned of the **lack of CPO test standards** — a gap that directly affects test and inspection equipment demand.
+- **Hybrid bonding timing:** TSMC SoIC production reportedly runs at ~**6μm** bond pitch. For HBM, JEDEC's decision to raise the HBM4 package-height limit to **775μm** (from 720μm) relieved the pressure to adopt hybrid bonding; SK hynix said at Hot Chips 2026 that hybrid bonding is not ready for HBM4E and will come with HBM5 at the earliest, while Samsung is reportedly more aggressive. SK hynix has reportedly placed a first hybrid-bonding production order for an integrated Applied Materials–Besi system (the Kinex die-to-wafer bonder launched in 2025).
+- **Panel and glass:** TSMC's **CoPoS** panel-level (rectangular, glass-core-compatible) packaging is on its roadmap, and glass-core substrates remain in development across the industry (Section 14).
+
+### Quantum, ferroelectric, and MRAM milestones
+
+- **Quantum:** In November 2025 IBM introduced the 120-qubit **Nighthawk** processor (218 tunable couplers) and the experimental **Loon** processor demonstrating the components needed for qLDPC-based fault tolerance, and moved primary quantum-processor wafer fabrication to a **300mm facility at Albany NanoTech**, which IBM says doubled its R&D speed. IBM expects verified quantum-advantage results by the end of 2026 and targets a fault-tolerant system in 2029 — a clear example of qubit fabrication migrating onto mainstream semiconductor tooling (Section 7).
+- **Ferroelectrics:** IMEC presented two ferroelectric (FeFET-oriented) memory advances at VLSI 2026; CEA-Leti and Fraunhofer IPMS exchanged ferroelectric memory wafers within the EU **FAMES pilot line**; and a March 2026 preprint reported a 28nm FeFET-based non-volatile 6T SRAM (not yet peer-reviewed).
+- **MRAM:** A team including NYCU, TSMC, and ITRI reported in early 2026 an **SOT-MRAM** device with ~**1ns** switching and >10-year retention, having stabilized the β-phase of tungsten — a step toward manufacturable SOT stacks, though not yet ready for direct processor integration. Per TechInsights (May 2026), TSMC and NXP introduced **16nm FinFET automotive eMRAM** products, extending STT-MRAM's production footprint.
+
+### AI as a research instrument
+
+AI's role in research (Section 17.3) is now industrial: Nvidia's **cuLitho** computational-lithography platform has been adopted by TSMC, and AI-driven inspection, digital twins, and autonomous experimentation featured prominently at SEMICON Taiwan 2026.
+
+| Milestone | Venue / date | Why it matters |
+|---|---|---|
+| First CFET circuits (101-stage ring oscillator, 6T SRAM) | TSMC, IEDM Dec 2025 | CFET moves from device to circuit level; 2030s production target |
+| CFET + PowerVia + direct backside contacts | Intel, VLSI Jun 2026 | Stacked transistors and backside power merged in one flow |
+| A16 with Super Power Rail (+8–10% speed vs N2P) | TSMC, VLSI Jun 2026 | Second BSPDN implementation heading to volume |
+| 50nm-pitch 2D n/pMOS via EUV on 300mm | IMEC, VLSI Jun 2026 | 2D channels enter a fab-compatible integration route |
+| 2D CFET shows no CPP gain over Si at A2 | IMEC, Jul 2026 | Contacts, not channels, set the scaling floor |
+| CAR single-patterning at 22nm pitch on High-NA | IMEC, 2026 | Broadens High-NA resist options beyond MOR |
+| COUPE CPO mass production | TSMC / Nvidia, 2H 2026 | Silicon photonics becomes a volume packaging flow |
+| Nighthawk / Loon; 300mm qubit fab | IBM, Nov 2025 | Quantum fabrication moves onto 300mm tooling |
+
+**What to watch (late 2026–2027)**
+
+- **IEDM 2026 (December 2026):** further CFET circuit and 2D-channel results, and whether 2D contact resistance closes the gap identified by IMEC.
+- **High-NA qualification:** IMEC's EXE:5200 qualification (targeted Q4 2026), Intel 14A customer commitments (2H 2026–1H 2027), and ASML's Capital Markets Day (10 June 2027).
+- **A16 ramp** and the first yield data on backside direct-contact power delivery.
+- **Hybrid bonding** decisions for HBM4E/HBM5 and adoption of integrated D2W bonders.
+- **CPO scale-up:** COUPE's move into CoWoS, and emerging CPO test standards.
+- **China's EUV prototype:** any independently verified progress toward exposure of patterned wafers.
+- **Quantum advantage claims** expected by end-2026, and progress of SOT-MRAM and FeFET toward foundry embedded-memory offerings.
+
+---
+
 ## Appendix: Key Frontier-Technology Acronyms
 
 - **CFET** — Complementary FET; vertically stacked nMOS/pMOS.
@@ -815,7 +881,7 @@ Underlying every technology in this file is a **human and financial system** tha
 
 **Talent.** The industry faces a widely recognized **talent shortage** — too few engineers and scientists trained in the deep, multidisciplinary skills (device physics, materials science, plasma physics, precision mechanics, computational methods) that frontier semiconductor work requires. The geographic expansion of manufacturing (Files 18) compounds the challenge, as new fabs in the U.S., Japan, and Europe compete for scarce talent. Workforce development has become a strategic priority and a component of the subsidy programs, because no amount of capital can substitute for the human expertise that turns frontier research into manufacturable technology.
 
-**The long game.** Perhaps the most important and least appreciated feature of the research frontier is its **timescale**. The technologies in this file are not next year's products; they are the products of the late 2020s and the 2030s, the result of research begun years ago and development that will continue for years more. High-NA EUV took over a decade from concept to first customer tool. CFET has been in research for years and will not reach volume before the late 2020s. 2D-channel transistors may not reach high volume before the 2030s. This long-horizon character means that the industry's future is, to a significant degree, **already visible** in today's research — the demonstrations at this year's IEDM and VLSI are a genuine preview of the next decade's manufacturing — and that the decisions and investments being made now, in funding, talent, and equipment development, will determine which of these frontiers are realized and by whom.
+**The long game.** Perhaps the most important and least appreciated feature of the research frontier is its **timescale**. The technologies in this file are not next year's products; they are the products of the late 2020s and the 2030s, the result of research begun years ago and development that will continue for years more. High-NA EUV took over a decade from concept to first customer tool. CFET has been in research for years and — per IMEC's 2026 roadmap, which places it around the A7 generation, and TSMC's own 2030s target — will not reach volume before the early 2030s. 2D-channel transistors may not reach high volume before the 2030s. This long-horizon character means that the industry's future is, to a significant degree, **already visible** in today's research — the demonstrations at this year's IEDM and VLSI are a genuine preview of the next decade's manufacturing — and that the decisions and investments being made now, in funding, talent, and equipment development, will determine which of these frontiers are realized and by whom.
 
 This is the ultimate message of the research frontier and of this database as a whole: semiconductor progress is a **long, collaborative, capital- and talent-intensive enterprise**, executed across a global ecosystem over timescales far longer than any product cycle, and increasingly central to economic and geopolitical power. The frontier research surveyed here is where that enterprise reaches furthest into the future — and the equipment industry that builds the tools to manufacture it is, and will remain, at the strategic heart of the most important technology on Earth.
 
@@ -823,7 +889,7 @@ This is the ultimate message of the research frontier and of this database as a 
 
 ## Final Synthesis: Reading the Frontier as a Map of the Future
 
-The twenty-five sections of this file, taken together, constitute a map — not of where the semiconductor industry *is*, but of where it is *going*. Every production technology described in File 15 was, a decade ago, frontier research of exactly the kind surveyed here: the FinFET was a laboratory curiosity before it was Intel 22nm; EUV was a physics experiment before it patterned billions of chips; GAA nanosheets were IMEC demonstrations before they were Samsung SF3 and TSMC N2. The disciplined reader of this file can therefore use it as a forward-looking instrument: the CFET integrations at today's IEDM foreshadow the nodes of the late 2020s; the 300mm 2D-material demonstrations foreshadow the channels of the 2030s; the hybrid-bonding pitch reductions foreshadow the system-of-chiplets that will replace the monolithic SoC; the ferroelectric and spintronic memories foreshadow a more diverse memory hierarchy; and the quantum and neuromorphic devices foreshadow computing paradigms beyond the von Neumann machine.
+The twenty-five sections of this file, taken together, constitute a map — not of where the semiconductor industry *is*, but of where it is *going*. Every production technology described in File 15 was, a decade ago, frontier research of exactly the kind surveyed here: the FinFET was a laboratory curiosity before it was Intel 22nm; EUV was a physics experiment before it patterned billions of chips; GAA nanosheets were IMEC demonstrations before they were Samsung SF3 and TSMC N2. The disciplined reader of this file can therefore use it as a forward-looking instrument: the CFET integrations at today's IEDM foreshadow the nodes of the early 2030s; the 300mm 2D-material demonstrations foreshadow the channels of the 2030s; the hybrid-bonding pitch reductions foreshadow the system-of-chiplets that will replace the monolithic SoC; the ferroelectric and spintronic memories foreshadow a more diverse memory hierarchy; and the quantum and neuromorphic devices foreshadow computing paradigms beyond the von Neumann machine.
 
 What unites them all — and what makes this file part of an *equipment* database rather than merely a device-physics survey — is that each frontier becomes real only when the **manufacturing capability** to build it at scale, at yield, and at acceptable cost is created. The history of the industry is, at bottom, the history of that capability: of the lithography that patterns ever-finer features, the deposition and etch that build and sculpt ever-thinner and more selective layers, the bonding and thinning that integrate ever more in three dimensions, and the metrology that sees and controls it all. The frontier research surveyed here is the frontier of that capability as much as of device physics, and the equipment industry that builds the tools to manufacture it is the indispensable partner of every breakthrough.
 

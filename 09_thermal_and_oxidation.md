@@ -68,7 +68,7 @@ The leading edge has pushed thermal processing in two opposite directions simult
 
 - **Ultra-fast anneal for contact resistance:** the lowest junction series resistance requires maximum dopant activation right at the contact, achieved by microsecond/nanosecond laser anneal that heats only the surface for the briefest possible time.
 - **Low-temperature BEOL processing:** once copper interconnect is present, the thermal budget is capped at roughly 400°C to avoid degrading the metal and low-k dielectrics. Every BEOL deposition, anneal, and cure must respect this ceiling, driving the use of plasma-enhanced and other low-temperature methods.
-- **Even tighter budgets for 3D integration:** in sequential 3D integration and backside power processing, an already-completed bottom device tier must survive the processing of an upper tier or the backside, demanding localized, surface-confined thermal steps (laser, flash) that activate dopants or crystallize films without heating the buried structures. This ultra-low-thermal-budget regime is one of the defining process challenges of CFET and advanced 3D-IC (Files 15 and 23).
+- **Even tighter budgets for 3D integration:** in sequential 3D integration and backside power processing, an already-completed bottom device tier must survive the processing of an upper tier or the backside, demanding localized, surface-confined thermal steps (laser, flash) that activate dopants or crystallize films without heating the buried structures. This ultra-low-thermal-budget regime is one of the defining process challenges of CFET and advanced 3D-IC (Files 15 and 23) — and with backside power now in high-volume manufacturing (Intel 18A with PowerVia since 2025–2026, TSMC A16 to follow), it is a production requirement rather than a research topic.
 - **Selective thermal processing:** localized heating (by laser or other means) that processes only the desired region, leaving the rest of the wafer cool.
 
 The tension between needing high temperature for the best films and junctions, and needing low temperature to protect everything already on the wafer, is one of the enduring balancing acts of advanced manufacturing — and it grows sharper as more of the device is built in three dimensions.
@@ -81,11 +81,12 @@ The tension between needing high temperature for the best films and junctions, a
 |---|---|
 | **Applied Materials (AMAT)** | Broad thermal portfolio spanning RTP, oxidation/nitridation, and the high-value **laser anneal** segment (DSA/Vantage); a leader across thermal processing. |
 | **Tokyo Electron (TEL)** | Strong in **batch furnaces** and thermal processing, especially for memory; broad coater/developer and thermal franchise. |
-| **Kokusai Electric** | A leader in **vertical batch furnaces** and batch ALD/CVD, central to memory manufacturing (3D NAND ONON, DRAM); formerly part of Hitachi. |
+| **Kokusai Electric** | A leader in **vertical batch furnaces** and batch ALD/CVD, central to memory manufacturing (3D NAND ONON, DRAM); formerly part of Hitachi (listed in Tokyo since Oct 2023); reports the No. 1 global revenue share in batch-ALD equipment in 2025 (company claim). |
 | **ASM International** | Furnace and epitaxy/thermal systems, alongside its ALD leadership. |
 | **Centrotherm, SCREEN** | Furnace and thermal-processing suppliers, with Centrotherm also serving solar and power-device markets. |
+| **Naura (China)** | China's leading domestic supplier of oxidation/diffusion and vertical furnaces (plus etch, PVD and other tools); its furnaces are reportedly widely used on SMIC's 28nm lines, and thermal processing is among the most-localized tool categories in China. |
 
-The thermal-processing market is split between the high-throughput **batch-furnace** franchise (dominated by TEL and Kokusai, especially for memory) and the **single-wafer RTP/laser-anneal** franchise (led by Applied Materials), reflecting the two distinct roles thermal plays in the modern fab.
+The thermal-processing market is split between the high-throughput **batch-furnace** franchise (dominated by TEL and Kokusai, especially for memory) and the **single-wafer RTP/laser-anneal** franchise (led by Applied Materials), reflecting the two distinct roles thermal plays in the modern fab. Inside China, Naura has become a major furnace supplier as domestic fabs localize mature-node tool sets.
 
 ---
 
@@ -124,7 +125,7 @@ Laser anneal has become strategically critical precisely because it can deliver 
 
 ### D. Furnace Processing Economics
 
-Batch furnaces remain economically vital in memory manufacturing because the enormous layer counts of 3D NAND (hundreds of ONON pairs) make per-wafer single-wafer processing prohibitively slow for many steps. A vertical batch furnace processing 100+ wafers at once amortizes the long deposition or anneal time across the whole batch, delivering the throughput and cost-per-wafer that commodity memory demands. The trade-off is reduced run-to-run flexibility and longer cycle time per batch, so the industry balances batch (for throughput-critical, less-variable steps) against single-wafer (for control-critical steps) — a balance that varies by application and by manufacturer. **Kokusai Electric and TEL** dominate the batch-furnace market, with their fortunes tied closely to the memory cycle.
+Batch furnaces remain economically vital in memory manufacturing because the enormous layer counts of 3D NAND (hundreds of ONON pairs, with leading-edge products now above 300 layers) make per-wafer single-wafer processing prohibitively slow for many steps. A vertical batch furnace processing 100+ wafers at once amortizes the long deposition or anneal time across the whole batch, delivering the throughput and cost-per-wafer that commodity memory demands. The trade-off is reduced run-to-run flexibility and longer cycle time per batch, so the industry balances batch (for throughput-critical, less-variable steps) against single-wafer (for control-critical steps) — a balance that varies by application and by manufacturer. **Kokusai Electric and TEL** dominate the batch-furnace market, with their fortunes tied closely to the memory cycle.
 
 ### E. Vendor and Technology Summary
 
@@ -137,3 +138,40 @@ Batch furnaces remain economically vital in memory manufacturing because the eno
 | Melt laser anneal | Nanoseconds | Most abrupt junctions, layer-selective 3D | Applied Materials, Sumitomo |
 
 As the industry moves to three-dimensional and backside-processed devices, the premium on **localized, ultra-low-thermal-budget** processing rises, making advanced laser anneal one of the technologies whose strategic importance grows even as classical furnace thermal processing matures — a microcosm of the broader pattern, seen throughout this database, in which the hardest and highest-value problems migrate toward the atomic-scale, three-dimensional frontier.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+### A. A memory-led cycle is good news for batch thermal
+
+Thermal processing — and in particular the vertical batch furnace — is more exposed to memory than almost any other front-end category (Section D of the Extended Analysis), so the shape of the 2026–2027 upcycle matters. SEMI's July 2026 mid-year forecast lifted 2026 total equipment sales to a record $165.9B (+23.2%), with WFE at $143.9B, and Lam Research (21 Oct 2026) preliminarily sees 2027 WFE above $200B with growth led by **DRAM**, then foundry/logic, then NAND. HBM for AI accelerators has driven a sharp DRAM price and capex upturn since late 2025; TrendForce had forecast ~$61.3B of DRAM capex for 2026, and memory spending subsequently ran above that.
+
+| Company | Recent data point | Source / status |
+|---|---|---|
+| Kokusai Electric | FY ended Mar 2026: revenue and profit down YoY (China DRAM normalization) but above revised forecasts; FY ending Mar 2027 revenue growth guided to roughly 20%, with DRAM and logic/foundry equipment sales expected to grow fastest and advanced-packaging tool sales expected to more than double | Secondary summaries of company results; exact figures vary |
+| Tokyo Electron | Record first half of FY2026 (reported); ≥$190B 2027 WFE view (reported) | Press reports |
+| Naura | First-half 2026 sales up ~25% YoY (reported); vertical-furnace shipments reportedly past 1,000 units cumulatively | Press/analyst summaries of company filings |
+
+### B. Technology developments
+
+- **Backside power and 3D integration in production.** Intel 18A (PowerVia) is in high-volume manufacturing and TSMC's A16 (Super Power Rail) is slated for volume production in 2H 2026–2027 (sources differ). Wafer bonding, thinning and backside contact formation impose tight thermal ceilings on all post-bond steps, raising demand for localized laser and low-temperature anneals described in Section 4 and Section C of the Extended Analysis.
+- **2nm GAA ramps.** TSMC N2 (volume since Q4 2025), Intel 18A and Samsung SF2 all use nanosheet stacks whose Si/SiGe superlattices, inner spacers and channel release are sensitive to thermal budget; post-epitaxy thermal steps must avoid Ge interdiffusion between sheets.
+- **Batch ALD and plasma treatment.** Batch ALD furnaces remain central to 3D NAND ONON stacks and DRAM capacitor dielectrics; vendors are adding plasma-assisted batch capability for lower-temperature, higher-quality films.
+- **Advanced packaging.** Thermal steps for hybrid bonding (post-bond anneals at a few hundred °C), polymer cures and wafer-level reflow are a growing niche; Kokusai and others are targeting packaging tools as AI packaging capacity (CoWoS, SoIC, HBM) expands.
+
+### C. Compound semiconductors
+
+The SiC power market was in a digestion phase in 2025–2026 after rapid capacity additions, slowing orders for SiC high-temperature activation furnaces and epitaxy reactors, although the transition to 200mm SiC wafers continues. Gallium export restrictions by China (with the ban on exports to the US paused until 27 Nov 2026 under the trade truce) and sharply higher gallium prices since early 2025 add supply risk for GaN device makers (see File 12 and File 16).
+
+### D. China
+
+China's domestic tool share reached ~35% of equipment used in 2025 (industry-body figure). Thermal processing — oxidation/diffusion furnaces, LPCVD and RTP — is among the most-localized categories, with Naura the leading domestic furnace supplier (its furnaces are reportedly used on more than half of SMIC's 28nm lines). New Chinese capacity is reportedly required to source more than 50% of its tools domestically, which pressures Japanese batch-furnace suppliers' share of the Chinese market even as Chinese demand remains large.
+
+**What to watch (late 2026–2027)**
+
+- Whether DRAM/HBM capex in 2027 lifts batch-furnace and batch-ALD orders to new records.
+- Thermal-budget solutions for TSMC A16 and Intel 14A backside-power flows.
+- Recovery timing for SiC high-temperature thermal equipment.
+- Naura's progress in advanced-node furnace and RTP qualification, and Japanese vendors' China share.
+- Gallium supply and pricing after the 27 Nov 2026 pause date.

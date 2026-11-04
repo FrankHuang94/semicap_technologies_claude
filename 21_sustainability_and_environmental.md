@@ -48,7 +48,7 @@ flowchart LR
 
 ## 1. Energy Intensity
 
-Fabs are extraordinarily energy-hungry. A single leading-edge fab can consume **100–500 MW** of continuous power, and the largest manufacturers consume electricity at national scale: **TSMC alone uses on the order of ~20+ TWh per year**, a significant fraction of Taiwan's total electricity consumption. The energy goes to running thousands of process tools (EUV scanners are notably power-hungry — each can draw on the order of a megawatt), to the enormous HVAC and air-handling systems that maintain cleanroom conditions, to ultrapure-water generation, to vacuum and abatement systems, and to chillers.
+Fabs are extraordinarily energy-hungry. A single leading-edge fab can consume **100–500 MW** of continuous power, and the largest manufacturers consume electricity at national scale: **TSMC alone uses on the order of ~25–30 TWh per year** (one 2026 analysis put its 2025 use at ~28.8 TWh, and press reports put it near a tenth of Taiwan's total electricity consumption), and its demand keeps rising with the 2nm and advanced-packaging build-out. The energy goes to running thousands of process tools (EUV scanners are notably power-hungry — each can draw on the order of a megawatt), to the enormous HVAC and air-handling systems that maintain cleanroom conditions, to ultrapure-water generation, to vacuum and abatement systems, and to chillers.
 
 Energy intensity is often measured in **kWh per wafer start** or per unit of silicon area, and it has risen at advanced nodes because each node adds process steps, more energy-intensive tools (EUV, more etch/deposition), and more stringent cleanroom requirements. This rising energy intensity per wafer, multiplied by growing wafer volumes, makes the industry's total energy footprint a growing concern and a major driver of its carbon emissions.
 
@@ -58,7 +58,7 @@ Energy intensity is often measured in **kWh per wafer start** or per unit of sil
 
 Semiconductor manufacturing requires immense quantities of **ultrapure water (UPW)** — water purified far beyond drinking standards (resistivity >18.2 MΩ·cm, total organic carbon <0.5 ppb) — used for rinsing wafers hundreds of times during fabrication. A large fab can consume **tens of millions of liters of water per day**. UPW is generated on-site through multi-stage purification (reverse osmosis, electrodeionization, UV treatment, membrane degasification) that is itself energy- and resource-intensive (File 24).
 
-Water is a particular vulnerability because fabs are often located in water-stressed regions. **TSMC's Taiwan operations faced a severe drought in 2021** that threatened production and required water to be trucked in, vividly illustrating the risk. In response, manufacturers pursue aggressive **water recycling and reclamation** — TSMC targets recycling rates exceeding **60%** and is building water-reclamation plants — and water sourcing has become a central siting consideration (e.g., **TSMC Arizona's** water strategy in the arid Southwest). Water stewardship is now a key ESG metric and operational priority.
+Water is a particular vulnerability because fabs are often located in water-stressed regions. **TSMC's Taiwan operations faced a severe drought in 2021** that threatened production and required water to be trucked in, vividly illustrating the risk. In response, manufacturers pursue aggressive **water recycling and reclamation** — TSMC targets recycling rates exceeding **60%** and is building water-reclamation plants — and water sourcing has become a central siting consideration (e.g., **TSMC Arizona's** water strategy in the arid Southwest, where TSMC broke ground in August 2025 on an industrial water-reclamation plant designed for near-zero liquid discharge, expected to be fully operational around 2028). Water stewardship is now a key ESG metric and operational priority.
 
 ---
 
@@ -77,7 +77,7 @@ SemiCap manufacturers and OEMs increasingly report and target reductions across 
 - **Scope 2** — purchased electricity (the largest component for most fabs, given their enormous power consumption).
 - **Scope 3** — value-chain emissions (suppliers, materials, product use).
 
-Because Scope 2 dominates, **renewable-electricity procurement** is the most powerful lever. **TSMC has committed to RE100** (100% renewable electricity) with net-zero targets, and is one of the world's largest corporate renewable-energy purchasers; Intel, Samsung, and the major OEMs (ASML, Applied, Lam) have made similar net-zero and renewable commitments. The challenge is acute in regions (like Taiwan) where renewable supply is limited relative to the industry's massive demand, making renewable procurement both a sustainability and a supply-security issue.
+Because Scope 2 dominates, **renewable-electricity procurement** is the most powerful lever. **TSMC has committed to RE100** (100% renewable electricity, a target pulled forward to 2040, with an interim 60% goal for 2030) with net-zero targets — renewables reached ~20% of its company-wide electricity use in 2025, per its sustainability report — and is one of the world's largest corporate renewable-energy purchasers; Intel, Samsung, and the major OEMs (ASML, Applied, Lam) have made similar net-zero and renewable commitments. The challenge is acute in regions (like Taiwan) where renewable supply is limited relative to the industry's massive demand, making renewable procurement both a sustainability and a supply-security issue.
 
 ---
 
@@ -96,7 +96,8 @@ Fabs generate large volumes of hazardous **liquid and gaseous waste** requiring 
 ## 7. Regulatory Landscape
 
 The industry operates under a thickening web of environmental regulation:
-- **EU REACH** — governing chemical registration, evaluation, and authorization, with growing **PFAS restrictions** that directly affect semiconductor materials.
+- **EU REACH** — governing chemical registration, evaluation, and authorization, with growing **PFAS restrictions** that directly affect semiconductor materials (the proposed universal PFAS restriction reached ECHA committee opinions in March 2026; see the 2025–2026 update below).
+- **EU F-gas Regulation (EU) 2024/573** — in force since March 2024, tightening the phase-down of fluorinated gases, with specific derogations relevant to semiconductor manufacturing.
 - **PFAS regulation** in the U.S. (EPA) and elsewhere, an emerging and potentially disruptive constraint.
 - **SEMI S2/S8 safety standards** — industry standards for equipment safety and ergonomics that intersect with environmental design.
 - **Local air, water, and waste permits** governing each fab's emissions and discharges, increasingly stringent in many jurisdictions.
@@ -135,7 +136,7 @@ Unlike carbon (a global problem), water is intensely **local**: a fab's water us
 
 ### D. The PFAS Dilemma
 
-**PFAS ("forever chemicals")** present a genuinely difficult challenge. Certain PFAS compounds are used across semiconductor manufacturing — in some photoresists and anti-reflective coatings, in fluoropolymer components (PTFE/PFA fluid-handling parts, File 20), in certain etch and cleaning chemistries, and in heat-transfer fluids. Tightening PFAS regulation (EU REACH restrictions, U.S. EPA action) could disrupt supply, and for some critical applications **there is currently no qualified non-PFAS substitute**. The industry is working to identify replacements and to argue for essential-use exemptions where alternatives do not exist, while regulators weigh environmental and health concerns against the strategic importance of semiconductor manufacturing. This tension — between environmental regulation and manufacturing necessity — is among the more challenging near-term sustainability issues and one without an easy resolution.
+**PFAS ("forever chemicals")** present a genuinely difficult challenge. Certain PFAS compounds are used across semiconductor manufacturing — in some photoresists and anti-reflective coatings, in fluoropolymer components (PTFE/PFA fluid-handling parts, File 20), in certain etch and cleaning chemistries, and in heat-transfer fluids. Tightening PFAS regulation (EU REACH restrictions, U.S. EPA action) could disrupt supply — although the EU process has moved more slowly than first feared, with the earliest bans now not expected before late 2028 — and for some critical applications **there is currently no qualified non-PFAS substitute**. The industry is working to identify replacements and to argue for essential-use exemptions where alternatives do not exist, while regulators weigh environmental and health concerns against the strategic importance of semiconductor manufacturing. This tension — between environmental regulation and manufacturing necessity — is among the more challenging near-term sustainability issues and one without an easy resolution.
 
 ### E. The Net Ledger and the Equipment Role
 
@@ -156,3 +157,49 @@ The equipment industry has a **decisive role** in the decoupling challenge, beca
 ### C. Sustainability as Strategic and Competitive
 
 Environmental performance has moved from a peripheral concern to a **strategic and competitive** factor across the industry, driven by several forces. **Customers** — the large technology companies buying chips — increasingly demand low-carbon supply chains and count semiconductor emissions in their own Scope 3 targets, pressuring manufacturers to decarbonize, who in turn pressure their equipment and materials suppliers. **Investors** weigh ESG performance in valuation and capital allocation. **Regulators** constrain emissions, water use, and chemicals (REACH, PFAS rules, F-GHG targets), with the PFAS challenge (Section D above) particularly difficult. **Operational resilience** — especially water and energy security — directly affects production continuity, as the Taiwan drought showed. And **talent** increasingly considers an employer's environmental record. These forces make sustainability a genuine competitive and strategic dimension, not a compliance afterthought, and they are driving real investment — in renewable energy (TSMC's RE100 commitment and massive renewable procurement), water recycling (60–90%+ reclaim targets), abatement, and efficient tools. The deepest framing is the **net ledger**: semiconductors enable enormous downstream environmental savings (efficient power electronics, AI-optimized energy systems, electrified transport) but are costly to manufacture, so the imperative is to maximize the enabled savings while minimizing the manufacturing impact — a balance in which the equipment industry, through the efficiency and environmental performance of its tools, plays a central and growing role. Reconciling the industry's necessary growth with environmental responsibility is one of the defining challenges of its future, and one in which the collective choices of the equipment, materials, and manufacturing players will determine whether the industry's footprint grows with its output or is progressively decoupled from it.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+### A. AI-driven growth makes decoupling harder
+
+The decoupling challenge described above became sharper in 2025–2026. SEMI's July 2026 mid-year forecast put 2026 total equipment sales at a record **$165.9B** (+23.2%), with OEMs such as Lam Research now preliminarily expecting 2027 WFE above $200B, driven by AI accelerators, HBM/DRAM and the 2nm ramp. Every additional fab, EUV tool and advanced-packaging line adds load on power grids and water systems, and in October 2026 Lam even flagged **cleanroom space** as a potential constraint on industry output — a reminder that physical infrastructure, including utilities, is now a gating factor.
+
+### B. Energy — Taiwan's grid becomes a strategic issue
+
+| Indicator (Taiwan) | Figure | Source (as reported) |
+|---|---|---|
+| Semiconductor-industry electricity use, Sep 2026 | >4.5 billion kWh in a single month (first time) | Focus Taiwan, Oct 2026 |
+| Semiconductor-industry use, full-year 2026 | Forecast to exceed ~50 TWh | Taiwan Research Institute, via Focus Taiwan |
+| Semiconductor share of national consumption | ~17% (2026) → ~24% (2030) → ~30% (2035) | Taipower internal assessment, per TrendForce |
+| TSMC renewable share of electricity, 2025 | ~20.1% company-wide; ~11.4% at Taiwan fabs; overseas sites 100% | TSMC 2025 Sustainability Report |
+| TSMC renewable targets | 60% by 2030 (RE60), 100% by 2040 (RE100) | TSMC |
+
+Taiwan's Ministry of Economic Affairs raised its national power-demand growth forecast for 2026–2035 to about 2.5% a year (from 1.7%), and Taipower said it was reassessing its power-development plans to accommodate semiconductor and AI data-center load. Advocacy analyses argue that TSMC could still face a renewable-supply shortfall of more than 10 TWh by 2030 even if its contracted portfolio is delivered; this is an outside estimate, not a company figure. The practical consequence for equipment makers is growing customer emphasis on **idle-mode power reduction, efficient vacuum/RF/thermal subsystems and fab-level energy management** — increasingly using the AI and digital-twin tools covered in [File 22](22_ai_and_ml_in_semicap.md).
+
+### C. Water — reclamation scales up, scrutiny rises
+
+- **TSMC Arizona** broke ground in August 2025 on a ~15-acre industrial water-reclamation plant in north Phoenix designed for near-zero liquid discharge. Per company statements, it will initially recycle about **85%** of wastewater (goal 90%) and cut the first fab's net water draw from ~4.75 million to under ~1.2 million gallons per day; full operation is expected around **2028**.
+- Local reporting in July–August 2026 noted that TSMC's expanded Phoenix plans could make it the **city's largest water customer**, illustrating how water stewardship has become a licence-to-operate issue for new US fabs.
+
+### D. PFAS — the EU restriction advances, slowly
+
+- On **26 March 2026** ECHA's Risk Assessment Committee (RAC) published its final opinion and the Socio-Economic Analysis Committee (SEAC) its draft opinion on the EU **universal PFAS restriction**, supporting an EU-wide restriction with **time-limited derogations**. The earliest bans are not expected before **late 2028**.
+- Semiconductors were the largest named sector among commenters, arguing that fluoropolymer fluid-handling parts, certain photoresist components and heat-transfer fluids lack qualified substitutes. The supply side has also shifted: 3M had announced its exit from PFAS manufacturing by end-2025, pushing fabs and tool makers to requalify alternative heat-transfer fluids and fluoropolymer sources.
+
+### E. F-gases and emissions reporting
+
+- **EU F-gas Regulation (EU) 2024/573** is now being implemented; Commission Implementing Regulation **(EU) 2026/286** (adopted 11 Feb 2026) grants an exemption for certain chillers used in semiconductor manufacturing, applying from 1 Jan 2027 to 31 Dec 2029. SEMI Europe has warned that servicing restrictions on F-gas-containing equipment could prematurely obsolete installed tools.
+- In the **United States**, the EPA proposed in 2025 to rescind most of the Greenhouse Gas Reporting Program; a February 2026 final rule only moved the reporting-year-2025 deadline to 30 Oct 2026, with the rest of the proposal pending. If finalized, public facility-level reporting of fab F-GHG emissions (Subpart I) could lapse, shifting transparency onto voluntary corporate disclosure and customer Scope 3 requirements.
+
+### F. Implications for equipment makers
+
+Despite regulatory crosscurrents, customer pressure has not eased: the hyperscalers buying AI chips still count semiconductor manufacturing in their Scope 3 inventories, and fabs increasingly specify energy, abatement and chemical-utilization performance in tool procurement. Abatement destruction efficiency, remote-plasma clean utilization, low-GWP etch chemistries and refurbishable designs therefore remain competitive differentiators.
+
+**What to watch (late 2026–2027)**
+
+- The SEAC final opinion and the European Commission's draft PFAS restriction text, including the scope and length of semiconductor derogations.
+- Whether the EPA finalizes the rescission of GHG reporting, and how fabs respond in voluntary disclosure.
+- Taiwan's power-supply plans (renewables, gas, and the nuclear debate) versus a semiconductor load heading toward a quarter of national demand.
+- Commissioning of large water-reclamation plants (TSMC Arizona, Taiwan) and whether new US and Japanese fabs meet water and energy commitments as 2027 capacity ramps.

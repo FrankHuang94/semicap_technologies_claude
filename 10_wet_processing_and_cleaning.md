@@ -109,11 +109,13 @@ Resist strip must be complete (any residue causes defects) yet gentle (it must n
 | **SCREEN Semiconductor Solutions (Japan)** | The **dominant single-wafer wet-clean supplier**, with a particularly strong position in Japan and globally; wet processing is core to SCREEN's identity. |
 | **Tokyo Electron (TEL)** | A major clean and surface-preparation supplier, with strong single-wafer and batch clean platforms integrated with its broad process portfolio. |
 | **Lam Research** | Strong in clean and surface preparation (including the former SEZ single-wafer clean business and Da Vinci platforms), tightly coupled to its etch and deposition franchises. |
-| **Akrion, Modutek** | Specialist wet-process and wet-bench suppliers. |
+| **Akrion, Modutek** | Specialist wet-process and wet-bench suppliers (Akrion's wet-processing business was acquired by China's Naura in 2018). |
+| **ACM Research (US/China)** | Fast-growing single-wafer and batch clean supplier (SAPS/TEBO megasonic cleaning, SPM tools) with most operations and customers in mainland China; by 2026 its growth was being driven more by electroplating (ECP) and advanced-packaging tools than by cleaning. |
+| **Naura (China)** | Broad-line Chinese equipment maker whose portfolio includes batch and single-wafer cleaning, benefiting from China's domestic-tool localization push. |
 | **MKS Instruments** | Supplies cleaning and surface-prep subsystems and chemistries (including through its acquisitions), and remote-plasma sources. |
 | **Semes (Korea)** | Samsung-affiliated wet-clean and process-equipment supplier serving the Korean memory industry. |
 
-The wet-clean market is notable for the strength of Japanese (SCREEN, TEL) and Korean (Semes) suppliers, reflecting the deep process know-how and customer relationships that cleaning — an unglamorous but yield-critical discipline — rewards.
+The wet-clean market is notable for the strength of Japanese (SCREEN, TEL) and Korean (Semes) suppliers, reflecting the deep process know-how and customer relationships that cleaning — an unglamorous but yield-critical discipline — rewards. Cleaning is also one of the tool categories where Chinese suppliers (ACM Research, Naura and others) have made the most progress in their home market, as Chinese fabs localize equipment purchasing (see the 2025–2026 update below).
 
 ---
 
@@ -125,6 +127,7 @@ The cleaning roadmap is defined by the imperative of **doing more cleaning, more
 - **EUV post-develop inspection and cleaning:** EUV's stochastic defects and thin resists demand specialized post-develop cleaning and inspection to remove defect-related residues without damaging the pattern.
 - **Low-temperature resist strip and clean:** the spread of 3D integration and temperature-sensitive materials demands resist strip and cleaning at the lowest possible temperatures to protect already-formed structures.
 - **New-material compatibility:** ruthenium, molybdenum, cobalt, high-k, and 2D channel materials each require cleaning chemistries that remove residue without corroding or damaging the new material — a continual co-development challenge as the materials set expands.
+- **Hybrid-bonding surface preparation:** die-to-wafer and wafer-to-wafer hybrid bonding (File 11) requires bonding surfaces that are essentially particle-free and atomically smooth, because a single particle creates a bonding void; post-CMP cleaning, plasma activation and surface preparation are increasingly sold integrated with the bonder itself.
 - **Pattern-collapse mitigation:** as aspect ratios climb further (3D NAND toward 1000 layers, taller capacitors and nanosheet stacks), supercritical and surface-tension-free drying methods become ever more essential.
 
 Cleaning thus exemplifies a recurring theme of this database: a process that appears mundane and mature is, at the leading edge, a continually innovating, yield-critical enabler — performed hundreds of times per wafer, and increasingly the difference between a working chip and a scrapped one.
@@ -174,3 +177,53 @@ Cleaning illustrates, perhaps better than any other step, the **co-development b
 ### C. The Cleaning Roadmap Reprised
 
 The cleaning roadmap, reprised, is defined by the imperative of doing **more cleaning, more gently, on more fragile and more diverse structures and materials** — a set of demands that intensifies at every node. Damage-free cleaning for fragile sub-2nm structures and delicate nanosheet stacks; EUV-specific post-develop cleaning that removes stochastic-defect-related residues without damaging thin resists; low-temperature resist strip and cleaning to protect the temperature-sensitive structures of three-dimensional integration; pattern-collapse-free drying (Marangoni and supercritical-CO₂) for ever-higher aspect ratios; and new-material-compatible chemistries for cobalt, ruthenium, molybdenum, high-k, ferroelectrics, and 2D channels — together these define a roadmap in which cleaning, far from being a solved and mundane step, is a continually innovating, yield-critical enabler. The deep process know-how this rewards — the accumulated learning about how to clean each material and structure thoroughly yet gently, hundreds of times per wafer, without damaging the increasingly delicate device — constitutes a durable competitive moat for the wet-clean leaders, and it ensures that cleaning, the humblest and most frequently repeated of process steps, remains an essential and continually advancing pillar of the semiconductor manufacturing enterprise, every bit as critical to yield as the more glamorous steps that build the device up.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+### Market backdrop: cleaning rides a DRAM-led, AI-driven upcycle
+
+Cleaning demand scales with the number of process steps and the number of wafers started, so it tracks overall wafer fab equipment (WFE) spending closely. Per SEMI's July 2026 mid-year forecast, total equipment sales are expected to reach about **$165.9B in 2026 (+23.2%)**, with WFE at about **$143.9B**; company views published in the October 2026 earnings season were higher still (Lam Research sees CY2026 WFE in the mid-$150B range and, preliminarily, more than $200B in 2027). Lam described the growth as led by **DRAM**, then foundry/logic, then NAND. That mix favors cleaning: DRAM capacitor and HBM-related flows are clean-intensive, and the ramp of 2nm-class gate-all-around (GAA) nodes (TSMC N2 in volume since Q4 2025, Intel 18A, Samsung SF2) adds many delicate nanosheet-release, inner-spacer and selective-etch/clean steps.
+
+### Vendor results: a mixed picture beneath the headline growth
+
+- **SCREEN** (fiscal year ended March 2026): per summaries of its May 2026 results, sales in the semiconductor production equipment segment were roughly **¥486B**, down from about ¥520B a year earlier. DRAM-related equipment and post-sales service grew while foundry-related equipment declined; by region, sales to Taiwan rose while sales to China and the US fell. SCREEN remains widely described as the world's largest single-wafer cleaning supplier.
+- **ACM Research** raised its full-year 2026 revenue guidance in August 2026 to **$1.125–1.175B** (25–30% growth) and on 28 Oct 2026 pre-announced Q3 2026 revenue of **$360–365M** (+34–36% YoY), with full results due 5 Nov 2026. Notably, management said growth in the first half of 2026 came from electroplating (ECP) and advanced-packaging tools while **single-wafer cleaning sales declined**; newer SPM (sulfuric-peroxide) cleaning products had shipped but contributed little revenue pending customer acceptance.
+- **TEL and Lam Research** continue to bundle clean and surface-preparation steps with their etch and deposition franchises; Lam's 2025 introduction of molybdenum ALD (ALTUS Halo) for metallization adds another metal that post-etch and post-CMP cleans must handle without corrosion or excessive loss.
+
+### China: cleaning is a leading localization category
+
+Domestic tools accounted for roughly **35%** of equipment used in Chinese fabs in 2025 (an industry-body figure, up from ~25% in 2024), and new capacity is reportedly required to source more than half of its tools domestically. Cleaning is commonly cited as one of the categories where Chinese suppliers (ACM Research's Shanghai operation, Naura and others) are furthest along, in contrast to lithography (<5% localized). This shift is one reason the sales of Japanese cleaning leaders into China softened in FY2026, even as overall China equipment demand remained substantial.
+
+### Hybrid bonding pulls cleaning into the packaging line
+
+The most visible new application is **surface preparation for hybrid bonding**, where any particle or residue on the copper/dielectric bonding surface creates a void:
+
+- Applied Materials and Besi's **Kinex** die-to-wafer hybrid-bonding system (launched October 2025) integrates surface preparation, bonding and metrology in one tool — a sign that chipmakers want cleaning and activation tightly coupled to the bonder.
+- **SUSS MicroTec** introduced the **XBC300 Gen2 SP** surface-preparation cluster for hybrid bonding in 2026, and ULVAC presented downstream-plasma cleaning/activation for hybrid bonding at a 2026 industry symposium (reported).
+- For HBM, JEDEC's decision to raise the HBM4 package-height limit to 775 µm eased the immediate need for hybrid bonding; SK hynix said at Hot Chips 2026 that hybrid bonding is not ready for HBM4E and would come with HBM5 at the earliest, while Samsung is reportedly more aggressive. The timing of hybrid bonding in HBM is therefore a key swing factor for packaging-line cleaning demand.
+
+### Sustainability and chemical supply
+
+- **PFAS:** On 26 Mar 2026 ECHA's RAC published its final opinion and SEAC its draft opinion supporting an EU-wide PFAS restriction with time-limited derogations; earliest bans are not expected before late 2028. Wet-process tools rely heavily on fluoropolymer wetted parts (PFA/PTFE tubing, tanks, valves) and some fluorinated chemistries, so derogation scope matters directly to wet-clean OEMs and fabs. Semiconductors were the largest named commenting sector.
+- **Water and chemicals:** Cleaning is the fab's largest consumer of ultrapure water and high-purity chemicals; single-wafer dispense efficiency, chemical recycling and water reclaim remain differentiators as new fabs in Arizona, Japan, Korea and Europe face local water constraints.
+
+### Key datapoints
+
+| Item | Datapoint | Source / status |
+|---|---|---|
+| 2026 WFE | ~$143.9B | SEMI mid-year forecast, Jul 2026 |
+| 2026 WFE (company view) | mid-$150B range; >$200B in 2027 (prelim.) | Lam Research, 21 Oct 2026 |
+| SCREEN SPE segment sales, FY to Mar 2026 | ~¥486B (vs ~¥520B) | Results summaries, May 2026 |
+| ACM Research 2026 revenue guide | $1.125–1.175B | Raised Aug 2026 |
+| ACM Research Q3 2026 revenue (prelim.) | $360–365M | Pre-announced 28 Oct 2026 |
+| China domestic-tool share | ~35% (2025) | Industry-body figure |
+| EU PFAS restriction | RAC final / SEAC draft opinions | Published 26 Mar 2026 |
+
+**What to watch (late 2026–2027)**
+- Whether DRAM- and HBM-led WFE growth in 2027 translates into a cleaning upcycle for SCREEN, TEL and Semes, and whether foundry-related cleaning recovers with the 2nm/A16 ramps.
+- Customer acceptance and revenue recognition of ACM Research's new SPM tools, and further localization of cleaning in China.
+- Hybrid-bonding adoption timing in HBM (HBM4E vs HBM5) and logic SoIC, which determines demand for integrated surface-preparation tools.
+- Cleaning chemistries for molybdenum and ruthenium metallization and for backside-power (A16, 18A) process flows.
+- The final EU PFAS restriction text and the scope of semiconductor derogations.

@@ -15,7 +15,7 @@ Memory manufacturing follows a different logic from logic manufacturing. Where l
    ══ word line (W) ══ │ ░ │ ══ word line ══       ░ = vertical channel
    ══ word line (W) ══ │ ░ │ ══ word line ══           (poly-Si + ONO charge trap)
    ══ word line (W) ══ │ ░ │ ══ word line ══
-        ...  100s of stacked layers (96 → 300+)  ...
+        ...  100s of stacked layers (96 → 300+ → 400+)  ...
    One HAR channel-hole etch (AR > 60:1) defines the whole tower.
 ```
 
@@ -37,7 +37,8 @@ timeline
     64-96L : mid 2010s
     128-176L : ~2020
     232L : ~2022
-    300L+ : 2024+ (string-stacked)
+    300L+ : 2024-2026 (string-stacked, volume)
+    400L+ : 2026+ (wafer-bonded, ramp/development)
 ```
 
 **The two memory scaling paradigms drive different equipment**
@@ -56,7 +57,7 @@ flowchart TB
 
 ### Architecture Evolution
 
-NAND flash stores data as charge trapped in memory cells. When planar (2D) NAND scaling hit its limits around 2013 (cells became too small to hold enough electrons reliably), the industry pivoted to building **vertically** — stacking memory cells in towers and addressing the third dimension. This **3D NAND** architecture has scaled not by shrinking features in the plane, but by **adding layers**: from 24 and 32 in the first generations, through 64, 96, 128, 176, 232, and now toward **300+ layers**, with the highest counts achieved by **string stacking** (fabricating two or more separate stacks and connecting them vertically). Adding layers increases bit density without requiring finer lithography — a fundamentally different scaling paradigm from logic.
+NAND flash stores data as charge trapped in memory cells. When planar (2D) NAND scaling hit its limits around 2013 (cells became too small to hold enough electrons reliably), the industry pivoted to building **vertically** — stacking memory cells in towers and addressing the third dimension. This **3D NAND** architecture has scaled not by shrinking features in the plane, but by **adding layers**: from 24 and 32 in the first generations, through 64, 96, 128, 176, 232, and now **300+ layers** in volume production (SK hynix's 321-layer NAND had become its largest NAND node by mid-2026, per its July 2026 results), with **400+ layer** generations in ramp or development; the highest counts are achieved by **string stacking** (fabricating two or more separate stacks and connecting them vertically) and, increasingly, by **wafer bonding** a separately built CMOS periphery wafer to the cell-array wafer. Adding layers increases bit density without requiring finer lithography — a fundamentally different scaling paradigm from logic.
 
 ### Defining Process Steps and Equipment
 
@@ -83,7 +84,7 @@ DRAM stores each bit as charge on a tiny capacitor, accessed by a single transis
 - **Capacitor dielectric ALD:** the capacitor is lined with a high-k dielectric stack — historically **ZrO₂/Al₂O₃/ZrO₂ (ZAZ)** and increasingly more advanced high-k materials — deposited by ALD with perfect conformality over the enormous aspect ratio, with a **TiN electrode**. Maximizing capacitance while minimizing leakage in an ever-smaller cell is the core DRAM materials challenge.
 - **Advanced cell transistors:** to control leakage and short-channel effects, DRAM access transistors have evolved through **RCAT (Recessed-Channel Array Transistor)** and **saddle-fin** structures, and the industry is moving toward **vertical-channel and 3D DRAM** in coming generations.
 - **Metal interconnect:** DRAM increasingly adopts **Ru, Co, and Mo** for tight-pitch metal layers, mirroring logic's interconnect transition.
-- **EUV adoption:** DRAM was the first memory to insert EUV. **SK Hynix** led with EUV in its 1a/1b nm-class DRAM, and Samsung and Micron have followed, using EUV to pattern the most critical layers and simplify multi-patterning. This has made advanced DRAM a meaningful EUV customer alongside leading-edge logic.
+- **EUV adoption:** DRAM was the first memory to insert EUV. **SK Hynix** led with EUV in its 1a/1b nm-class DRAM, and Samsung and Micron have followed (Micron's first EUV node is 1γ), using EUV to pattern the most critical layers and simplify multi-patterning. At the 1c (sixth-generation 10nm-class) node now ramping in 2025–2026, SK hynix and Samsung reportedly use five or more EUV layers, while Micron has kept EUV use minimal and relied more on ArF-immersion multi-patterning. This has made advanced DRAM a meaningful EUV customer alongside leading-edge logic.
 
 DRAM's equipment intensity spans **lithography (now including EUV), HAR capacitor etch, high-k ALD, and precise deposition/CMP** — a more litho-heavy mix than NAND.
 
@@ -108,7 +109,7 @@ The memory industry is highly consolidated:
 | Memory | Major manufacturers |
 |---|---|
 | **DRAM** | Samsung, SK Hynix, Micron (the "big three," ~95% of the market); CXMT (China, emerging) |
-| **3D NAND** | Samsung, SK Hynix (which acquired Intel's NAND business, now Solidigm), Kioxia/Western Digital (JV), Micron; YMTC (China, emerging) |
+| **3D NAND** | Samsung, SK Hynix (which acquired Intel's NAND business, now Solidigm), Kioxia/Sandisk (JV; Sandisk was spun off from Western Digital in Feb 2025), Micron; YMTC (China, emerging) |
 | **Emerging/embedded** | Samsung, TSMC, GlobalFoundries, Infineon, plus specialists (Everspin, Weebit Nano) |
 
 This concentration means that the capital-spending decisions of a handful of companies drive the entire memory-equipment market — and because memory is a commodity prone to violent price cycles, that spending swings dramatically, making memory the most cyclical driver of WFE demand.
@@ -121,7 +122,7 @@ Memory's equipment-spend profile differs markedly from logic:
 
 - **3D NAND** is dominated by **deposition (batch ALD/CVD for the ONON stack) and HAR etch and tungsten fill** — making Lam Research (etch and metal fill), Applied Materials, TEL, and Kokusai especially memory-exposed. Lithography is comparatively light (the regular array patterns are forgiving), which is why **nanoimprint lithography (Canon)** is being explored for NAND. CMP and clean are also intensive.
 - **DRAM** is more **lithography-intensive** (now including EUV from ASML), alongside HAR capacitor etch and high-k ALD; it thus spreads spending across ASML, Lam, TEL, Applied, and the ALD specialists.
-- **Spend cyclicality:** memory capex is the most volatile component of WFE. When DRAM and NAND prices spike (as in 2017–2018 and the AI-driven HBM boom), memory makers surge investment; when prices crash, they slash capex almost overnight, driving the boom-bust pattern that ripples through the entire equipment industry.
+- **Spend cyclicality:** memory capex is the most volatile component of WFE. When DRAM and NAND prices spike (as in 2017–2018, the AI-driven HBM boom, and the DRAM-led 2025–2026 upcycle), memory makers surge investment; when prices crash, they slash capex almost overnight, driving the boom-bust pattern that ripples through the entire equipment industry.
 
 The **HBM boom** deserves special mention: the AI-driven demand for high-bandwidth memory has made advanced DRAM and its **TSV/stacking/bonding** processes a major growth driver, pulling memory makers (especially SK Hynix and Samsung) into heavy investment in both advanced DRAM and the advanced-packaging equipment (File 11) needed to stack it. HBM has, for the first time in years, made memory a leading-edge-technology story rather than purely a commodity-cost story — and has correspondingly reshaped memory-maker equipment spending toward the most advanced deposition, etch, lithography, and bonding tools.
 
@@ -145,7 +146,7 @@ DRAM's central challenge is storing enough charge in an ever-smaller cell to rel
 
 ### D. HBM — Memory Meets Advanced Packaging
 
-The AI boom has made **High-Bandwidth Memory (HBM)** the most important growth story in memory, and HBM is as much an **advanced-packaging** story as a memory story. An HBM stack comprises 8–16 DRAM dies connected vertically by **through-silicon vias (TSVs)** and **micro-bumps** (transitioning to **hybrid bonding** for HBM4), mounted beside logic on a silicon interposer (CoWoS, File 11). Manufacturing HBM therefore requires not only advanced DRAM but the **TSV formation, wafer thinning, stacking, and bonding** equipment of advanced packaging — drawing the memory makers (especially SK Hynix, the HBM leader, and Samsung and Micron) into heavy investment in both advanced DRAM and packaging equipment. HBM has, for the first time in years, made memory a leading-edge-technology and capacity-constrained story rather than purely a commodity-cost story, and it has reshaped memory-maker equipment spending toward the most advanced deposition, etch, lithography, TSV, thinning, and bonding tools. The competition to lead in HBM (where yield and stacking capability are decisive) is one of the defining battles in the current memory industry.
+The AI boom has made **High-Bandwidth Memory (HBM)** the most important growth story in memory, and HBM is as much an **advanced-packaging** story as a memory story. An HBM stack comprises 8–16 DRAM dies connected vertically by **through-silicon vias (TSVs)** and **micro-bumps** (HBM4, in mass production in 2026, still uses MR-MUF/TC bonding after JEDEC relaxed the package height limit to 775 µm; **hybrid bonding** is now expected from HBM4E or HBM5), mounted beside logic on a silicon interposer (CoWoS, File 11). Manufacturing HBM therefore requires not only advanced DRAM but the **TSV formation, wafer thinning, stacking, and bonding** equipment of advanced packaging — drawing the memory makers (especially SK Hynix, the HBM leader, and Samsung and Micron) into heavy investment in both advanced DRAM and packaging equipment. HBM has, for the first time in years, made memory a leading-edge-technology and capacity-constrained story rather than purely a commodity-cost story, and it has reshaped memory-maker equipment spending toward the most advanced deposition, etch, lithography, TSV, thinning, and bonding tools. The competition to lead in HBM (where yield and stacking capability are decisive) is one of the defining battles in the current memory industry.
 
 ### E. Emerging Memory and the Equipment Implication
 
@@ -161,8 +162,61 @@ The defining economic feature of mainstream memory (DRAM and NAND) is its **comm
 
 ### B. How HBM Broke the Commodity Pattern
 
-The rise of **High-Bandwidth Memory (HBM)** for AI has, for the first time in years, partly broken memory's pure-commodity pattern and transformed the memory landscape. Unlike commodity DRAM, HBM is a **differentiated, high-value, capacity-constrained, technology-intensive product**: it requires advanced DRAM plus sophisticated 3D stacking (TSVs, micro-bumps moving to hybrid bonding), the yield and stacking capability are decisive competitive differentiators, and demand (driven by AI accelerators) has outstripped supply, supporting premium pricing. This has several profound effects. It has made **SK Hynix** (the HBM leader) a standout beneficiary of the AI boom and intensified competition with Samsung and Micron to lead in HBM. It has pulled memory makers into heavy investment in both advanced DRAM and the **advanced-packaging equipment** (TSV, thinning, stacking, bonding — File 11) that HBM requires, expanding their equipment spending beyond the traditional memory toolset. And it has, for the first time in years, made memory a **leading-edge-technology and capacity story** rather than purely a commodity-cost story, partly decoupling a meaningful slice of memory demand from the commodity cycle. HBM's transformation of memory — from interchangeable commodity to differentiated, AI-driven, packaging-intensive product — is one of the most important developments in the recent memory industry, and it has reshaped both the competitive dynamics among the memory makers and the equipment demand they generate.
+The rise of **High-Bandwidth Memory (HBM)** for AI has, for the first time in years, partly broken memory's pure-commodity pattern and transformed the memory landscape. Unlike commodity DRAM, HBM is a **differentiated, high-value, capacity-constrained, technology-intensive product**: it requires advanced DRAM plus sophisticated 3D stacking (TSVs, micro-bumps, with hybrid bonding expected in later HBM generations), the yield and stacking capability are decisive competitive differentiators, and demand (driven by AI accelerators) has outstripped supply, supporting premium pricing. This has several profound effects. It has made **SK Hynix** (the HBM leader) a standout beneficiary of the AI boom and intensified competition with Samsung and Micron to lead in HBM. It has pulled memory makers into heavy investment in both advanced DRAM and the **advanced-packaging equipment** (TSV, thinning, stacking, bonding — File 11) that HBM requires, expanding their equipment spending beyond the traditional memory toolset. And it has, for the first time in years, made memory a **leading-edge-technology and capacity story** rather than purely a commodity-cost story, partly decoupling a meaningful slice of memory demand from the commodity cycle. HBM's transformation of memory — from interchangeable commodity to differentiated, AI-driven, packaging-intensive product — is one of the most important developments in the recent memory industry, and it has reshaped both the competitive dynamics among the memory makers and the equipment demand they generate.
 
 ### C. The Coming 3D DRAM Transition
 
 Looking ahead, the most consequential development on the memory horizon is the **transition of DRAM to three dimensions** (3D DRAM, File 23). DRAM has scaled primarily in-plane while building its capacitor vertically, but it is approaching the same wall that drove NAND vertical: the cell can no longer shrink in-plane while storing and switching adequate charge. 3D DRAM — stacking DRAM cells vertically — is in development at all three major makers, and while it is profoundly difficult (DRAM's low-leakage requirements are far less forgiving than NAND's charge-trap cell), it is increasingly seen as the necessary path beyond conventional DRAM scaling. The equipment implications are significant: 3D DRAM will require the **high-aspect-ratio etch, conformal ALD, and HAR fill** capabilities that NAND pioneered, applied to DRAM's more demanding specifications, plus potentially new materials (IGZO oxide-semiconductor access transistors for their ultra-low leakage). This transition would pull DRAM toward the deposition-and-etch intensity that has long characterized NAND, reshaping memory equipment demand and creating new opportunities for the deposition and etch leaders. The 3D DRAM transition, expected toward the end of the decade, represents the next great inflection in memory manufacturing — DRAM finally following NAND into the third dimension, with all the equipment intensity that implies, and completing the industry-wide turn toward three-dimensional integration that runs throughout this database.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+### A. Memory Leads the 2026–2027 Equipment Upcycle
+
+The memory cycle described above has swung decisively upward. DRAM and NAND prices rose sharply from late 2025, and the industry narrative has shifted to a "memory supercycle" driven by AI data-center demand for HBM, high-capacity server DRAM and enterprise SSDs. This has made memory the leading growth segment of wafer fab equipment:
+
+- **SEMI's July 2026 mid-year forecast** raised 2026 WFE to **$143.9B** (total equipment $165.9B, +23.2%), with a record $229.5B total projected for 2028.
+- **Lam Research** (21 Oct 2026) sees CY2026 WFE in the ~mid-$150B range and, preliminarily, **more than $200B in 2027**, with growth led by **DRAM**, followed by foundry/logic and then NAND. Lam also warned that **cleanroom space and component supply** could constrain how fast the industry can add output. Per earnings-call summaries, Lam reported record DRAM revenue tied to 1α/1β/1γ technology additions, and said its NAND **upgrade** business would remain strong into 2026.
+- TrendForce (Nov 2025) forecast 2026 DRAM capex of ~$61.3B (+14%), a figure later exceeded as memory spending rose.
+
+| Indicator | Latest view | Source |
+|---|---|---|
+| 2026 WFE | $143.9B | SEMI, Jul 2026 |
+| 2026 WFE | ~mid-$150B range | Lam Research, Oct 2026 |
+| 2027 WFE | >$200B (preliminary), DRAM-led | Lam Research, Oct 2026 |
+| 2026 DRAM capex | ~$61.3B (+14%), later exceeded | TrendForce, Nov 2025 |
+| HBM share, Q2 2026 | SK hynix ~50%, Samsung ~33%, Micron ~18% | Counterpoint |
+
+### B. DRAM: 1c, More EUV, and the Road to 4F²/3D
+
+- **EUV layer counts are rising.** At the 1c node, SK hynix and Samsung reportedly use **five or more EUV layers**; SK hynix reportedly raised its 1c EUV investment well above its original plan and aims to convert a large share of its DRAM capacity to 1c. Micron, by contrast, introduced EUV only at 1γ and has kept EUV usage minimal, relying on ArF-immersion multi-patterning. These diverging strategies matter for ASML (EUV units) versus deposition/etch suppliers (multi-patterning spacer and etch steps).
+- **Next architectures.** Vertical-channel transistor (VCT) and **4F² cell** designs are reportedly targeted for sub-10nm-class DRAM, with **3D DRAM** further out; none has a confirmed mass-production date. Each step raises deposition and etch intensity, a point Lam has stressed publicly.
+
+### C. HBM4: Bonding Choices Shift
+
+- **HBM4 entered mass production in 2026**, primarily for Nvidia's Rubin platform.
+- **JEDEC raised the HBM4 package height limit to 775 µm** (from 720 µm). This eased the pressure to adopt hybrid bonding. SK hynix continues with **MR-MUF / thermo-compression (TC) bonding**, and at Hot Chips 2026 said hybrid bonding is not ready for HBM4E and would come at **HBM5 at the earliest**.
+- **Samsung** is reportedly more aggressive on hybrid bonding (Cheonan line). SK hynix reportedly placed a first hybrid-bonding production order for an integrated **Applied Materials + Besi** inline system. Hybrid bonding remains a key future equipment opportunity, but timing has slipped relative to earlier expectations.
+- **HBM share** has become more contested. Per Counterpoint, Samsung's share rose from ~21% in Q1 2026 to ~33% in Q2 2026.
+
+### D. 3D NAND: 300+ Layers in Volume, 400+ Next
+
+- SK hynix's **321-layer** NAND became its largest NAND node by mid-2026. Samsung's 10th-generation V-NAND (400+ layers, with wafer bonding of periphery and cell wafers) and Kioxia's 332-layer BiCS10 are in ramp or preparation, though reported timelines vary. Samsung has reportedly shown very-high-layer prototypes built by bonding stacked wafers.
+- **Cryogenic dielectric etch** has become mainstream for advanced channel-hole etch; Lam has described its Cryo 3.0 as the industry standard for advanced NAND. **Molybdenum** word lines (replacing tungsten) are reportedly being adopted in next-generation NAND, which benefits Mo ALD/CVD platforms such as Lam's ALTUS Halo.
+- NAND spending is still weighted to **node upgrades** of existing capacity rather than greenfield fabs, although AI inference storage has improved the NAND demand outlook. YMTC has reportedly accelerated a third Wuhan fab phase despite export controls.
+
+### E. Capacity Investments and Geopolitics
+
+- **SK hynix:** first fab at the Yongin cluster targeted for Q1 2027; Indiana advanced-packaging plant (~US$3.87B, ~2028); a reported US listing raising up to ~US$36B for fabs and EUV tools (Jul 2026).
+- **Micron:** ~US$7B HBM packaging facility in Singapore; US fabs in Idaho and New York.
+- **Samsung/SK hynix:** new HBM back-end capacity (Cheonan/Onyang).
+- **China fabs of Korean makers:** Samsung (Xi'an) and SK hynix (Wuxi, Dalian) lost Validated End-User status effective 31 Dec 2025. BIS then granted **annual licenses for 2026** that allow them to maintain, but not expand or upgrade, operations. This effectively freezes technology migration at those NAND/DRAM sites.
+- **CXMT and YMTC** continue expanding with an increasing share of domestic tools. China's broader domestic-equipment share reached roughly 35% in 2025 (industry-body figure).
+
+**What to watch (late 2026–2027)**
+- Whether 2027 WFE exceeds $200B as Lam projects, and whether cleanroom and component shortages cap memory capacity additions.
+- HBM4E qualification, and whether any maker commits hybrid bonding to volume HBM before HBM5.
+- Samsung's 1c DRAM yields and its HBM share trajectory versus SK hynix.
+- 400+ layer NAND ramps, Mo word-line adoption and the spread of cryogenic etch.
+- Renewal terms of the US licenses for Korean makers' China memory fabs after 2026.

@@ -28,3 +28,8 @@ DONE: 25_test_and_characterization.md (3300 words)
 DONE: README.md (1620 words)
 TOTAL: 103649 words (target: 100000)
 DONE: 26_glossary.md (3272 words)
+# 2026-11 UPDATE
+DONE: all 26 content files refreshed with "2025–2026 Update: Latest Developments (as of November 2026)" sections and in-place fixes
+DONE: README.md (What's New in the November 2026 Update; link to Simplified Chinese translation)
+DONE: zh-CN/ — complete Simplified Chinese reference translation of README + 26 files
+DONE: zh-CN/SemiCap_Knowledge_Database_zh-CN.pdf (built by zh-CN/_build/build_pdf.mjs)

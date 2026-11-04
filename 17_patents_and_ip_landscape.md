@@ -33,7 +33,9 @@ timeline
     late 1990s : EUV LLC consortium IP
     2013 : ASML acquires Cymer (EUV source IP)
     2018-2019 : ASML/Brion vs XTAL trade-secret verdict (~$845M)
-    2025-2030 : foundational EUV-era patents begin to expire
+    2025 : Adeia sues AMD over hybrid-bonding patents
+    2025-2026 : TSMC 2nm trade-secret case - TEL Taiwan indicted and fined
+    2025-2030 : foundational EUV-era patents expiring
 ```
 
 ---
@@ -62,7 +64,7 @@ The advanced-resist patent landscape is contested among **JSR (which acquired In
 
 ### Advanced Packaging and Hybrid Bonding
 
-Hybrid bonding is the most actively contested packaging IP. **Xperi/Adeia (formerly Invensas)** holds a foundational portfolio around **Direct Bond Interconnect (DBI)** that it licenses broadly — including to major foundries and memory makers — making a non-manufacturing IP holder a central figure in the hybrid-bonding ecosystem. **Sony** holds important hybrid-bonding IP from its pioneering stacked CMOS image sensors; **TSMC** has built a substantial **SoIC** portfolio; and **EV Group and SUSS MicroTec** hold key wafer-bonding equipment IP.
+Hybrid bonding is the most actively contested packaging IP. **Xperi/Adeia (formerly Invensas)** holds a foundational portfolio around **Direct Bond Interconnect (DBI)** that it licenses broadly — including to major foundries and memory makers — making a non-manufacturing IP holder a central figure in the hybrid-bonding ecosystem. **Sony** holds important hybrid-bonding IP from its pioneering stacked CMOS image sensors; **TSMC** has built a substantial **SoIC** portfolio; and **EV Group and SUSS MicroTec** hold key wafer-bonding equipment IP. The commercial stakes became explicit in **November 2025**, when Adeia filed patent-infringement suits against **AMD** in the Western District of Texas asserting hybrid-bonding patents against AMD's 3D V-Cache products (see the 2025–2026 update below).
 
 ### 3D NAND and DRAM
 
@@ -92,7 +94,7 @@ A landmark **trade-secret** case: ASML's computational-lithography subsidiary **
 
 ## 3. Patent Expiry Analysis
 
-A number of **foundational EUV-era patents begin expiring in the 2025–2030 window**, as the core inventions of the late 1990s and 2000s reach the end of their ~20-year terms. In principle, expiry lowers the legal barrier to entry. In practice, the **practical barrier remains the integrated know-how and supply ecosystem**, not the patents alone: even with expired patents, no competitor can replicate the ZEISS optics, the TRUMPF laser, the Cymer source, the decades of accumulated process learning, and the supplier network that together constitute an EUV scanner. Patent expiry is therefore far less consequential than it would be in most industries — the moat is built primarily from trade secrets, tacit manufacturing knowledge, and ecosystem control that no patent grant or expiry can transfer.
+A number of **foundational EUV-era patents are expiring through the 2025–2030 window** (a process now under way), as the core inventions of the late 1990s and 2000s reach the end of their ~20-year terms. In principle, expiry lowers the legal barrier to entry. In practice, the **practical barrier remains the integrated know-how and supply ecosystem**, not the patents alone: even with expired patents, no competitor can replicate the ZEISS optics, the TRUMPF laser, the Cymer source, the decades of accumulated process learning, and the supplier network that together constitute an EUV scanner. Patent expiry is therefore far less consequential than it would be in most industries — the moat is built primarily from trade secrets, tacit manufacturing knowledge, and ecosystem control that no patent grant or expiry can transfer.
 
 ---
 
@@ -140,7 +142,7 @@ The synthesis is that SemiCap's competitive moats rest on a **combination** of p
 
 ### A. The Knowledge That Cannot Be Copied
 
-The deepest truth about SemiCap intellectual property is that the most valuable knowledge — the **tacit process and integration know-how** that makes a tool yield reliably in production — cannot be copied, bought, or transferred by any patent or document. It lives in the experience of thousands of engineers, in the accumulated learning from millions of processed wafers, in the subtle tuning procedures and integration sequences refined over years, and in the dense web of supplier and customer relationships. This is why China's massive, determined, state-backed effort, after years and tens of billions of dollars, has not produced a domestic EUV capability or matched the leading edge in advanced metrology — not because the patents are unavailable (many are public, and some are expiring), but because the **tacit knowledge and integrated ecosystem** that turn the patents into a working tool cannot be quickly replicated. An EUV scanner's patents could all expire tomorrow, and no competitor could build one, because the ZEISS optics know-how, the Cymer source know-how, the integration expertise, and the supplier network are not in the patents. This is the ultimate moat — knowledge embodied in people, processes, and relationships, accumulated over decades, that no legal mechanism can transfer — and it is the deepest reason the SemiCap competitive order is so durable and the leading edge so hard to penetrate.
+The deepest truth about SemiCap intellectual property is that the most valuable knowledge — the **tacit process and integration know-how** that makes a tool yield reliably in production — cannot be copied, bought, or transferred by any patent or document. It lives in the experience of thousands of engineers, in the accumulated learning from millions of processed wafers, in the subtle tuning procedures and integration sequences refined over years, and in the dense web of supplier and customer relationships. This is why China's massive, determined, state-backed effort, after years and tens of billions of dollars, has not produced a production-worthy domestic EUV capability (a prototype EUV light-generating machine reportedly assembled in Shenzhen by late 2025 — notably by a team said to include former ASML engineers — had not produced working chips as of the latest reports) or matched the leading edge in advanced metrology — not because the patents are unavailable (many are public, and some are expiring), but because the **tacit knowledge and integrated ecosystem** that turn the patents into a working tool cannot be quickly replicated. An EUV scanner's patents could all expire tomorrow, and no competitor could build one, because the ZEISS optics know-how, the Cymer source know-how, the integration expertise, and the supplier network are not in the patents. This is the ultimate moat — knowledge embodied in people, processes, and relationships, accumulated over decades, that no legal mechanism can transfer — and it is the deepest reason the SemiCap competitive order is so durable and the leading edge so hard to penetrate.
 
 ### B. The Implications for IP Strategy and Security
 
@@ -149,3 +151,45 @@ This primacy of tacit know-how over formal IP shapes the industry's IP strategy 
 ### C. Patent Trends as a Window on the Future
 
 For all the primacy of tacit know-how, the **formal patent landscape** remains a valuable window on the industry's direction, because the surges in filings reveal where the leaders are investing to stake out the IP that will define the next generation of manufacturing. The current concentration of filings around **selective and area-selective deposition, atomic layer etch, hybrid bonding, GAA inner-spacer and channel-release processes, backside power, EUV resists and masks, and CFET integration** maps precisely onto the frontier challenges of the GAA, backside-power, and CFET era (Files 15, 23) — the vendors racing to lock in the process IP for technologies that will reach volume in the coming years. China's filing patterns (concentrated in etch, deposition, and clean, where its makers are most credible; sparse in EUV and advanced metrology, where the gaps remain) similarly map its capabilities and limits. Reading the patent landscape is thus a way of reading the technology roadmap — the IP filings of today foreshadow the manufacturing battles of tomorrow — and it complements the analysis of the production roadmap (File 15) and the frontier research (File 23) with a view of where the industry is investing its inventive effort. The patent landscape and the tacit know-how together constitute the intellectual foundation of the industry: the formal IP staking out the frontier, and the tacit knowledge embodying the accumulated learning that turns frontier inventions into manufacturable technology — both essential, both strategic, and both at the heart of the durable competitive advantage that defines the SemiCap leaders.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+The period from mid-2025 to late 2026 confirmed the central thesis of this file: the most consequential IP events in SemiCap were not patent-validity fights over scanner claims but **trade-secret and know-how cases**, often with a national-security dimension, alongside a sharpening of patent assertion in **hybrid bonding** — the packaging technology that AI accelerators and HBM have made strategic.
+
+### Trade secrets move to the centre — and to criminal courts
+
+- **TSMC 2nm case (Taiwan).** In August 2025 Taiwanese prosecutors indicted a former TSMC engineer and others for obtaining trade secrets tied to TSMC's 2nm process. In December 2025 prosecutors charged **Tokyo Electron's Taiwan subsidiary** as a corporate defendant under both the Trade Secrets Act and the National Security Act, for failing to supervise an employee; the Japanese parent was not charged and said it had found no evidence that the technology reached third parties. A supplementary indictment followed in January 2026. Per Taiwanese press reports, in April 2026 a court sentenced the former engineer to 10 years and fined TEL Taiwan **NT$150 million** (suspendable if it pays compensation to TSMC and the treasury); prosecutors described the material as relating to **etch equipment used in 2nm production**. Taiwan's Supreme Court rejected two appeals in July 2026. The case is widely viewed as the first corporate prosecution of its kind under Taiwan's National Security Act "core key technology" provisions — a precedent that raises the compliance burden for every equipment vendor with field-service engineers inside leading-edge fabs.
+- **Samsung DRAM technology and CXMT (Korea).** In December 2025 Seoul prosecutors indicted ten people, including former Samsung executives and CXMT-linked employees, alleging that Samsung's 10nm-class DRAM process know-how (hundreds of process steps) was transferred to CXMT and then adapted to Chinese-made equipment. Reports differ on node details.
+- **Applied Materials and Mattson / Beijing E-Town.** The US dispute in which Applied accused Mattson Technology (owned by Beijing E-Town Semiconductor since 2016) of recruiting its engineers to obtain trade secrets continued, and in **August 2025** Beijing E-Town counter-sued Applied in the **Beijing Intellectual Property Court**, seeking an injunction and about RMB 100 million in damages over an Applied patent filing in China naming former Mattson employees as inventors.
+- **China's EUV prototype.** Per a Reuters report (December 2025), a prototype EUV machine in Shenzhen was built by a team including **former ASML engineers**, partly using components from older ASML systems; it generates EUV light but had not produced working chips. The report underlines that the scarce asset is people and tacit knowledge, not patent text.
+
+### Hybrid bonding becomes a litigation zone
+
+In **November 2025**, Adeia (the former Xperi/Invensas DBI licensor) filed two suits against **AMD** in the Western District of Texas, asserting ten patents — seven on hybrid bonding and three on advanced-node process technology — against AMD's 3D V-Cache (Ryzen X3D), EPYC and Instinct products. TSMC, which manufactures the parts, was not named. No ruling or settlement had been reported in the sources reviewed. The case matters for equipment vendors because hybrid bonding is moving into volume (TSMC SoIC, and HBM4E/HBM5 candidates) and because Applied Materials and Besi — in which Applied took a ~9% stake in 2025 — are co-developing integrated die-to-wafer hybrid-bonding systems; tool vendors' customers will increasingly ask about freedom to operate.
+
+### Summary table
+
+| Matter | Jurisdiction | Key dates | Status (Nov 2026, per press reports) | SemiCap relevance |
+|---|---|---|---|---|
+| TSMC 2nm trade secrets / TEL Taiwan | Taiwan | Indictments Aug 2025, Dec 2025, Jan 2026; verdict Apr 2026 | Engineer sentenced to 10 yrs; TEL Taiwan fined NT$150M; two appeals rejected Jul 2026 | Supplier liability for field engineers; etch know-how |
+| Samsung DRAM know-how → CXMT | South Korea | Indictment of 10 people Dec 2025 | Prosecution ongoing | Process recipes adapted to domestic Chinese tools |
+| Applied Materials vs. Mattson; Beijing E-Town vs. Applied | US; China | US suit 2022; China suit Aug 2025 | Pending | Talent mobility; parallel litigation in China |
+| Adeia vs. AMD | US (W.D. Tex.) | Filed Nov 2025 | No ruling/settlement reported | Hybrid-bonding freedom to operate |
+| Reported Chinese EUV prototype | China | Reuters, Dec 2025 | Prototype; no working chips reported | Know-how transfer via personnel |
+
+### Structural trends
+
+- **Patent expiry is under way but immaterial to the EUV moat.** The 2025–2030 expiry window has begun without any visible competitive effect at the leading edge, consistent with Section 3.
+- **IP security is now part of export-control compliance.** With US controls focused on SME, components and know-how to China (File 18), and Taiwan and Korea criminalizing leakage of "core" technologies, vendors face overlapping regimes covering employees, service data and cloud storage.
+- **China's filing surge continues** in etch, deposition, clean and thermal — the segments where NAURA, AMEC, Piotech and ACM gained share as domestic tools reached roughly a third of equipment used in China in 2025 (industry-body estimate; File 18) — while lithography and advanced metrology remain thin.
+- **Packaging IP is the growth area for assertion and licensing**, as hybrid bonding and co-packaged optics move into production.
+
+**What to watch (late 2026–2027)**
+
+- Any further appeals or civil damages in the TSMC/TEL Taiwan case, and whether other jurisdictions adopt corporate liability for supplier staff.
+- Developments in Adeia v. AMD (claim construction, settlement or licence) and any assertions against foundries or HBM makers.
+- Status of the Beijing E-Town suit against Applied Materials, and whether Chinese courts become a venue for counter-assertion against Western toolmakers.
+- Verdicts in the Korean CXMT-related prosecutions.
+- Patent-filing data for High-NA EUV, backside power and CFET as A16/A14 and 14A nodes approach volume.

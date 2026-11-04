@@ -39,6 +39,7 @@ flowchart TB
     C2["Japan dominates resist, wafers, HF"] --> RISK
     C3["2019 Japan-Korea materials dispute"] --> RISK
     C4["Neon shortage (Ukraine war)"] --> RISK
+    C5["China Ga/Ge/rare-earth export controls (2023-2026)"] --> RISK
     style RISK fill:#fff3cd
 ```
 
@@ -62,10 +63,10 @@ Photoresist is the light-sensitive polymer that records the lithographic image �
 
 - **ArF (193nm) CAR (Chemically Amplified Resist):** the workhorse for immersion lithography, using a photoacid generator to catalyze a solubility change.
 - **EUV CAR:** adapted chemically amplified resists for 13.5nm, with carefully tuned **quencher chemistry** to control acid diffusion and limit stochastic blur.
-- **Metal-oxide EUV resist (MOR):** **tin-oxide-based** resists (pioneered by **Inpria**, acquired by **JSR** in 2021) that absorb EUV directly in the metal atoms, offering higher resolution and lower line-edge roughness at the cost of sensitivity — increasingly important for High-NA EUV.
+- **Metal-oxide EUV resist (MOR):** **tin-oxide-based** resists (pioneered by **Inpria**, acquired by **JSR** in 2021; JSR itself was taken private in 2024 by the government-backed Japan Investment Corporation) that absorb EUV directly in the metal atoms, offering higher resolution and lower line-edge roughness at the cost of sensitivity — increasingly important for High-NA EUV. Competing metal-containing formulations (e.g., from Merck and DuPont) and **dry (vapor-deposited) resist** processes such as Lam's are also being developed for production qualification.
 - **Non-CAR / molecular-glass resists:** small-molecule resists with inherently lower roughness, in research.
 
-Photoresist is dominated by Japanese suppliers — **JSR, Tokyo Ohka Kogyo (TOK), Shin-Etsu, Fujifilm, and Sumitomo** — plus **Merck/EMD (Germany)** and **DuPont**. The concentration of advanced EUV resist supply in a handful of (mostly Japanese) firms is a notable supply-chain sensitivity, underscored when Japan's 2019 export restrictions on resist precursors to Korea caused alarm.
+Photoresist is dominated by Japanese suppliers — **JSR, Tokyo Ohka Kogyo (TOK), Shin-Etsu, Fujifilm, and Sumitomo** — plus **Merck/EMD (Germany)** and **DuPont**. The concentration of advanced EUV resist supply in a handful of (mostly Japanese) firms is a notable supply-chain sensitivity, underscored when Japan's 2019 export restrictions on resist precursors to Korea caused alarm. In late 2025, rumors of Japanese photoresist shipment curbs to China circulated but were unverified; China is meanwhile pushing domestic KrF/ArF resist development.
 
 ---
 
@@ -88,7 +89,7 @@ Modern fabs consume dozens of **process gases**, broadly grouped by function:
 - **Dopant and specialty gases:** **GeH₄ (germane), AsH₃ (arsine), PH₃ (phosphine), B₂H₆ (diborane)** for doping and epitaxy; **NH₃ (ammonia)** for nitrides.
 - **Carrier and purge gases:** **H₂, N₂, Ar, He** in enormous volumes.
 
-Many of these are **toxic, pyrophoric, or corrosive** (arsine, phosphine, diborane, silane), demanding sophisticated gas-handling, abatement, and safety systems (File 20, File 24). Several — notably **NF₃, SF₆, and the perfluorocarbons** — are potent greenhouse gases, driving emissions-reduction efforts (File 21). The major industrial-gas suppliers are **Air Liquide, Linde, Air Products, Taiyo Nippon Sanso (Nippon Sanso/Matheson), and Merck/Versum**, with the specialty-precursor business especially concentrated and high-value.
+Many of these are **toxic, pyrophoric, or corrosive** (arsine, phosphine, diborane, silane), demanding sophisticated gas-handling, abatement, and safety systems (File 20, File 24). Several — notably **NF₃, SF₆, and the perfluorocarbons** — are potent greenhouse gases, driving emissions-reduction efforts (File 21); many fluorinated process chemicals also fall within the scope of the EU's proposed universal **PFAS restriction** (see the 2025–2026 update below). The major industrial-gas suppliers are **Air Liquide, Linde, Air Products, Taiyo Nippon Sanso (Nippon Sanso/Matheson), and Merck/Versum**, with the specialty-precursor business especially concentrated and high-value.
 
 ---
 
@@ -111,7 +112,7 @@ These deposited dielectric materials are delivered chiefly as **ALD/CVD precurso
 ## 8. Barrier Metals and the New Interconnect Materials
 
 - **Barrier/liner metals:** **TaN/Ta** (the classic copper barrier), **TiN, WN, and Co/Ru liners** — thin layers that stop metal diffusion and promote adhesion.
-- **New BEOL metals:** as copper reaches its limits, **ruthenium (Ru), molybdenum (Mo), and cobalt (Co)** are entering production as barrier-less or thin-barrier interconnect metals at the tightest pitches (File 04, File 15) — one of the most significant materials transitions in BEOL since copper itself.
+- **New BEOL metals:** as copper reaches its limits, **ruthenium (Ru), molybdenum (Mo), and cobalt (Co)** are entering production as barrier-less or thin-barrier interconnect metals at the tightest pitches (File 04, File 15) — one of the most significant materials transitions in BEOL since copper itself. By 2025–2026, **molybdenum** had moved into production use (e.g., Lam's ALTUS Halo Mo ALD, introduced in 2025 for advanced memory and logic metallization), making Mo precursors a growing specialty-chemical category.
 
 These metals are deposited from specialized precursors (for ALD/CVD) or targets (for PVD), again concentrating value in the precursor and target suppliers.
 
@@ -164,7 +165,7 @@ The semiconductor materials supply chain is remarkably **concentrated**, often m
 - **High-purity HF** is concentrated in Japanese suppliers (notably Stella Chemifa).
 - **Specialty precursors** for ALD/CVD come from a small set of specialized chemical makers.
 
-This concentration means that disruption to a single supplier, region, or material can ripple through the entire industry — a risk made vivid by Japan's **2019 export restrictions** on photoresist precursors and HF to Korea, which threatened Samsung and SK Hynix and demonstrated that materials, not just equipment, are a geopolitical chokepoint (File 18). It was also underscored by the **neon** shortage from the war in Ukraine (Ukraine had supplied much of the world's semiconductor-grade neon, used in DUV lasers).
+This concentration means that disruption to a single supplier, region, or material can ripple through the entire industry — a risk made vivid by Japan's **2019 export restrictions** on photoresist precursors and HF to Korea, which threatened Samsung and SK Hynix and demonstrated that materials, not just equipment, are a geopolitical chokepoint (File 18). It was also underscored by the **neon** shortage from the war in Ukraine (Ukraine had supplied much of the world's semiconductor-grade neon, used in DUV lasers), and since 2023 by China's export controls on **gallium, germanium, and rare earths** (China supplies ~80% of primary gallium and ~60% of germanium).
 
 ### C. The Japanese Materials Dominance
 
@@ -189,3 +190,55 @@ A recurring theme across this database is that, for many frontier devices, the *
 ### C. Supply Resilience as Strategic Imperative
 
 The concentration and criticality of the materials supply chain make **supply resilience** a strategic imperative that the geopolitical era has thrown into sharp relief. The dependence on three EUV-blank suppliers, on heavily Japanese photoresist and HF supply, on specific precursor and specialty-gas sources, and on materials like neon (the Ukraine disruption) and rare earths represents a set of vulnerabilities that a single disruption — a natural disaster, a trade dispute, a conflict — could turn into an industry-wide crisis. The 2019 Japan-Korea materials dispute and the neon shortage were warnings of how a materials disruption can ripple through the entire chip industry. In response, the subsidy programs (CHIPS Act, EU Chips Act) increasingly fund materials capacity and diversification, manufacturers pursue dual-sourcing and inventory buffers, and the resilience of the materials supply chain has become a matter of corporate and national strategy alongside the equipment supply chain. Yet the depth of expertise and the exacting qualification required make rapid diversification difficult — a fab cannot simply switch to an unqualified resist or precursor — so materials resilience remains a hard, long-term challenge. The quiet, concentrated, high-purity, deeply co-engineered world of semiconductor materials is, in the end, as strategically critical and as vulnerable as the multi-million-dollar tools it supplies, and its security is inseparable from the security of the entire semiconductor enterprise.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+### A. Market Size: Record Materials Spend, Led by Lithography and Packaging
+
+Per **SEMI's materials market report (May 2026)**, global semiconductor materials revenue reached a record **$73.2B in 2025 (+6.8%)**. Wafer-fab materials grew 5.4% to **$45.8B**, with lithography-related materials (photomasks, photoresists and ancillaries) and wet chemicals showing strong double-digit growth. Packaging materials grew 9.3% to **$27.4B**, helped by substrates and by higher gold prices lifting bonding-wire revenue. Taiwan remained the largest consuming region for the 16th consecutive year.
+
+For silicon, **SEMI (Feb 2026)** reported 2025 wafer area shipments up ~6% to ~12,973 million square inches. Wafer revenue, however, slipped ~1.2% to ~$11.4B: AI-driven demand for advanced epi wafers and HBM-grade polished wafers lifted volumes, but weak legacy demand weighed on pricing. SEMI's 2026 outlook is "two-track": strong 300mm demand for AI logic and memory, with only a cautious mature-node recovery. With SEMI's July 2026 forecast calling for WFE of $143.9B in 2026, materials consumption should follow the capacity additions with a lag.
+
+| Indicator | 2025 value | Source |
+|---|---|---|
+| Total semiconductor materials | $73.2B (+6.8%) | SEMI, May 2026 |
+| Wafer-fab materials | $45.8B (+5.4%) | SEMI, May 2026 |
+| Packaging materials | $27.4B (+9.3%) | SEMI, May 2026 |
+| Silicon wafer shipments | ~12,973 MSI (+~6%) | SEMI SMG, Feb 2026 |
+| Silicon wafer revenue | ~$11.4B (−~1.2%) | SEMI SMG, Feb 2026 |
+
+### B. Critical-Minerals Geopolitics
+
+- **Gallium, germanium, antimony:** China supplies ~80% of primary gallium and ~60% of germanium. Its ban on exports of these to the US is **paused until 27 Nov 2026** under the US–China truce reached in Busan (30 Oct 2025). Gallium prices have risen sharply since early 2025.
+- **Rare earths:** China's expansive October 2025 rare-earth export controls were **suspended until Nov 2026** under the same truce. On 23 Sep 2026, US Treasury Secretary Bessent said the truce was being extended to 10 Jan 2027.
+- **Tungsten, tellurium, bismuth, molybdenum, indium:** China placed export controls on these items in Feb 2025. They matter for WF₆ and tungsten targets, Mo interconnect, and InP/compound semiconductors. No public relaxation had been confirmed as of this update.
+- **Nexperia:** the Dutch government took control of Nexperia in Oct 2025, and China then blocked Nexperia China exports, disrupting automotive supply. Nexperia's China unit switched to domestic wafers. This showed how quickly a materials and wafer supply chain can split along political lines.
+
+**Implication:** fabs and tool makers are building inventory buffers, qualifying second sources outside China (where these exist), and funding recycling and refining capacity. Rapid substitution remains difficult because of the qualification burden described in the Extended Analysis above.
+
+### C. Photoresist and Lithography Materials
+
+- **EUV resist demand is growing** with rising EUV layer counts in DRAM (five or more EUV layers at 1c for some makers, reported) and with 2nm-class logic ramps (TSMC N2 in volume since Q4 2025; Intel 18A in HVM).
+- **Metal-oxide and dry resists** are advancing toward production qualification, especially for High-NA EUV, where thinner resist films are needed. Intel's 14A is the first node planned to use High-NA, and Samsung and TSMC reportedly plan high-volume High-NA use around 2028 and 2030 respectively. Adoption timing for MOR in high-volume manufacturing remains supplier- and customer-specific, and public confirmation is limited.
+- **China localization:** Japan's rumored resist curbs (late 2025) remained unverified. China nonetheless accelerated domestic KrF/ArF resist qualification as part of a broader localization push, in which domestic tools reached ~35% of equipment used in 2025.
+
+### D. PFAS: The Regulatory Overhang for Fluorochemicals
+
+The EU's proposed **universal PFAS restriction** advanced in 2026. On **26 Mar 2026**, ECHA's Risk Assessment Committee (RAC) published its final opinion and its Socio-Economic Analysis Committee (SEAC) published a draft opinion. Both support an EU-wide restriction with **time-limited derogations**, and the earliest bans would not apply before late 2028. Semiconductors were the largest named commenting sector in the consultation.
+
+The restriction matters because fluoropolymers (PFA/PTFE wetted parts in tools and chemical-delivery systems), fluorinated photoacid generators and surfactants in resists, and certain fluorinated etch and cleaning chemicals all fall within its scope. Expect sustained R&D on PFAS-free resist components and on emissions abatement and capture, alongside industry lobbying for long derogation periods.
+
+### E. New Materials Entering Production
+
+- **Molybdenum** has joined tungsten and copper in production metallization (Lam ALTUS Halo, 2025). Mo is reportedly being adopted for next-generation 3D NAND word lines.
+- **Backside power** (Intel 18A PowerVia in HVM; TSMC A16 Super Power Rail volume production 2H 2026–2027, timing per sources) raises demand for bonding dielectrics, wafer-thinning consumables, and carrier wafers.
+- **Advanced-packaging materials** grew faster than wafer-fab materials in 2025 (per SEMI), driven by CoWoS expansion, hybrid bonding (dielectric and Cu-pad chemistries, CMP for bonding surfaces), and glass-core substrates under development for panel-level packaging (TSMC CoPoS on the roadmap).
+
+**What to watch (late 2026–2027)**
+- Whether China's gallium/germanium pause (to 27 Nov 2026) and rare-earth suspension are extended in line with the truce extension to 10 Jan 2027.
+- ECHA's final SEAC opinion and the European Commission's PFAS restriction proposal, including derogation lengths for semiconductor uses.
+- MOR or dry-resist qualification at High-NA insertion points (Intel 14A).
+- Silicon-wafer pricing as 300mm demand from AI and HBM tightens supply while mature-node demand stays soft.
+- Any confirmed Japanese or Chinese export measures on resists or specialty chemicals.

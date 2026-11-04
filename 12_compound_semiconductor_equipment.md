@@ -48,13 +48,13 @@ Silicon carbide is the leading wide-bandgap material for **high-voltage power el
 
 **Boule growth.** Unlike silicon, SiC cannot be pulled from a melt by the Czochralski method (it sublimes rather than melts at practical pressures). Instead, SiC boules are grown by **PVT (Physical Vapor Transport / seeded sublimation)**, in which SiC source powder is sublimed at ~2,200–2,400°C and re-condenses on a seed crystal — an extremely slow process (millimeters per hour) that produces short boules and is prone to defects (micropipes, dislocations). **HTCVD (High-Temperature CVD)** is an alternative growth method. The slow, defect-prone growth is the primary reason SiC wafers are expensive and supply-constrained.
 
-**Wafer-size transition.** The SiC industry is undergoing a pivotal transition from **150mm to 200mm** wafers, which roughly doubles the die per wafer and lowers cost — a key competitive battleground, with Wolfspeed, Coherent (formerly II-VI), and others racing to ramp 200mm.
+**Wafer-size transition.** The SiC industry is undergoing a pivotal transition from **150mm to 200mm** wafers, which roughly doubles the die per wafer and lowers cost — a key competitive battleground, with Wolfspeed, Coherent (formerly II-VI), and others racing to ramp 200mm. By 2026 the transition was well under way: Wolfspeed closed its Durham 150mm device fab and consolidated device production at its 200mm Mohawk Valley fab, while Chinese substrate makers (SICC, TankeBlue and others) were scaling 200mm capacity and showing 300mm (12-inch) SiC substrate samples, which have not yet reached mass production.
 
 **Epitaxy.** A SiC CVD epitaxial layer is grown on the substrate to form the device's active region, with **n-type doping (nitrogen)** and **p-type doping (aluminum)** introduced in situ. SiC epitaxy occurs at high temperature in specialized CVD reactors.
 
 **Device processing.** SiC device fabrication requires extraordinarily high-temperature **dopant-activation anneals (1,600–1,800°C)**, often with a carbon cap, far beyond anything in silicon processing. Devices include **trench and planar MOSFETs** and **Schottky barrier diodes (SBDs)**. The gate-oxide interface quality (SiC/SiO₂) is a persistent reliability challenge requiring specialized oxidation and passivation.
 
-**Wafer vendors:** Wolfspeed (the long-time leader), Coherent/II-VI, SiCrystal (ROHM), SICC and TankeBlue (China), Resonac, STMicroelectronics (which acquired Norstel). **Equipment:** Aixtron and others for SiC CVD epitaxy; specialized high-temperature furnaces and implanters; PVT growth furnaces from a small set of suppliers.
+**Wafer vendors:** Wolfspeed (the long-time leader, which restructured through Chapter 11 in 2025 and emerged on 29 Sep 2025), Coherent/II-VI, SiCrystal (ROHM), SICC and TankeBlue (China, which have gained substantial share amid a substrate price war), Resonac, STMicroelectronics (which acquired Norstel). **Equipment:** Aixtron and others for SiC CVD epitaxy; specialized high-temperature furnaces and implanters; PVT growth furnaces from a small set of suppliers.
 
 ---
 
@@ -104,9 +104,9 @@ The compound-semiconductor markets are driven by powerful secular trends:
 | **SiC substrates** | Wolfspeed, Coherent/II-VI, SiCrystal (ROHM), STMicroelectronics, SICC, TankeBlue, Resonac |
 | **SiC/GaN power devices** | Infineon, STMicroelectronics, onsemi, ROHM, Wolfspeed, Mitsubishi, Toshiba, Navitas, Power Integrations, GaN Systems (Infineon), EPC |
 | **RF GaN/III-V** | Qorvo, Broadcom, MACOM, Wolfspeed (former RF business to MACOM), NXP, Sumitomo |
-| **MOCVD epitaxy equipment** | Aixtron, Veeco |
+| **MOCVD epitaxy equipment** | Aixtron, Veeco (merging with Axcelis; closing expected by end of Q1 2027), AMEC (China) |
 | **MBE equipment** | Riber, Veeco |
-| **Compound-semi foundries** | Tower Semiconductor, WIN Semiconductors (GaAs/GaN foundry), GlobalFoundries (specialty), VPEC, IQE and others (epi-wafer supply) |
+| **Compound-semi foundries** | Tower Semiconductor, WIN Semiconductors (GaAs/GaN foundry), GlobalFoundries (specialty, incl. GaN), Powerchip/PSMC (GaN-on-Si), VPEC, IQE and others (epi-wafer supply); TSMC is exiting GaN foundry by July 2027 |
 
 The compound-semiconductor equipment market is notably distinct from mainstream silicon WFE: it is led by epitaxy specialists (Aixtron, Veeco) and a constellation of materials and device companies, rather than by the silicon-CMOS giants (though Applied Materials and others supply some implant, etch, and deposition tools adapted for these materials). Crystal growth — PVT furnaces for SiC, bulk GaN and InP growth — is served by a small, specialized supplier base, and substrate supply remains the key bottleneck and value driver across the compound-semiconductor world.
 
@@ -160,8 +160,54 @@ Gallium nitride's competitive structure is shaped by its two distinct markets �
 
 ### C. The InP Photonics Tailwind
 
-Indium phosphide is riding one of the strongest tailwinds in the compound-semiconductor world: the **AI-driven explosion in data-center optical interconnect**. As AI clusters demand ever more bandwidth between chips, racks, and systems, the optical transceivers that carry that bandwidth — built on InP lasers, modulators, and detectors — are in surging demand, and the move toward co-packaged optics (Files 11, 23) and higher data rates (800G, 1.6T) further accelerates it. This makes InP epitaxy (MOCVD and MBE) and InP device fabrication a growth area, served by a specialized ecosystem (Coherent, Lumentum, and the photonics foundries) and increasingly intertwined with silicon photonics (which uses InP lasers bonded to silicon). The InP photonics tailwind exemplifies how the compound-semiconductor world, though distinct from mainstream silicon logic, is being pulled by the same AI megatrend — not through logic but through the optical interconnect that AI's bandwidth demands require. For the equipment makers, it is another growth vector adjacent to the silicon mainstream, with its own specialized epitaxy and processing requirements.
+Indium phosphide is riding one of the strongest tailwinds in the compound-semiconductor world: the **AI-driven explosion in data-center optical interconnect**. As AI clusters demand ever more bandwidth between chips, racks, and systems, the optical transceivers that carry that bandwidth — built on InP lasers, modulators, and detectors — are in surging demand, and the move toward co-packaged optics (Files 11, 23) and higher data rates (800G and 1.6T in volume by 2026, with 3.2T next) further accelerates it. This makes InP epitaxy (MOCVD and MBE) and InP device fabrication a growth area, served by a specialized ecosystem (Coherent, Lumentum, and the photonics foundries) and increasingly intertwined with silicon photonics (which uses InP lasers bonded to silicon). The InP photonics tailwind exemplifies how the compound-semiconductor world, though distinct from mainstream silicon logic, is being pulled by the same AI megatrend — not through logic but through the optical interconnect that AI's bandwidth demands require. For the equipment makers, it is another growth vector adjacent to the silicon mainstream, with its own specialized epitaxy and processing requirements.
 
 ### D. The Distinct Equipment Ecosystem
 
 The deepest structural point about compound semiconductors is that they constitute a **distinct equipment ecosystem** from mainstream silicon logic — different crystal growth (PVT furnaces for SiC, bulk growth for GaN and InP), different epitaxy (MOCVD and MBE rather than the silicon-CVD epitaxy of logic), different thermal processing (the extreme high-temperature anneals SiC requires), smaller wafers, and a specialized, often-adapted toolset. This ecosystem is led not by the silicon-WFE giants but by epitaxy specialists (Aixtron, Veeco), crystal-growth-furnace makers, and a constellation of materials and device companies, though the WFE giants supply some adapted implant, etch, and deposition tools. The substrate — its growth, its cost, its quality, its diameter — is the value-determining bottleneck across the compound-semiconductor world, more than any other factor. As electrification (SiC/GaN power) and AI-driven optics (InP) accelerate, this distinct ecosystem represents one of the most attractive growth areas adjacent to mainstream silicon, with its own roadmaps, its own competitive dynamics, and its own strategic significance in the energy transition and the connectivity and AI revolutions — a reminder that the semiconductor industry is not only about shrinking silicon transistors but also about the diverse materials that serve the applications silicon cannot.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+### The demand mix has flipped: AI optics up, EV-driven SiC under pressure
+
+The compound-semiconductor equipment cycle of 2025–2026 was shaped less by electric vehicles and more by AI data centers. Slower-than-expected EV growth in the West and aggressive Chinese capacity additions created a **SiC substrate glut and price war**, while AI clusters drove surging demand for **InP-based optical components** and, increasingly, for high-efficiency **GaN and SiC power** in data-center power delivery.
+
+The clearest equipment datapoint is Aixtron. Per its preliminary Q3 2026 release (15 Oct 2026), order intake was about **€275M** — roughly double the €124M of Q3 2025 — with **optoelectronics ~68%** and power electronics ~24% of equipment orders. Aixtron said demand for InP-based optical components continued to grow rapidly and now represents the majority of its order backlog, while momentum in GaN and SiC power improved. Q3 revenue was about €184M with an EBIT margin of about 31%, and full-year 2026 guidance was unchanged.
+
+### SiC: restructuring, 200mm consolidation and Chinese scale
+
+- **Wolfspeed** filed a prepackaged Chapter 11 in mid-2025 and emerged on **29 Sep 2025**. It then shut its Durham 150mm device fab ahead of schedule and moved device production to its 200mm Mohawk Valley fab; per its fiscal-2026 releases, quarterly revenue was roughly $150–170M with gross margins still deeply negative because of underutilization.
+- **China**: SICC, TankeBlue and others have scaled 150mm and 200mm substrate capacity rapidly. Press reports describe a 6-inch price war and overcapacity that squeezed even Chinese suppliers' margins (SICC reported a sharp revenue drop and net loss in Q1 2026, per press summaries), with strategy shifting to 8-inch (200mm) capacity. SICC unveiled the first 300mm SiC substrate in November 2024, and at least ten Chinese firms reportedly have 12-inch samples, but 300mm SiC has not reached mass production.
+- **Implication for equipment**: crystal-growth furnace and SiC epitaxy demand is now concentrated in China and in 200mm conversions elsewhere; Western greenfield SiC projects have generally been slowed or rescoped.
+
+### GaN: foundry reshuffle and the move to 300mm
+
+- **TSMC** announced in 2025 that it will **exit the GaN foundry business by July 2027**, citing price pressure from Chinese competitors, and will reportedly repurpose the fab for advanced packaging. Its customers are moving elsewhere: **Navitas** shifted GaN-on-Si production to **Powerchip (PSMC)** on 200mm (100V products from 1H 2026, 650V over 12–24 months) and signed a separate foundry collaboration with **GlobalFoundries**.
+- **Infineon** is scaling GaN-on-Si on **300mm** wafers in its existing Austrian silicon fabs (first customer samples planned by end-2025), a step that brings GaN into mainstream silicon-fab tooling and could disadvantage 150/200mm-only competitors.
+- **Data-center power**: Nvidia's 2025 announcement of an 800V DC power architecture for future AI racks, with power-semiconductor makers among its partners, reinforced GaN and SiC demand in server power supplies (timing of adoption remains to be seen).
+
+### Materials and geopolitics: gallium and germanium
+
+China supplies roughly 80% of primary gallium and ~60% of germanium. Its December 2024 ban on gallium, germanium and antimony exports to the US was **paused until 27 Nov 2026** under the late-2025 US–China truce, and gallium prices rose sharply from early 2025. This matters directly for GaAs, GaN and InP supply chains (trimethylgallium precursors, GaAs substrates) and for defense RF programs. The broader rare-earth controls China announced in October 2025 are likewise suspended until November 2026; whether the truce — which US officials said in September 2026 was extended to 10 Jan 2027 — produces a further extension of the mineral pauses is a key near-term risk.
+
+### Equipment-vendor consolidation
+
+The **Axcelis–Veeco** all-stock merger (announced October 2025, ~$4.4B) combines a leading SiC/power ion-implant supplier with a leading MOCVD/MBE supplier. Shareholders of both companies approved it on 6 Feb 2026; closing is now expected by **end of Q1 2027**, pending China SAMR approval and a new HSR filing.
+
+| Item | Datapoint | Source / status |
+|---|---|---|
+| Aixtron Q3 2026 orders | ~€275M (vs €124M Q3 2025); optoelectronics ~68% | Preliminary release, 15 Oct 2026 |
+| Wolfspeed | Emerged from Chapter 11 on 29 Sep 2025; 150mm Durham device fab closed | Company releases |
+| TSMC GaN | Exit from GaN foundry by July 2027 | Announced 2025 |
+| Infineon GaN | 300mm GaN-on-Si production ramp | Company plan |
+| China Ga/Ge export ban to US | Paused until 27 Nov 2026 | US–China truce |
+| Axcelis–Veeco | Closing expected by end Q1 2027 | Pending SAMR/HSR |
+
+**What to watch (late 2026–2027)**
+- Whether China's gallium/germanium and rare-earth export pauses are extended past late November 2026 and into 2027.
+- SiC substrate pricing and the pace of 200mm adoption; any 300mm SiC pilot production.
+- GaN foundry capacity transfers after TSMC's exit, and 300mm GaN qualification at Infineon and others.
+- Continued InP epitaxy and optical-component capacity expansion for 1.6T/3.2T transceivers and co-packaged optics.
+- Closing of the Axcelis–Veeco merger and any resulting product-line changes in implant and MOCVD.

@@ -88,7 +88,7 @@ The frontier of 3D integration. Two surfaces — each a planarized array of copp
 
 ### 2.6 HBM Stack Bonding
 
-High-Bandwidth Memory stacks 8–16 DRAM dies, connected vertically by TSVs and micro-bumps (with hybrid bonding arriving for HBM4), then mounts the stack beside logic on an interposer. HBM assembly is a specialized, high-value form of 3D stacking, and HBM demand for AI has made it one of the hottest areas of both memory and packaging investment.
+High-Bandwidth Memory stacks 8–16 DRAM dies, connected vertically by TSVs and micro-bumps, then mounts the stack beside logic on an interposer. HBM4 entered mass production in 2026 still using micro-bumps with mass-reflow molded underfill (SK hynix's MR-MUF) or thermo-compression bonding: JEDEC's decision to relax the HBM4 package-height limit to 775 µm (from 720 µm) removed the immediate need for hybrid bonding, which SK hynix now expects for HBM4E or HBM5 at the earliest, while Samsung is reportedly pushing hybrid bonding more aggressively. HBM assembly is a specialized, high-value form of 3D stacking, and HBM demand for AI has made it one of the hottest areas of both memory and packaging investment.
 
 ---
 
@@ -97,7 +97,7 @@ High-Bandwidth Memory stacks 8–16 DRAM dies, connected vertically by TSVs and 
 The three leading 3D platforms reflect the strategies of the three leading manufacturers:
 
 - **TSMC SoIC (System on Integrated Chips):** a front-end-grade, bumpless **hybrid-bonding** 3D-stacking technology offering the finest pitches; combined with CoWoS (as "SoIC + CoWoS") for full 3D-plus-2.5D systems. The flagship of TSMC's 3DFabric packaging portfolio.
-- **Intel Foveros:** Intel's 3D die-stacking technology using micro-bumps (Foveros) evolving to **Foveros Direct** (hybrid bonding); used in products like Meteor Lake and Ponte Vecchio, combined with **EMIB** (Embedded Multi-die Interconnect Bridge, Intel's alternative to a full interposer, embedding a small silicon bridge in the substrate).
+- **Intel Foveros:** Intel's 3D die-stacking technology using micro-bumps (Foveros) evolving to **Foveros Direct** (hybrid bonding); used in products like Meteor Lake, Ponte Vecchio and the Intel 18A-based Panther Lake (launched early 2026), combined with **EMIB** (Embedded Multi-die Interconnect Bridge, Intel's alternative to a full interposer, embedding a small silicon bridge in the substrate).
 - **Samsung X-Cube (eXtended-Cube):** Samsung's 3D stacking technology, also moving toward hybrid bonding, integrated with its I-Cube (2.5D) and H-Cube offerings.
 
 All three are converging on hybrid bonding as the endpoint of fine-pitch 3D integration, differentiated by their interposer/bridge strategies and their integration with each company's logic and memory.
@@ -110,11 +110,11 @@ Advanced packaging draws on a distinct equipment ecosystem, much of it supplied 
 
 - **Wafer thinning and backgrinding:** **DISCO** (the dominant supplier) and **Okamoto** grind and polish wafers to the thinness required for stacking and TSV reveal.
 - **Die singulation (dicing):** mechanical **blade dicing**, **stealth laser dicing** (DISCO; laser creates subsurface damage for clean separation), and **plasma dicing** (etching streets for damage-free singulation of thin/fragile dies).
-- **Die attach and bonding:** **BESI (BE Semiconductor Industries)**, **ASM Pacific Technology**, and **Kulicke & Soffa (K&S)** lead die attach, thermo-compression bonding, and hybrid-bonding placement; **EV Group** and **SUSS MicroTec** lead wafer-to-wafer bonders and temporary bonding/debonding.
+- **Die attach and bonding:** **BESI (BE Semiconductor Industries)**, **ASM Pacific Technology**, and **Kulicke & Soffa (K&S)** lead die attach, thermo-compression bonding, and hybrid-bonding placement (Korea's **Hanmi Semiconductor** and **Hanwha Semitech** are major TC-bonder suppliers for HBM; Applied Materials took a ~9% stake in Besi in 2025 and the two co-developed the Kinex integrated die-to-wafer hybrid bonder); **EV Group** and **SUSS MicroTec** lead wafer-to-wafer bonders and temporary bonding/debonding.
 - **Wire bonding:** K&S and ASM Pacific dominate the still-enormous wire-bond market for mainstream packages.
 - **Molding:** **TOWA** (the leader) and **APIC Yamada** supply compression and transfer molding for encapsulation and fan-out.
 - **Underfill dispense:** **Nordson** and others supply precision dispensing for capillary and molded underfill.
-- **RDL formation:** litho-based redistribution using semi-additive plating (SAP) and electroplating tools, drawing on front-end lithography (steppers) and ECD equipment.
+- **RDL formation:** litho-based redistribution using semi-additive plating (SAP) and electroplating tools, drawing on front-end lithography (steppers) and ECD equipment (in May 2026 Applied Materials agreed to acquire ASMPT's NEXX large-area/panel-level ECD business).
 - **TSV formation:** **Bosch-process DRIE** deep silicon etch (Lam, SPTS, TEL), ALD barrier/seed, and copper electrochemical deposition (ECD) fill.
 - **Inspection:** **3D X-ray (computed tomography)** and **scanning acoustic microscopy (SAM)** to inspect buried bonds, voids, and TSVs non-destructively, plus optical and e-beam inspection of RDL and bumps.
 
@@ -126,7 +126,7 @@ A notable structural feature is that advanced packaging is bringing **front-end-
 
 The advanced-packaging value chain spans both leading foundries and dedicated **OSATs (Outsourced Semiconductor Assembly and Test)** companies:
 
-- **TSMC** — the leader in advanced packaging via its **3DFabric** portfolio (CoWoS, InFO, SoIC); CoWoS capacity is a key constraint on AI-accelerator supply, prompting multi-year capacity expansions.
+- **TSMC** — the leader in advanced packaging via its **3DFabric** portfolio (CoWoS, InFO, SoIC); CoWoS capacity is a key constraint on AI-accelerator supply, prompting multi-year capacity expansions (industry estimates put CoWoS capacity at roughly 106–130k wafers per month in 2026, rising sharply in 2027).
 - **ASE Group (Advanced Semiconductor Engineering)** — the largest OSAT, offering the full range of advanced packaging including fan-out and 2.5D/3D.
 - **Amkor Technology** — a leading global OSAT with advanced SiP, fan-out, and 2.5D/3D capabilities; key Western packaging partner.
 - **JCET, Powertech (PTI), SPIL (part of ASE), Tongfu, TFME** — major OSATs, several China-based, central to assembly capacity and (in China's case) to localization efforts.
@@ -146,8 +146,8 @@ The advanced-packaging roadmap points toward ever-finer, ever-more-3D integratio
 
 - **Sub-1μm bump pitch:** hybrid bonding drives bond pitches from ~10μm toward 1μm and below, dramatically increasing inter-die bandwidth density and pushing CMP, alignment, and cleanliness requirements toward front-end levels.
 - **3D-stacked logic:** moving beyond stacking memory-on-logic or SRAM-on-logic toward stacking active logic tiers, blurring into the territory of sequential CFET and monolithic 3D (Files 15, 23).
-- **Panel-level packaging:** moving from round wafers to large rectangular panels for fan-out, improving area utilization and cost for large packages.
-- **Optical and co-packaged optics integration:** integrating silicon-photonics chiplets into the package to break the electrical-bandwidth wall (File 23).
+- **Panel-level packaging:** moving from round wafers to large rectangular panels for fan-out, improving area utilization and cost for large packages (TSMC's **CoPoS** panel-level, glass-core variant of CoWoS is on its roadmap).
+- **Optical and co-packaged optics integration:** integrating silicon-photonics chiplets into the package to break the electrical-bandwidth wall (File 23). Co-packaged optics (CPO) moved from roadmap to product in 2025–2026: Nvidia's Spectrum-X/Quantum-X Photonics switches ship with CPO, and TSMC's COUPE optical engine is entering mass production in 2H 2026.
 - **Liquid and embedded cooling integration:** as power densities of stacked AI accelerators soar, cooling is increasingly integrated into the package — microfluidic channels, embedded cooling, and advanced thermal-interface materials become part of the packaging equipment roadmap.
 - **Glass substrates and new interposers:** glass-core substrates and other interposer materials are emerging to provide larger, flatter, higher-density platforms for very large multi-chiplet systems.
 
@@ -167,7 +167,7 @@ A profound structural shift is the migration of **front-end-grade processes and 
 
 ### C. The Hybrid-Bonding Trajectory
 
-Hybrid bonding is the single most important advanced-packaging technology, and its trajectory toward ever-finer pitch is one of the most consequential in the industry. Conventional micro-bumps reach pitches of ~10–40μm; hybrid bonding has pushed bond pitch below 10μm and is heading toward **1μm and below**, ultimately approaching pitches fine enough that two bonded dies behave almost like a single monolithic die. Each step finer dramatically increases inter-die bandwidth density (more connections per unit area), lowers power per bit (shorter, lower-capacitance connections), and improves performance. The enabling equipment — extreme CMP (Files 06), precision wafer-to-wafer and die-to-wafer bonders (EVG, SUSS, BESI), and the cleanliness and metrology to support them — is correspondingly pushed to ever-tighter specifications. The applications are proliferating: HBM (moving to hybrid bonding for HBM4), 3D logic (AMD 3D V-Cache, TSMC SoIC), CMOS image sensors (where Sony pioneered it), and increasingly logic-on-logic stacking. Hybrid bonding is, in effect, the physical bridge between "packaging" and "monolithic 3D integration" (File 23), and its continued advance is central to the industry's three-dimensional future.
+Hybrid bonding is the single most important advanced-packaging technology, and its trajectory toward ever-finer pitch is one of the most consequential in the industry. Conventional micro-bumps reach pitches of ~10–40μm; hybrid bonding has pushed bond pitch below 10μm and is heading toward **1μm and below**, ultimately approaching pitches fine enough that two bonded dies behave almost like a single monolithic die. Each step finer dramatically increases inter-die bandwidth density (more connections per unit area), lowers power per bit (shorter, lower-capacitance connections), and improves performance. The enabling equipment — extreme CMP (Files 06), precision wafer-to-wafer and die-to-wafer bonders (EVG, SUSS, BESI), and the cleanliness and metrology to support them — is correspondingly pushed to ever-tighter specifications. The applications are proliferating: HBM (where hybrid bonding has slipped from HBM4 to HBM4E/HBM5 after JEDEC relaxed the stack-height limit), 3D logic (AMD 3D V-Cache, TSMC SoIC), CMOS image sensors (where Sony pioneered it), and increasingly logic-on-logic stacking. Hybrid bonding is, in effect, the physical bridge between "packaging" and "monolithic 3D integration" (File 23), and its continued advance is central to the industry's three-dimensional future.
 
 ### D. Equipment Categories and the Vendor Map
 
@@ -189,3 +189,48 @@ This ecosystem is growing rapidly and attracting investment from both the packag
 ### E. The Roadmap Convergence
 
 The deepest theme is that advanced packaging is **converging with front-end scaling** into a single, three-dimensional integration challenge. Backside power delivery (File 15) uses packaging-like wafer thinning and bonding in the front-end flow; sequential CFET (File 23) uses wafer bonding to stack transistor tiers; monolithic 3D builds device layers sequentially; and hybrid bonding pushes packaging pitches toward monolithic densities. The historical separation between "making the chip" (front-end) and "packaging the chip" (back-end) is dissolving into a continuum of three-dimensional integration, spanning transistor stacking, die stacking, and system integration. For the equipment industry, this convergence means that the technologies of advanced packaging — bonding, thinning, TSV, fine-pitch interconnect, and the metrology to control them — are becoming central to the entire future of scaling, and that the packaging-equipment makers and the front-end WFE leaders are increasingly competing and collaborating in the same three-dimensional space. Advanced packaging has completed its journey from neglected back-end to one of the most strategic and fastest-growing frontiers in all of semiconductor manufacturing.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+### Packaging remains the AI bottleneck — and a fast-growing equipment market
+
+AI accelerators built on CoWoS-class 2.5D packaging with HBM stacks remained the single largest driver of advanced-packaging investment through 2026. Industry estimates put TSMC's CoWoS capacity at roughly **106–130k wafers per month in 2026**, rising sharply again in 2027 (estimates vary), and TSMC raised its 2026 capital budget to **$60–64B** (from $52–56B), with packaging part of the expansion. Process control is growing fastest of all: KLA reportedly expects its advanced-packaging process-control revenue to reach about **$1.1B in 2026, up ~70%**, reflecting the "front-end-ification" described in Extended Analysis B. ACM Research likewise attributed its 2026 growth mainly to electroplating (ECP) and advanced-packaging tools.
+
+### Hybrid bonding: orders accelerate, HBM timing slips
+
+- **Besi** reported Q3 2026 results on 22 Oct 2026; per press coverage, revenue was about **€283M (+114% YoY)** and orders about **€343M (+96% YoY)**, with hybrid-bonding orders in the first nine months of 2026 already more than double the full-year 2025 total. Applied Materials, which took a ~9% stake in Besi in 2025, co-developed with Besi the **Kinex** integrated die-to-wafer hybrid-bonding system (launched October 2025), which combines surface preparation, bonding and metrology in one tool.
+- **Logic:** hybrid-bonding pitches in TSMC's SoIC production are reportedly around **6 µm**, with the roadmap continuing toward ~1 µm.
+- **HBM:** HBM4 entered mass production in 2026 for Nvidia's Rubin platform, but **without** hybrid bonding. JEDEC raised the HBM4 package-height limit to **775 µm** (from 720 µm), allowing 12- and 16-high stacks with conventional micro-bumps. SK hynix said at Hot Chips 2026 that hybrid bonding is not ready for HBM4E and would come with HBM5 at the earliest, while Samsung is reportedly more aggressive (a hybrid-bonding line at Cheonan). SK hynix reportedly placed a first hybrid-bonding production order for an Applied/Besi inline system.
+
+### TC bonders still carry HBM volume
+
+Because HBM4 kept micro-bumps, thermo-compression (TC) bonders remained the workhorse of HBM stacking in 2026. Per Korean press reports relayed by TrendForce, SK hynix placed a **₩44.2B** HBM4 TC-bonder order with **Hanmi Semiconductor** in June 2026, and ASMPT reportedly supplies about half of the TC bonders used in SK hynix's HBM4 production (Dec 2025 report). Hanmi and Hanwha Semitech remain in a patent dispute over TC-bonding technology. HBM market share (Counterpoint, Q2 2026) was roughly SK hynix ~50%, Samsung ~33% and Micron ~18%, so all three suppliers' packaging lines are expanding.
+
+### Consolidation and new capacity
+
+| Development | Details | Status |
+|---|---|---|
+| Applied Materials – NEXX | Definitive agreement (3 May 2026) to acquire ASMPT's NEXX large-area / panel-level ECD business (panels up to 510×515 mm) | Announced; closing expected within months |
+| Applied Materials – Besi | ~9% equity stake (2025); Kinex D2W hybrid bonder | In production use |
+| Axcelis – Veeco merger | All-stock merger (Veeco also supplies packaging wet-process and lithography tools) | Closing expected by end of Q1 2027, pending China SAMR |
+| SK hynix Indiana | ~US$3.87B HBM advanced-packaging plant | Targeted ~2028 |
+| Micron Singapore | ~US$7B HBM packaging facility | Under construction |
+| TSMC COUPE | Co-packaged-optics engine | Mass production 2H 2026 |
+| TSMC CoPoS | Panel-level, rectangular, glass-core CoWoS successor | On roadmap |
+
+### Co-packaged optics and panel-level packaging go mainstream
+
+Co-packaged optics (CPO) moved from roadmap to product: Nvidia's Spectrum-X and Quantum-X Photonics switches ship with CPO, and TSMC's **COUPE** (Compact Universal Photonic Engine) is entering mass production in 2H 2026. This adds new equipment needs — fiber attach, optical alignment, and wafer-level optical test — and ASE has warned that the industry still lacks CPO test standards. In parallel, the move from round wafers to large rectangular panels (TSMC's CoPoS, glass-core substrates) is drawing front-end OEMs into panel processing; Applied's NEXX purchase is explicitly aimed at the shift from 300 mm wafers to panels for AI packages.
+
+### Geopolitical and supply-chain notes
+
+Advanced packaging is increasingly treated as strategic infrastructure. US and Korean memory makers are building packaging in the US (SK hynix Indiana) and Southeast Asia (Micron Singapore), while China's OSATs (JCET, Tongfu, TFME) continue to expand as part of the localization push. HBM itself has been subject to US export controls since the December 2024 package.
+
+**What to watch (late 2026–2027)**
+- Whether hybrid bonding wins HBM4E qualification at Samsung or remains an HBM5 story at SK hynix and Micron — the single largest swing factor for hybrid-bonder demand.
+- Closing of Applied's NEXX acquisition and of the Axcelis–Veeco merger, and further consolidation among packaging-equipment specialists.
+- CoWoS capacity additions in 2027 and the pace of transition to CoPoS/panel-level and glass-core substrates.
+- CPO volume ramps and the emergence of optical test standards and equipment.
+- Advanced-packaging process-control growth (KLA, Onto, Nova, Camtek) as defect budgets tighten for hybrid bonding.

@@ -56,7 +56,7 @@ The first test occurs at **wafer level**, before the wafer is diced — called *
 The functional testing of chips is performed by **Automated Test Equipment (ATE)** — sophisticated, expensive testers that apply patterns of input signals to the device and check the outputs against expected results, at speed, across voltage and temperature. ATE is a major equipment category with its own leaders, and different device types require different testers:
 
 - **Logic / SoC ATE:** tests complex digital and mixed-signal system-on-chip devices, exercising the logic, embedded memory, analog/RF blocks, power management, and high-speed I/O (SerDes). Leading platforms include **Advantest's V93000** and **Teradyne's UltraFLEX/UltraFLEXplus**. SoC test is increasingly challenging as chips integrate more functions (RF, high-speed I/O, power) requiring instrument-rich testers.
-- **Memory ATE:** tests DRAM and NAND, where the challenge is testing enormous numbers of memory cells efficiently and in massive parallelism. Leading platforms include **Advantest's T5800-series** and **Teradyne's Magnum**.
+- **Memory ATE:** tests DRAM and NAND, where the challenge is testing enormous numbers of memory cells efficiently and in massive parallelism. Leading platforms include **Advantest's T5800-series** and **Teradyne's Magnum** (Teradyne's **Magnum 7H**, launched in August 2025, targets HBM devices from HBM2E through HBM4/HBM4E). HBM has become the most demanding memory-test segment, because stacked dies must be tested at wafer, die, and stack level at very high I/O speeds.
 - **Parallel testing economics:** because test time directly drives cost, ATE tests **many devices in parallel** (dozens to hundreds of devices simultaneously), and the degree of parallelism is a key economic lever — more parallel sites amortize the expensive tester across more devices per unit time.
 
 ATE works with **handlers** (which present devices to the tester and sort them by result) and **contactors/sockets** (the electrical interface to the packaged device) — a market led by **Cohu**, with Advantest and Teradyne also supplying handlers.
@@ -123,14 +123,15 @@ Failure analysis is essential to yield learning and reliability improvement, pro
 | Category | Leading vendors |
 |---|---|
 | **Logic / SoC ATE** | Advantest, Teradyne |
-| **Memory ATE** | Advantest, Teradyne |
+| **Memory ATE (incl. HBM)** | Advantest, Teradyne |
 | **Test handlers** | Cohu, Advantest, Teradyne |
 | **Probe cards** | FormFactor, Technoprobe, MPI |
 | **Sockets / contactors** | Cohu, Smiths Interconnect, Yokowo |
 | **Failure analysis** | Thermo Fisher, ZEISS, Hamamatsu |
 | **System-level test** | Advantest, Teradyne, Cohu, and specialists |
+| **Co-packaged optics (CPO) test** *(emerging, 2025–2026)* | ATE vendors, probe-card makers (e.g., FormFactor), and photonics-test specialists; standards still immature |
 
-The ATE market is essentially a **duopoly** of **Advantest and Teradyne**, with **Cohu** leading handlers and contactors and **FormFactor** leading probe cards. This is a distinct ecosystem from wafer-fab equipment, with its own dynamics, though it is tied to the same end-market cycles and increasingly to the advanced-packaging and AI-chip trends driving the rest of the industry.
+The ATE market is essentially a **duopoly** of **Advantest and Teradyne**, with **Cohu** leading handlers and contactors and **FormFactor** leading probe cards. This is a distinct ecosystem from wafer-fab equipment, with its own dynamics, though it is tied to the same end-market cycles and increasingly to the advanced-packaging and AI-chip trends driving the rest of the industry. By 2025–2026 that tie had become dominant: Advantest reported its SoC-tester market share rising from ~56% in 2024 to ~66% in 2025 on the strength of AI-accelerator test, and AI-related demand accounted for roughly 70% of Teradyne's revenue in Q1 2026 (see the 2025–2026 update below).
 
 ---
 
@@ -185,3 +186,45 @@ The chiplet revolution (Files 11, 23) poses perhaps the deepest test challenge, 
 ### D. Test as a Guarantor of Trust
 
 The deepest significance of test extends beyond cost to **trust and safety**. For the applications increasingly at the heart of the industry — AI systems where a single fault can corrupt a massive computation, and above all automotive and safety-critical systems where a failure can be life-threatening — test is the guarantor that the chip will work correctly and reliably. The extreme reliability requirements of automotive (AEC-Q100, parts-per-billion defect rates, ISO 26262 functional safety) demand test and characterization of a thoroughness that goes far beyond simple functional verification, encompassing extensive reliability screening (TDDB, electromigration, BTI, HCI), burn-in or system-level test, and ongoing field-reliability monitoring. As semiconductors penetrate ever more deeply into safety-critical and mission-critical systems, the role of test as the final guarantor of correctness and reliability grows ever more important, making it not a back-end formality but an essential safeguard — and one whose equipment ecosystem (Advantest, Teradyne, Cohu, FormFactor) and methodologies (adaptive test, KGD, system-level test, reliability characterization) are rising in sophistication and strategic importance to match the stakes of the applications they protect.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+### Test becomes an AI-driven growth market
+
+The structural forces described in this file — rising complexity, KGD for multi-die packages, and near-zero-defect requirements — converged in 2025–2026 around a single driver: **AI accelerators and HBM**. Each AI GPU or custom ASIC package combines a very large logic die (or several), multiple HBM stacks, and an interposer, so test time per package, test insertions per product, and the value at risk from a test escape have all risen sharply. SLT for AI accelerators, in particular, has grown into a major tester and handler category.
+
+The market data reflect this. Per **SEMI's 14 Jul 2026 mid-year forecast**, test-equipment sales are expected to reach about **$15.3B in 2026**, a strong upward revision and one of the fastest-growing equipment segments; tester-market views for 2026 were reportedly raised to roughly **$13.0–14.5B**. Advantest said in October 2026 that it expects the 2026 SoC-tester market to reach about $11.5B, near the upper end of its forecast range, driven by the volume and complexity of AI-related high-performance chips.
+
+| Company | Recent data point (2026) | Source / note |
+|---|---|---|
+| Advantest | Record Sept-2026 quarter revenue and margins (per press reports; reported figures vary by source); FY2026 operating-margin forecast raised (28 Oct 2026) on stronger SoC-tester sales | Company results; SoC-tester share ~56% (2024) → ~66% (2025), company-reported |
+| Teradyne | Sept-2026 quarter revenue ~$1.31B; 2026 guide midpoint ~$5.2B; AI-related demand ~70% of revenue in Q1 2026 | Company results; Magnum 7H ramping at the largest HBM makers |
+| FormFactor | Q3 2026 revenue up nearly 40% YoY (fourth consecutive quarterly record); new Farmers Branch (Texas) factory coming online | Company release (28 Oct 2026); HBM and co-packaged optics cited as growth drivers |
+
+### HBM test: the memory-test boom
+
+HBM demand transformed memory test. HBM4 entered mass production in 2026 for Nvidia's Rubin platform, and each HBM stack requires extensive testing — wafer-level probe of DRAM core dies and base (logic) dies, KGD screening before stacking, and stack-level test after bonding. Teradyne reported memory-test sales of $128M in Q3 2025, up 110% sequentially, and said volume shipments of its **Magnum 7H** were ramping at the largest HBM manufacturers; Advantest also expanded its memory-test and handler line-up (e.g., the M5241 memory handler, Dec 2025). On the probe side, FormFactor reported record DRAM revenue in Q1 2026 ($82.9M, up ~70% YoY) driven by HBM, with SK hynix its largest customer, and highlighted full-wafer contactor technology for high-parallelism HBM4-speed test.
+
+JEDEC's decision to raise the HBM4 package-height limit to **775 µm** allowed SK hynix to stay with MR-MUF/TC bonding for HBM4 rather than moving immediately to hybrid bonding. For test, this means the 12- and 16-high stacks of HBM4/HBM4E will continue to rely on established micro-bump interconnect test methods, while hybrid-bonded HBM (expected at HBM4E or HBM5 at the earliest, per SK hynix at Hot Chips 2026) will require new inter-die connectivity and KGD approaches.
+
+### Co-packaged optics and new test insertions
+
+Co-packaged optics moved into production in 2025–2026 (Nvidia Spectrum-X/Quantum-X Photonics switches; TSMC's COUPE platform entering mass production in 2H 2026). CPO adds optical test — coupling loss, wavelength, and optical power at wafer and package level — to the traditional electrical test flow. Packaging house ASE has warned about the lack of CPO test standards, and probe-card and ATE vendors are positioning for this new insertion. Similarly, the growth of hybrid bonding and panel-level packaging (CoPoS) raises KGD and inter-die test requirements.
+
+### Integration with front-end and process control
+
+Test is increasingly tied to front-end and packaging partners: **Tokyo Electron and Teradyne** announced a collaboration in June 2026 on an integrated test cell for AI/data-center devices, and KLA expects its advanced-packaging process-control revenue to reach roughly **$1.1B in 2026 (+70%)** (reported), reflecting the overlap between inline inspection and test in multi-die packages. AI-based adaptive test and outlier detection (Further Analysis, Section B above) are moving from pilots into standard flows as test data volumes rise.
+
+### Geopolitics and supply
+
+Test equipment is less constrained by U.S. export controls than front-end tools, but the broader regime (Entity List additions, the suspended Affiliates Rule, HBM controls from December 2024) shapes where advanced AI-chip and HBM test can be performed. Chinese test-equipment makers continue to grow in mature-node and memory test, while tariff policy (including the Section 232 semiconductor tariff effective 15 Jan 2026) has added uncertainty to test-cell location decisions for OSATs.
+
+**What to watch (late 2026–2027)**
+
+- Whether the 2026 test-equipment forecast (~$15.3B, SEMI) is exceeded and how much of the 2027 AI upcycle flows to SLT and HBM test.
+- Test strategies for hybrid-bonded HBM4E/HBM5 and for 16-high stacks.
+- Emergence of CPO test standards and dedicated optical test equipment.
+- Advantest vs. Teradyne share shifts in AI-accelerator SoC test and HBM test.
+- Probe-card capacity additions (FormFactor, Technoprobe, MPI) to match HBM and advanced-logic demand.

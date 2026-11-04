@@ -56,13 +56,13 @@ The earliest and most mature application of ML in the fab is in **advanced proce
 
 ## 2. Defect Inspection and Classification
 
-Defect inspection (File 08) generates enormous image data, and **deep learning** has transformed how it is analyzed. **Convolutional neural networks (CNNs)** and, increasingly, **vision transformers (ViTs)** automatically **classify defects** into types and, critically, separate genuine **defects of interest from "nuisance"** events (harmless anomalies) — dramatically improving the signal-to-noise of inspection and reducing the engineer-hours needed to review images. Because some defect types are rare, **synthetic defect augmentation** (using generative AI to create realistic training images of uncommon defects) improves classifier robustness. Commercial implementations include **KLA's AI-based classification and analytics (e.g., its KLARITY/Klarity platforms)** and **Applied Materials' AI-enhanced inspection (e.g., its ExtractAI and related capabilities)**. AI-driven inspection is one of the highest-value ML applications because it directly accelerates yield learning.
+Defect inspection (File 08) generates enormous image data, and **deep learning** has transformed how it is analyzed. **Convolutional neural networks (CNNs)** and, increasingly, **vision transformers (ViTs)** automatically **classify defects** into types and, critically, separate genuine **defects of interest from "nuisance"** events (harmless anomalies) — dramatically improving the signal-to-noise of inspection and reducing the engineer-hours needed to review images. Because some defect types are rare, **synthetic defect augmentation** (using generative AI to create realistic training images of uncommon defects) improves classifier robustness. Commercial implementations include **KLA's AI-based classification and analytics (e.g., its KLARITY/Klarity platforms)** and **Applied Materials' AI-enhanced inspection (e.g., its ExtractAI and related capabilities, and the SEMVision H20 eBeam defect-review system launched in February 2025, which pairs eBeam imaging with AI image recognition)**. AI-driven inspection is one of the highest-value ML applications because it directly accelerates yield learning.
 
 ---
 
 ## 3. Computational Lithography
 
-Lithography is among the most compute-intensive parts of chip-making, and AI is reshaping it. **AI-driven OPC (Optical Proximity Correction)** and **inverse lithography (ILT)** use machine learning to accelerate the computation of mask shapes, and **neural-network surrogate models** approximate the expensive physical simulations (such as RCWA-based imaging) at a fraction of the cost. **Stochastic-defect prediction** uses ML to anticipate where EUV's random defects are likely to occur. The flagship development is **NVIDIA cuLitho** (announced 2023, in partnership with **TSMC, ASML, and Synopsys**), a GPU-accelerated computational-lithography library that speeds up mask synthesis and ILT by orders of magnitude — addressing the exploding compute cost of mask preparation at advanced nodes and enabling the curvilinear masks that High-NA EUV increasingly requires. Computational lithography is a domain where the AI-chips/AI-manufacturing virtuous circle is especially direct: GPUs accelerate the lithography that makes GPUs.
+Lithography is among the most compute-intensive parts of chip-making, and AI is reshaping it. **AI-driven OPC (Optical Proximity Correction)** and **inverse lithography (ILT)** use machine learning to accelerate the computation of mask shapes, and **neural-network surrogate models** approximate the expensive physical simulations (such as RCWA-based imaging) at a fraction of the cost. **Stochastic-defect prediction** uses ML to anticipate where EUV's random defects are likely to occur. The flagship development is **NVIDIA cuLitho** (announced 2023, in partnership with **TSMC, ASML, and Synopsys**), a GPU-accelerated computational-lithography library that speeds up mask synthesis and ILT by orders of magnitude — moved into production use at TSMC in 2024, and added by Samsung to its OPC flow (Samsung reported up to ~20× faster computational lithography, Oct 2025) — addressing the exploding compute cost of mask preparation at advanced nodes and enabling the curvilinear masks that High-NA EUV increasingly requires. Computational lithography is a domain where the AI-chips/AI-manufacturing virtuous circle is especially direct: GPUs accelerate the lithography that makes GPUs.
 
 ---
 
@@ -95,11 +95,13 @@ Machine learning is also being applied to the **design of the equipment itself**
 | Company | AI/ML focus |
 |---|---|
 | **KLA** | AI defect classification, yield management, inspection analytics |
-| **Applied Materials** | AI-enhanced inspection (ExtractAI), process control, the AIx initiative |
+| **Applied Materials** | AI-enhanced inspection (ExtractAI), AI-assisted eBeam defect review (SEMVision H20), process control, the AIx initiative |
+| **Lam Research** | Equipment Intelligence services (predictive/automated maintenance, fleet matching); Dextro maintenance cobots |
+| **ASML** | Strategic partnership with Mistral AI (ASML led its ~€1.3B Series C, Sep 2025) to apply AI across products and operations |
 | **PDF Solutions** | Exensio yield analytics; fab data integration |
 | **Onto Innovation** | Metrology analytics and inspection AI |
 | **Synopsys / Siemens EDA** | Computational lithography, AI-driven design and yield, fab analytics |
-| **NVIDIA** | cuLitho (GPU-accelerated computational lithography); AI compute for fabs |
+| **NVIDIA** | cuLitho (GPU-accelerated computational lithography); Omniverse fab digital twins; AI compute for fabs (e.g., Samsung and SK Group "AI factories", announced Oct 2025) |
 | **The fabs themselves (TSMC, Intel, Samsung)** | Extensive internal ML for APC, yield, and predictive maintenance |
 
 ---
@@ -142,7 +144,7 @@ Consider a concrete example. A bright-field inspection tool scans a wafer and fl
 
 ### D. Case Study — cuLitho and Computational-Lithography Acceleration
 
-The compute cost of preparing a single advanced mask set — running OPC and inverse lithography across billions of polygons — has grown so large that it occupies enormous CPU farms for weeks. **NVIDIA cuLitho** (with TSMC, ASML, and Synopsys) reformulates these workloads for massively parallel GPU execution, reporting order-of-magnitude speedups. This both reduces the time and cost of mask preparation and enables more sophisticated, compute-hungry techniques (full curvilinear ILT, which High-NA EUV increasingly requires) that were previously impractical. It is also the clearest illustration of the industry's recursive relationship with AI: GPUs, manufactured using computational lithography, are used to accelerate the computational lithography that manufactures the next generation of GPUs.
+The compute cost of preparing a single advanced mask set — running OPC and inverse lithography across billions of polygons — has grown so large that it occupies enormous CPU farms for weeks. **NVIDIA cuLitho** (with TSMC, ASML, and Synopsys) reformulates these workloads for massively parallel GPU execution, reporting order-of-magnitude speedups; by 2024–2025 it had moved from announcement to production use at TSMC and adoption at Samsung. This both reduces the time and cost of mask preparation and enables more sophisticated, compute-hungry techniques (full curvilinear ILT, which High-NA EUV increasingly requires) that were previously impractical. It is also the clearest illustration of the industry's recursive relationship with AI: GPUs, manufactured using computational lithography, are used to accelerate the computational lithography that manufactures the next generation of GPUs.
 
 ### E. The Challenges and Limits
 
@@ -167,3 +169,44 @@ The long-term vision of the **autonomous, "lights-out" fab** — running with mi
 ### C. The Strategic Stakes of Manufacturing AI
 
 The strategic stakes of manufacturing AI are significant and growing. The fabs and equipment makers that most effectively deploy AI gain advantages in **yield** (faster learning curves, higher mature yields — the economic heart of a node ramp), **cost** (better tool utilization, less scrap, optimized maintenance), and **time-to-market** (faster process development and ramp). Because yield and ramp speed are decisive competitive weapons (Files 15, 19), manufacturing AI is becoming a genuine source of competitive advantage, not a peripheral efficiency play. This favors the players with the most data (the largest fabs and the equipment makers with the largest installed bases — KLA's process-control data franchise is a prime example), the best ML capability, and the most effective data integration. It also favors the equipment and software makers (KLA, Applied, PDF Solutions, Synopsys, Siemens EDA, NVIDIA) who supply the AI capabilities, making manufacturing AI a growth and differentiation opportunity for them. As the complexity of manufacturing rises (more steps, tighter tolerances, three-dimensional devices, new materials) and the data volumes explode, AI shifts from a useful tool to an indispensable necessity for managing the otherwise-unmanageable complexity — and the effectiveness of a player's manufacturing AI becomes an increasingly important determinant of its competitive position. In an industry whose products power the AI revolution, the AI revolution is, in turn, reshaping how those products are made — and doing so in ways that increasingly separate the leaders from the followers.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+### A. AI is now both the demand engine and the factory tool
+
+The recursive loop described above became the defining feature of the 2025–2026 equipment cycle. On the demand side, AI data-center build-outs (GPUs/ASICs, HBM, advanced packaging) drove SEMI's July 2026 mid-year forecast to a record **$165.9B** of 2026 equipment sales (+23.2%), with WFE at **$143.9B**, and OEMs such as Lam Research preliminarily expect 2027 WFE above $200B. On the manufacturing side, AI moved from pilot projects toward fab-scale infrastructure, with chipmakers buying GPU clusters specifically to run their own factories.
+
+### B. "AI factories" for chip factories
+
+| Initiative | What was announced | Status / caveats |
+|---|---|---|
+| **Samsung × NVIDIA "AI Megafactory"** (Oct 2025, APEC) | >50,000 NVIDIA GPUs across semiconductor, mobile and robotics operations; Omniverse-based **digital twins of fabs**; cuLitho/CUDA-X added to OPC | Samsung reported up to ~20× faster computational lithography (company figure); rollout planned to global sites including Taylor, Texas |
+| **SK Group × NVIDIA AI factory** (Oct 2025) | >50,000 GPUs, first phase targeted for late 2027; initial >2,000 RTX PRO 6000 Blackwell GPUs for SK hynix fab digital twins and internal AI agents | Linked to SK hynix's "Autonomous Factory 2030" plan; reportedly hosted at the Cheongju fab |
+| **TSMC × NVIDIA cuLitho** | GPU-accelerated OPC/ILT in production since 2024 | Supports curvilinear masks needed for High-NA EUV (File 03) |
+| **ASML × Mistral AI** (Sep 2025) | ASML led Mistral's ~€1.3B Series C and formed a strategic partnership to apply AI models across its products, R&D and operations | Benefits to scanner performance not yet quantified publicly |
+
+These programs show a shift from isolated ML models (a defect classifier here, a virtual-metrology model there) to **integrated platforms**: fab-wide digital twins, decision-optimization engines, and AI agents connected to legacy manufacturing-execution and automation software.
+
+### C. Equipment makers productize AI services
+
+- **Lam Research** has scaled its **Equipment Intelligence** services (predictive and automated maintenance, fleet matching) and **Dextro** collaborative robots for tool maintenance; per earnings-call summaries, Dextro supports six Lam tool types, solutions first proven in NAND are expanding into DRAM, and a leading foundry/logic customer agreed to deploy Equipment Intelligence for critical deposition applications. Lam's CEO has said the strategic focus is to add more sensors to tools so AI can detect problems earlier (reported, May 2026).
+- **Applied Materials** combines eBeam defect review with AI image recognition (SEMVision H20, Feb 2025) alongside its ExtractAI/AIx data-analytics approach.
+- **KLA** remains the leader in AI-driven inspection and yield analytics; it expects advanced-packaging process-control revenue of roughly **$1.1B in 2026 (+70%, reported)**, an area where AI-based classification of bump, hybrid-bonding and die-level defects is central.
+- **Tokyo Electron and Teradyne** (Jun 2026) announced a collaboration on an integrated test cell for AI/data-center devices, extending data-driven optimization across the process–test boundary (File 25).
+
+### D. The autonomous-fab agenda goes mainstream
+
+SEMICON Taiwan 2026 (2–4 Sep, Taipei) debuted a **Smart Fab Zone** focused on AI, autonomous decision-making, digital twins, automated material handling and collaborative/humanoid robots, and SEMI framed the shift as moving "from scale advantage to intelligence advantage." Industry conference programs in 2026 increasingly feature **agentic AI and large language models** for fab operations (recipe assistance, troubleshooting, report generation). The core caveats in this file still apply: explainability, data integration across vendors, model drift, and the cost of errors keep most applications advisory or human-supervised for critical steps.
+
+### E. AI as a source of constraint, too
+
+AI demand is also stressing the physical systems AI is meant to optimize: Lam flagged cleanroom and component shortages (Oct 2026), equipment lead times reportedly stretched to ~12 months for conventional etch and deposition tools, and Taiwan's semiconductor electricity use set records in 2026 (File 21). Fab AI that improves tool uptime, chamber matching and energy efficiency therefore has direct capacity value in a supply-constrained market.
+
+**What to watch (late 2026–2027)**
+
+- Measured results (yield, ramp time, uptime) from the Samsung and SK hynix fab digital-twin programs, rather than announcements.
+- Whether OEMs win recurring software/service revenue for equipment AI, and how fabs handle data-ownership and cross-vendor data sharing.
+- Adoption of GPU-accelerated computational lithography and curvilinear masks as High-NA EUV moves toward high-volume use (Intel 14A; Samsung and TSMC later).
+- The first credible deployments of agentic AI for closed-loop control of critical process steps, and how export controls on advanced AI chips affect fab AI deployments in China.

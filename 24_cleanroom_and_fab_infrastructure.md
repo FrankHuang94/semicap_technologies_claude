@@ -38,6 +38,7 @@ flowchart LR
  Cost:   $20-30B+   |   Tools ≈ 70-80% of that
  Time:   2-4 years groundbreaking → first wafer (longer to full ramp)
  Built by: Exyte (M+W), Turner, Samsung C&T, ... ; construction is now itself a bottleneck
+ 2026:   cleanroom space shortage flagged as a limit on WFE (Lam, Oct 2026)
 ```
 
 ---
@@ -145,7 +146,7 @@ Fab construction is a specialized discipline served by a handful of firms with t
 - **Samsung C&T and other Korean/Asian construction firms** — building the enormous fab complexes of Samsung, SK Hynix, and others.
 - **Local and specialized contractors** for cleanroom systems, mechanical/electrical/plumbing (MEP), and utility integration.
 
-The fab-construction industry has become strategically important as the subsidy-driven buildout (Files 18, 19) launches dozens of new fabs across the U.S., Japan, Europe, and Asia simultaneously — straining construction capacity, skilled-labor availability, and the supply of cleanroom and utility systems, and making fab construction itself a bottleneck on how fast new capacity can come online.
+The fab-construction industry has become strategically important as the subsidy-driven buildout (Files 18, 19) launches dozens of new fabs across the U.S., Japan, Europe, and Asia simultaneously — straining construction capacity, skilled-labor availability, and the supply of cleanroom and utility systems, and making fab construction itself a bottleneck on how fast new capacity can come online. Since 2025 the AI-driven demand surge (HBM/DRAM, 2nm logic, advanced packaging) has layered a second wave of urgent expansion on top of the subsidy-driven projects, and by 2026 equipment makers and memory producers were openly citing a shortage of ready cleanroom space as a constraint on industry output (see the 2025–2026 update below).
 
 ---
 
@@ -169,11 +170,11 @@ The fab's infrastructure is also where its environmental footprint (File 21) is 
 
 ### D. The Geography of Fab Siting
 
-Where a fab is built is determined by a complex calculus in which infrastructure plays a central role. The classic requirements — **abundant, reliable, clean power; ample water; stable geology (low earthquake/vibration risk); skilled labor; supply-chain proximity; and supportive government** — explain the historical concentration of fabs in specific clusters (Taiwan's Hsinchu/Tainan, Korea, parts of the U.S., Japan, and increasingly Europe). The post-2022 subsidy-driven geographic dispersion (File 18) collides with these requirements: building fabs in new locations (Arizona, Ohio, Germany, Japan) requires establishing the power, water, supply-chain, and talent infrastructure that the established clusters already possess, which is part of why these projects face higher costs, longer timelines, and execution challenges. Water availability in arid regions (Arizona), grid capacity and cleanliness, and the availability of skilled construction and operations labor are real constraints that shape where the subsidy-driven buildout can succeed. Fab siting is thus an infrastructure problem as much as an economic or political one, and the infrastructure requirements help explain both the historical clustering of the industry and the friction in its current geographic dispersion.
+Where a fab is built is determined by a complex calculus in which infrastructure plays a central role. The classic requirements — **abundant, reliable, clean power; ample water; stable geology (low earthquake/vibration risk); skilled labor; supply-chain proximity; and supportive government** — explain the historical concentration of fabs in specific clusters (Taiwan's Hsinchu/Tainan, Korea, parts of the U.S., Japan, and increasingly Europe). The post-2022 subsidy-driven geographic dispersion (File 18) collides with these requirements: building fabs in new locations (Arizona, Ohio, Germany, Japan) requires establishing the power, water, supply-chain, and talent infrastructure that the established clusters already possess, which is part of why these projects face higher costs, longer timelines, and execution challenges (Intel, for example, pushed completion of its first Ohio fab to 2030–2031 in February 2025, while TSMC's Arizona site — by contrast — accelerated its second fab and expanded its U.S. commitment to US$165 billion). Water availability in arid regions (Arizona), grid capacity and cleanliness, and the availability of skilled construction and operations labor are real constraints that shape where the subsidy-driven buildout can succeed. Fab siting is thus an infrastructure problem as much as an economic or political one, and the infrastructure requirements help explain both the historical clustering of the industry and the friction in its current geographic dispersion.
 
 ### E. The Construction Bottleneck
 
-The simultaneous global fab-construction wave (driven by subsidies and AI demand) has revealed **construction itself** as a bottleneck. Building dozens of the world's most complex factories at once strains the supply of specialized cleanroom and utility systems, of experienced fab-construction firms (Exyte and a handful of others), and above all of **skilled labor** (the specialized trades that build cleanrooms and install utilities). Construction delays, cost overruns, and labor shortages have affected major projects, and the lead time to build and qualify a fab (2–4 years) means that today's construction decisions determine capacity years out. For the equipment industry, the construction bottleneck is a real constraint on how fast new capacity — and thus tool demand — can come online, and it interacts with the equipment lead times (File 15) to set the practical pace at which the industry can expand. The humble business of pouring concrete, installing air handlers, and running pipes turns out to be, alongside the exotic physics of the process tools, a genuine gating factor on the future of computing.
+The simultaneous global fab-construction wave (driven by subsidies and AI demand) has revealed **construction itself** as a bottleneck. Building dozens of the world's most complex factories at once strains the supply of specialized cleanroom and utility systems, of experienced fab-construction firms (Exyte and a handful of others), and above all of **skilled labor** (the specialized trades that build cleanrooms and install utilities). Construction delays, cost overruns, and labor shortages have affected major projects (in 2026 Lam Research flagged cleanroom-space shortages as a possible limit on industry output, and Micron said adding supply requires adding cleanroom space), and the lead time to build and qualify a fab (2–4 years) means that today's construction decisions determine capacity years out. For the equipment industry, the construction bottleneck is a real constraint on how fast new capacity — and thus tool demand — can come online, and it interacts with the equipment lead times (File 15) to set the practical pace at which the industry can expand. The humble business of pouring concrete, installing air handlers, and running pipes turns out to be, alongside the exotic physics of the process tools, a genuine gating factor on the future of computing.
 
 ---
 
@@ -190,3 +191,53 @@ Because of the fab's enormous fixed costs and the value of in-process wafers, **
 ### C. The Ramp — From First Wafer to Full Production
 
 Bringing a new fab (or a new node) from first wafer to full, profitable production — the **ramp** — is one of the most challenging and consequential phases of fab operation, and it ties together the infrastructure, the tools, the process, and the yield learning. A new fab must install and qualify hundreds of tools, integrate the full process flow, drive yield up the learning curve (File 15), and scale output to full capacity — a process that takes years and that is fraught with the risk of yield, tool, and integration problems. The speed and smoothness of the ramp is a decisive competitive factor: a fab that ramps faster reaches profitability sooner, captures the lucrative early-node market, and amortizes its enormous fixed costs faster. The geographic dispersion of fabs (File 18) complicates ramps, as new fabs in less-established locations (Arizona, Germany, Japan) must build the talent, supply-chain, and operational capabilities that the established clusters already possess — part of why these projects face ramp challenges. The ramp is where the infrastructure (this file), the tools (the equipment chapters), the process (Files 02, 15), and the people come together, and where operational excellence is most severely tested — making it, alongside the technology itself, a central determinant of a fab's and a manufacturer's success. The humble infrastructure described in this file — the cleanroom, the utilities, the automation — is the indispensable stage on which the high-stakes drama of the ramp, and of profitable high-volume manufacturing, is performed.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+### Cleanroom space becomes a binding constraint
+
+The most important infrastructure story of 2026 is that **ready-to-use cleanroom space**, not only tool supply, has become a limiting factor on how fast the industry can add capacity. The AI-driven upcycle — HBM and conventional DRAM for AI servers, the 2nm logic ramp, and CoWoS-class advanced packaging — arrived while many subsidy-era shells were still under construction. Memory makers, which had held back greenfield construction during the 2023 downturn, were hit hardest: Micron said that adding supply requires adding cleanroom space and that it could not yet see when supply and demand would rebalance, and Korean industry sources and brokers reportedly expected memory supply growth to be capped in 2026–2027 by limited cleanroom availability. On its 21 Oct 2026 earnings call, **Lam Research** explicitly flagged cleanroom-space shortages and component supply constraints as possible limits on industry output, even while guiding to ~mid-$150B WFE in 2026 and, preliminarily, >$200B in 2027.
+
+The practical consequences for the infrastructure ecosystem are:
+
+- **Shell-first strategies:** producers are building shells and cleanroom space ahead of committed tool orders so that equipment can be moved in as soon as it is available; Samsung reportedly accelerated cleanroom construction at Pyeongtaek P5, and SK hynix targeted its first Yongin cluster fab for around Q1–Q2 2027.
+- **Buying existing space:** acquiring or converting existing fabs has become a faster route to capacity than greenfield construction (for example, Micron's reported purchase of a Taiwanese fab site to add cleanroom space).
+- **Packaging cleanrooms:** advanced-packaging lines (CoWoS, HBM stacking, hybrid bonding) now need near-front-end cleanliness and are competing for the same contractors, filtration, and AMHS suppliers; SK hynix's ~US$3.87B Indiana packaging plant and Micron's ~US$7B HBM packaging facility in Singapore are examples.
+
+### Major fab-construction milestones, 2025–2026
+
+| Project | Status as of Nov 2026 | Infrastructure note |
+|---|---|---|
+| TSMC Arizona (Phoenix) | Fab 1 in volume production on 4nm since late 2024; Fab 2 accelerated, with tool move-in reported for 2H 2026 and 3nm volume production targeted for 2H 2027; Fab 3 groundwork under way (2nm/A16) | Total U.S. commitment raised to US$165B (Mar 2025); skilled-labor shortages cited as a past cause of delay |
+| Micron, Clay (New York) | Groundbreaking ceremony held 16 Jan 2026; up to four fabs planned, initial phase targeted around 2030 | Site work in 2026, vertical construction to follow; one of the largest cleanroom projects in the U.S. |
+| Intel Ohio | First fab completion pushed to 2030–2031 (announced Feb 2025) | Illustrates how shells can be slowed to match demand |
+| SK hynix Yongin (Korea) | Fab 1 targeted for 2027 | Part of a multi-fab memory cluster with large new power and water needs |
+| Rapidus IIM-1 (Chitose, Hokkaido) | 2nm GAA prototypes running since Jul 2025; HVM target 2H FY2027 | Greenfield leading-edge cleanroom built on a compressed schedule |
+
+### Power and water under new pressure
+
+The fab's appetite for power (100–500 MW per large site) now competes directly with the AI data centers it supplies. Grid interconnection queues, substation lead times, and transformer shortages — the same constraints that slow data-center construction — affect fab siting, and new memory and logic clusters in Korea, Taiwan, Japan, and the U.S. require dedicated power and water projects. EUV-heavy nodes and the rising number of process steps keep pushing per-wafer energy and ultrapure-water demand upward, reinforcing investment in heat recovery, high-efficiency chillers and FFUs, and multi-loop water reclamation (File 21).
+
+### Chemicals, PFAS, and facility systems
+
+The EU universal PFAS restriction moved forward when ECHA's RAC final opinion and SEAC draft opinion were published on 26 Mar 2026, supporting an EU-wide restriction with time-limited derogations; earliest bans are not expected before late 2028. Fluoropolymers are pervasive in fab infrastructure — PFA/PTFE piping and valves in chemical and UPW distribution, seals, filter housings, and wet-bench components — so facility designers and component suppliers are tracking derogation scope closely.
+
+### Supply chain for fab infrastructure
+
+- **Equipment-adjacent components:** Lam's comments on component constraints echo the broader tightness in vacuum, RF, valves, and precision parts; in China, vacuum valves and RF power were still reported in Aug 2026 to be ~80% foreign-supplied.
+- **Localization:** China's push for domestic equipment (domestic tools reportedly ~35% of equipment used in 2025) extends to facility systems and AMHS, with new capacity reportedly required to source more than half of its tools domestically.
+- **India:** Lam announced (Oct 2026, reported) a ~US$1.2B investment in India for semiconductor component manufacturing, part of a wider effort to build a local supply base around India's first fabs and OSATs.
+
+### AI inside the fab
+
+Facility operations are an early beneficiary of AI: digital twins of fab utilities, predictive maintenance for pumps, chillers, and FFUs, and AI-assisted scheduling of AMHS and energy loads were prominent themes at SEMICON Taiwan 2026 (including its "Smart Fab Zone").
+
+**What to watch (late 2026–2027)**
+
+- Whether cleanroom-space shortages actually cap 2027 WFE, or whether shell-first construction catches up as forecasts of $200B+ WFE are tested.
+- Timing of SK hynix Yongin Fab 1, TSMC Arizona Fab 2 tool-in, and Micron New York vertical construction.
+- Grid and power-equipment constraints (transformers, substations) at new fab clusters competing with AI data centers.
+- Final EU PFAS restriction text and the scope of derogations for fab piping, seals, and filtration.
+- Construction-labor availability in the U.S., Japan, and Europe as multiple megaprojects peak simultaneously.

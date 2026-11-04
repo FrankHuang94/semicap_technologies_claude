@@ -75,7 +75,7 @@ Many advanced wafers receive an **epitaxial (epi) layer** — a thin, ultra-pure
 
 ## 2. Front-End-of-Line (FEOL)
 
-FEOL builds the transistors themselves — the active devices. This is the most physics-intensive and lowest-thermal-budget-flexible part of the flow.
+FEOL builds the transistors themselves — the active devices. This is the most physics-intensive and lowest-thermal-budget-flexible part of the flow. At the 2nm class — TSMC N2 (in volume production since Q4 2025), Intel 18A and Samsung SF2 — the FinFET has given way to the **gate-all-around (GAA) nanosheet**, which adds Si/SiGe superlattice epitaxy, inner-spacer formation and selective channel release to the FEOL modules described below.
 
 ### 2.1 Shallow Trench Isolation (STI)
 
@@ -148,7 +148,7 @@ Each metal layer is planarized by CMP. Challenges include **dishing** (over-poli
 
 ### 4.4 The Ru/Mo Transition for Sub-10nm Pitches
 
-At the tightest pitches, copper's resistivity rises sharply due to electron scattering at grain boundaries and surfaces, and the fixed-thickness TaN barrier consumes too much of the wire cross-section. The industry is transitioning lower BEOL layers to **ruthenium (Ru)** and **molybdenum (Mo)**, which can be used with thinner or no barrier and offer lower effective resistivity at scaled dimensions. This is covered in depth in Files 04 and 15.
+At the tightest pitches, copper's resistivity rises sharply due to electron scattering at grain boundaries and surfaces, and the fixed-thickness TaN barrier consumes too much of the wire cross-section. The industry is transitioning lower BEOL layers to **ruthenium (Ru)** and **molybdenum (Mo)**, which can be used with thinner or no barrier and offer lower effective resistivity at scaled dimensions. Production-oriented molybdenum ALD tools reached the market in 2025 (e.g., Lam Research's ALTUS Halo), for metallization applications across NAND, DRAM and logic. This is covered in depth in Files 04 and 15.
 
 ---
 
@@ -158,9 +158,10 @@ Once historically a low-value "back-end" afterthought, packaging is now a primar
 
 - **2.5D — CoWoS (Chip-on-Wafer-on-Substrate):** multiple dies (logic + HBM stacks) are placed side-by-side on a silicon **interposer** containing fine-pitch wiring and through-silicon vias (TSVs). This is the backbone of modern AI accelerators (NVIDIA, AMD).
 - **3D — SoIC / Foveros / X-Cube:** dies are stacked vertically and connected by micro-bumps or, increasingly, **hybrid bonding**. TSMC's SoIC, Intel's Foveros, and Samsung's X-Cube are the leading platforms.
-- **Hybrid Bonding (Cu-Cu direct bond):** the frontier of 3D integration. Two surfaces — each a planarized array of copper pads in dielectric, polished to sub-nanometer roughness — are brought into contact; the dielectrics bond at room temperature and a thermal anneal fuses the copper pads. This enables bond pitches below 10μm (toward 1μm and below), an order of magnitude finer than micro-bumps. Requires extreme CMP, surface activation, and sub-100nm alignment.
+- **Hybrid Bonding (Cu-Cu direct bond):** the frontier of 3D integration. Two surfaces — each a planarized array of copper pads in dielectric, polished to sub-nanometer roughness — are brought into contact; the dielectrics bond at room temperature and a thermal anneal fuses the copper pads. This enables bond pitches below 10μm (toward 1μm and below), an order of magnitude finer than micro-bumps; TSMC's SoIC production is reported to run at ~6μm pitch. Requires extreme CMP, surface activation, and sub-100nm alignment. Integrated die-to-wafer hybrid bonders (e.g., the Applied Materials–Besi Kinex system launched in 2025) aim to bring this into high-volume use.
 - **Fan-Out Wafer-Level Packaging (FOWLP):** dies are embedded in a reconstituted molded wafer and connected by a redistribution layer (RDL) built directly over them. TSMC's **InFO** (used in Apple A-series application processors) and **HDFO**, and the original **eWLB**, are key variants.
-- **HBM stack bonding:** High-Bandwidth Memory stacks 8–16 DRAM dies connected by TSVs and micro-bumps (transitioning to hybrid bonding for HBM4), then sits beside logic on the interposer.
+- **HBM stack bonding:** High-Bandwidth Memory stacks 8–16 DRAM dies connected by TSVs and micro-bumps, then sits beside logic on the interposer. Hybrid bonding was long expected to arrive with HBM4, but JEDEC's relaxation of the HBM4 package height limit to 775μm (from 720μm) allowed HBM4 — in mass production in 2026 for Nvidia's Rubin platform — to stay on mass-reflow molded underfill (MR-MUF) and thermo-compression bonding; SK hynix said at Hot Chips 2026 that hybrid bonding would come with HBM5 at the earliest, while Samsung is reportedly pushing it more aggressively.
+- **Co-packaged optics (CPO):** optical engines are integrated alongside switch or accelerator dies in the package. CPO switches began shipping in 2025–2026 (e.g., Nvidia's Spectrum-X/Quantum-X Photonics), and TSMC's COUPE platform enters mass production in 2H 2026.
 
 ---
 
@@ -225,8 +226,58 @@ The number of steps in the flow has grown dramatically with each node, and under
 
 ### D. The Modern Disruptions to the Classical Flow
 
-Several modern developments are disrupting the classical front-to-back flow described in this file. **Backside power delivery** (File 15) adds an entire new processing sequence *after* the frontside is complete — flipping the wafer, thinning it, and processing the backside — extending the flow into the third dimension. **Sequential 3D integration and CFET** (File 23) bond wafers together and process additional tiers, breaking the single-wafer linearity of the classical flow. **Advanced packaging** (File 11) has grown from a simple back-end step into a complex, front-end-grade processing sequence (TSV, RDL, hybrid bonding) that rivals parts of the wafer flow in sophistication. These disruptions reflect the broader turn toward three-dimensional integration: the classical flow built a chip layer by layer on a single wafer surface, but the modern flow increasingly builds in the third dimension — on the backside, in stacked tiers, and across bonded dies — extending and complicating the elegant front-to-back sequence that defined manufacturing for decades, and creating the new equipment categories (bonding, thinning, backside processing) that are among the industry's fastest-growing.
+Several modern developments are disrupting the classical front-to-back flow described in this file. **Backside power delivery** (File 15) — now in high-volume production with Intel 18A's PowerVia and following with TSMC's A16 Super Power Rail — adds an entire new processing sequence *after* the frontside is complete — flipping the wafer, thinning it, and processing the backside — extending the flow into the third dimension. **Sequential 3D integration and CFET** (File 23) bond wafers together and process additional tiers, breaking the single-wafer linearity of the classical flow. **Advanced packaging** (File 11) has grown from a simple back-end step into a complex, front-end-grade processing sequence (TSV, RDL, hybrid bonding) that rivals parts of the wafer flow in sophistication. These disruptions reflect the broader turn toward three-dimensional integration: the classical flow built a chip layer by layer on a single wafer surface, but the modern flow increasingly builds in the third dimension — on the backside, in stacked tiers, and across bonded dies — extending and complicating the elegant front-to-back sequence that defined manufacturing for decades, and creating the new equipment categories (bonding, thinning, backside processing) that are among the industry's fastest-growing.
 
 ### E. The Flow as a Map of the Equipment Industry
 
 The end-to-end flow is, in effect, a map of the entire SemiCap industry: each module corresponds to one or more equipment categories, and the chapters of this database follow the flow. Crystal growth and wafering (the materials suppliers, File 16); FEOL (lithography, deposition, etch, implant, thermal, clean — Files 03–10); MOL and BEOL (deposition, etch, CMP, lithography — Files 03–06); advanced packaging (File 11); metrology and inspection woven throughout (File 08); and test at the end (File 25). Understanding the flow is therefore the foundation for understanding the equipment industry, because every tool exists to perform one or more steps in this sequence, and the value of each equipment category derives from the criticality, difficulty, and frequency of the steps it performs. The flow is the stage on which the entire drama of semiconductor manufacturing — and of the equipment industry that enables it — is performed.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+Between 2025 and late 2026 the end-to-end flow described in this file changed in three places at once: the transistor (GAA nanosheets replaced FinFETs at the leading edge), the power-delivery network (moving to the wafer backside), and the back end (advanced packaging and HBM became capacity bottlenecks in their own right). Each change added process steps and new tool types, which is a large part of why SEMI's July 2026 mid-year forecast put 2026 wafer fab equipment at ~$143.9B.
+
+### FEOL: the GAA era begins in volume
+
+| Node | Company | Status (Nov 2026) | Flow implications |
+|---|---|---|---|
+| N2 | TSMC | Volume production since Q4 2025; capacity reported sold out; N2P follows | Si/SiGe superlattice epi, inner spacers, channel release |
+| 18A | Intel | High-volume manufacturing (Panther Lake, early 2026); 18A-P in risk production since Jun 2026 | GAA (RibbonFET) + PowerVia backside power |
+| SF2 | Samsung | In production (Exynos 2600); 2nd generation ramping 2H 2026 | GAA (MBCFET); yields reportedly below TSMC's |
+| 2nm GAA | Rapidus | Prototype transistors since Jul 2025; customer test chips planned late 2026 | HVM target 2H FY2027 |
+
+GAA adds epitaxy, selective-etch and ALD steps to the FEOL and makes in-cell 3D metrology essential. imec's 2026 roadmap (reported) keeps nanosheets and forksheets in play until CFET becomes viable around the A7 generation; its July 2026 work suggests that contact and parasitic resistance — not the channel material — will set the scaling floor at A2, reinforcing the point made in Section 2.5 that contact resistance is the most binding challenge.
+
+### Backside power and the "third dimension" of the flow
+
+- Intel 18A is the first high-volume node with backside power delivery (PowerVia), meaning wafer bonding, extreme thinning and backside lithography/etch/metallization are now part of a production flow, not just R&D.
+- TSMC's A16 with Super Power Rail is scheduled for volume production from 2H 2026 into 2027 (sources differ on timing), with first products expected around 2027, aimed first at HPC/AI.
+- Intel's 14A, the first node planned to use High-NA EUV, awaits external customer decisions expected 2H 2026–1H 2027.
+
+### BEOL and MOL materials
+
+Molybdenum ALD (e.g., Lam's ALTUS Halo, 2025) and Lam's Akara conductor etch system (2025) address the metallization and patterning challenges of the tightest-pitch lines and contacts. Ruthenium and molybdenum continue to move from research into the lowest metal levels as copper resistivity rises.
+
+### Packaging: the back end becomes a front-end-grade bottleneck
+
+- **CoWoS** remains the dominant AI packaging platform, with capacity estimates of ~106–130k wafers/month for 2026 (estimates vary) and sharp increases planned for 2027.
+- **Hybrid bonding** is in production for logic stacking (TSMC SoIC at ~6μm pitch, reported). For HBM, JEDEC's relaxation of the HBM4 height limit to 775μm postponed hybrid bonding; HBM4 shipped in 2026 using MR-MUF and thermo-compression bonding, with hybrid bonding expected from HBM4E/HBM5 (SK hynix) and pursued more aggressively by Samsung (reported).
+- **Co-packaged optics** entered production (Nvidia Spectrum-X/Quantum-X Photonics switches; TSMC COUPE in mass production 2H 2026), while **panel-level packaging** (TSMC CoPoS with rectangular, glass-core substrates) is on the roadmap. ASE has warned that CPO still lacks test standards.
+- Equipment makers repositioned accordingly: Applied Materials agreed to acquire ASMPT's NEXX deposition/ECD business (May 2026, reported), and KLA expects its advanced-packaging process-control revenue to reach ~$1.1B in 2026, up ~70% (reported).
+
+### Test and process control
+
+AI accelerators, with large dies, HBM stacks and long test times, have driven a test-equipment boom: SEMI's July 2026 forecast puts 2026 test equipment at ~$15.3B, and AI-related demand accounted for ~70% of Teradyne's revenue in Q1 2026. Tokyo Electron and Teradyne announced a collaboration on an integrated test cell for AI/data-center devices (June 2026), an example of the trend toward combining fab and test data. Known-good-die testing (Section 7) is now critical given the cost of multi-chiplet, multi-HBM assemblies.
+
+### Capacity constraints across the flow
+
+The 2026 upturn exposed physical limits beyond the tools themselves: Lam Research (21 Oct 2026) flagged cleanroom space shortages and component supply constraints, and ASML said its planned supply will not fully meet demand in 2027–2028. Fab construction and qualification times (Section 4 of File 01) therefore matter as much as tool lead times.
+
+### What to watch (late 2026–2027)
+
+- Yield learning on TSMC N2/N2P and Samsung SF2, and the A16 backside-power ramp.
+- Intel 14A customer commitments and the first production flows that use High-NA EUV.
+- Whether HBM4E moves to hybrid bonding, and how quickly die-to-wafer hybrid bonders reach high volume.
+- CoWoS, CoPoS and CPO capacity additions, and the emergence of CPO test standards.
+- IEDM 2026 (December) papers on CFET, 2D-channel devices and backside contacts.

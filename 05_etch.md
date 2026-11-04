@@ -78,7 +78,7 @@ Modern etch chambers add sophisticated control layers: **multi-zone electrostati
 
 ## 3. 3D NAND High-Aspect-Ratio (HAR) Etch
 
-If any single application embodies the modern etch challenge, it is the **channel-hole and slit etch in 3D NAND**. 3D NAND builds memory vertically by stacking alternating dielectric layers (an "ONON" or "OPOP" stack of oxide and nitride, or oxide and polysilicon) — and the layer count has exploded from 24 in early generations to 96, 128, 176, 232, and now toward 300+ layers, with string-stacking (etching two stacks and joining them) used to reach the highest counts.
+If any single application embodies the modern etch challenge, it is the **channel-hole and slit etch in 3D NAND**. 3D NAND builds memory vertically by stacking alternating dielectric layers (an "ONON" or "OPOP" stack of oxide and nitride, or oxide and polysilicon) — and the layer count has exploded from 24 in early generations to 96, 128, 176, 232, and now past 300 layers (SK hynix began mass-producing 321-layer NAND in late 2024, and other makers have since announced 300-plus-layer generations), with string-stacking (etching two stacks and joining them) used to reach the highest counts.
 
 Etching the channel holes through such a stack is one of the most extreme processes in all of manufacturing:
 
@@ -132,7 +132,7 @@ The closely related **inner-spacer process** requires *laterally* recessing the 
 
 ## 7. Cryogenic Etch
 
-**Cryogenic etch** cools the wafer to very low temperatures (often −60°C to below −100°C) during plasma etch. The cold temperature enhances sidewall passivation and changes reaction kinetics, dramatically improving etch rate, profile control, and mask selectivity. Originally developed for **deep silicon etch** in MEMS and **through-silicon vias (TSVs)**, cryogenic etch has become important for **3D NAND HAR channel etch**, where it enables faster, straighter, higher-aspect-ratio holes with less mask consumption — a key lever as NAND layer counts climb past 300. Cryogenic capability is now a competitive differentiator among the leading etch vendors.
+**Cryogenic etch** cools the wafer to very low temperatures (often −60°C to below −100°C) during plasma etch. The cold temperature enhances sidewall passivation and changes reaction kinetics, dramatically improving etch rate, profile control, and mask selectivity. Originally developed for **deep silicon etch** in MEMS and **through-silicon vias (TSVs)**, cryogenic etch has become important for **3D NAND HAR channel etch**, where it enables faster, straighter, higher-aspect-ratio holes with less mask consumption — a key lever as NAND layer counts climb past 300. Cryogenic capability is now a competitive differentiator among the leading etch vendors: Lam's third-generation Lam Cryo 3.0 (launched August 2024) is in volume production, with Lam stating that nearly 1,000 of its more than 7,500 NAND HAR dielectric etch chambers use cryogenic technology, while Tokyo Electron's cryogenic channel-hole etch (which TEL says etches through 400+ layers about 2.5× faster than conventional processes) is reportedly being introduced from 2026 to challenge Lam's near-monopoly in this step.
 
 ---
 
@@ -146,13 +146,13 @@ The advent of EUV lithography created new etch requirements. EUV resists are **t
 
 | Vendor | Etch position |
 |---|---|
-| **Lam Research** | The **etch market leader**, with dominant CCP (Flex/Exelan, Kiyo) and ICP platforms; especially strong in dielectric HAR etch (3D NAND) and conductor etch; etch is the core of Lam's business and a deep technology moat. |
+| **Lam Research** | The **etch market leader**, with dominant CCP (Flex/Exelan) and ICP (Kiyo) platforms; launched **Akara** (February 2025), the successor to Kiyo for conductor etch, with a solid-state DirectDrive plasma source, and Lam Cryo 3.0 for NAND; especially strong in dielectric HAR etch (3D NAND) and conductor etch; etch is the core of Lam's business and a deep technology moat. |
 | **Tokyo Electron (TEL)** | The number-two etch supplier and Lam's principal rival, with strong dielectric and conductor etch platforms (Tactras, Telius); also dominant in coat/develop, enabling integrated litho-etch offerings. |
-| **Applied Materials (AMAT)** | A major etch player (Centura, Sym3, Producer Selectra for selective etch), with particular strength in selective and ALE for GAA channel release, leveraging its integrated-materials-solutions strategy. |
+| **Applied Materials (AMAT)** | A major etch player (Centura, Sym3, Producer Selectra for selective etch), with particular strength in selective and ALE for GAA channel release, leveraging its integrated-materials-solutions strategy; introduced the Sym3 Z Magnum conductor etch system (second-generation pulsed-voltage technology) in February 2026. |
 | **Hitachi High-Tech** | Strong in conductor and specialty etch with advanced control, and a leader in etch-related metrology (CD-SEM). |
 | **SPTS (KLA company)** | Specialty and advanced-packaging etch (DRIE/Bosch process, MEMS, TSV). |
 | **Mattson Technology (now Beijing E-Town/APS)** | Strip, dry etch, and RTP; now part of a China-linked group, relevant to localization. |
-| **NAURA, AMEC (China)** | Fast-rising Chinese etch suppliers; AMEC in particular has credible CCP/ICP etch tools used by domestic and some international fabs, and is a focal point of China's equipment-localization effort. |
+| **NAURA, AMEC (China)** | Fast-rising Chinese etch suppliers; AMEC in particular has credible CCP/ICP etch tools used by domestic and some international fabs (reported 2025 etch revenue ~RMB 9.8B, +35%), and is a focal point of China's equipment-localization effort; NAURA has 28nm-class etch in mass production. |
 
 ---
 
@@ -168,7 +168,7 @@ The etch roadmap is driven by the architecture transitions:
 
 - **GAA nanosheet etch:** ever-higher Si/SiGe selectivity for channel release, precise inner-spacer lateral recess, and damage-free isotropic etch of suspended sheets — making selective and atomic-layer etch central.
 - **CFET patterning:** dual-tier stacks roughly double the inner-spacer and channel-release complexity and demand new self-aligned isolation etches between the n and p tiers, plus high-aspect-ratio inter-tier via etch.
-- **Backside etch for BSPDN:** etching nano-scale through-silicon vias from the wafer backside through ultra-thin (<5μm) silicon at aspect ratios above 40:1, aligned to frontside transistors — a wholly new etch challenge created by backside power delivery.
+- **Backside etch for BSPDN:** etching nano-scale through-silicon vias from the wafer backside through ultra-thin (<5μm) silicon at aspect ratios above 40:1, aligned to frontside transistors — a wholly new etch challenge created by backside power delivery, now in volume production with Intel 18A (PowerVia) and following with TSMC A16 (Super Power Rail) from 2H 2026–2027.
 - **3D NAND beyond 1000 layers:** as string-stacking pushes total layer counts toward and past 1000, channel-hole etch faces ever-more-extreme aspect ratios, demanding cryogenic etch, new high-energy plasma sources, novel hardmasks, and tighter profile control to keep billions of holes uniform from top to bottom.
 - **Atomic-scale everything:** across logic and memory, the common thread is the migration from continuous etch toward **self-limiting, atomically controlled removal**, because at these dimensions the natural variation of a conventional etch is no longer small compared with the features being made.
 
@@ -197,3 +197,45 @@ Selective etch — removing one material while leaving an adjacent, chemically s
 ### E. The Backside and 3D Etch Frontier
 
 The turn toward three-dimensional integration is creating entirely new etch challenges. **Backside via etch** for backside power delivery (File 15) requires etching nano-scale vias from the wafer backside through ultra-thin (<5μm) silicon at aspect ratios above 40:1, aligned to frontside transistors — a wholly new etch application created by backside power. **Inter-tier via etch** for sequential CFET (File 23) requires high-aspect-ratio etch at sub-20nm CD between bonded device tiers. **Through-silicon via etch** for advanced packaging (File 11) uses Bosch-process DRIE at various scales. And **self-aligned isolation etch** between CFET tiers requires new selective capabilities. These 3D etch challenges — backside, inter-tier, TSV, and self-aligned — represent a new frontier created by the industry's turn to the third dimension, and they ensure that etch, far from being a mature step, remains one of the most demanding and rapidly advancing areas of semiconductor equipment, central to enabling the three-dimensional, atomic-scale, multi-material devices that define the leading edge.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+### Market backdrop
+
+Etch has been one of the main beneficiaries of the 2025–2026 equipment upcycle. Per SEMI's December 2025 year-end forecast, total equipment sales reached about **$133B in 2025 (+13.7%)**; SEMI's July 2026 mid-year forecast then raised 2026 sharply to **$165.9B (+23.2%)**, with WFE at **$143.9B**. Lam Research, the etch leader, reported record foundry sales in its 21 October 2026 results and said it sees calendar-2026 WFE in the mid-$150B range and, preliminarily, above $200B in 2027, with growth led by **DRAM**, then foundry/logic, then NAND. Lam also cautioned that cleanroom space shortages and component supply constraints could limit how fast the industry can add output. For etch, the drivers are the 2nm GAA ramp, HBM-driven DRAM spending, NAND layer-count upgrades and backside power.
+
+### New etch platforms
+
+- **Lam Akara (Feb 2025):** Lam's successor to the Kiyo conductor-etch line, which has more than 30,000 chambers installed. Akara uses a solid-state **DirectDrive** plasma source that Lam says responds about 100× faster than earlier sources, together with TEMPO plasma pulsing and SNAP ion-energy control. Lam targets it at GAA, 6F² DRAM and 3D NAND, extendable to 4F² DRAM, CFET and 3D DRAM, and says it has been selected as production tool of record for planar DRAM and foundry GAA applications.
+- **Applied Sym3 Z Magnum (Feb 2026):** builds on the Sym3 Z platform (more than 250 chambers deployed, per Applied) with second-generation pulsed-voltage technology (PVT2) for 2nm-class conductor etch. It was launched alongside the **Viva** radical-treatment system for damage-free smoothing of GAA nanosheet surfaces; Applied says a logic maker has adopted Viva for sub-2nm engineering.
+- **Cryogenic etch competition:** Lam Cryo 3.0 (August 2024) is in volume NAND production, and nearly 1,000 of Lam's more than 7,500 NAND HAR dielectric chambers run cryogenic processes. Tokyo Electron's cryogenic channel-hole etch is reportedly entering the market from 2026. Channel-hole etch has been close to a Lam monopoly, so any TEL wins here would be one of the most important share shifts in etch. Share estimates from secondary sources conflict and should be treated with caution.
+
+### GAA and backside power in volume
+
+With TSMC N2 in volume production since Q4 2025, Intel 18A in high-volume manufacturing (Panther Lake, early 2026) and Samsung SF2 shipping, the selective SiGe channel-release, inner-spacer recess and ALE steps in Sections 4 and 6 have become high-volume processes for the first time. Intel's PowerVia on 18A makes **backside via etch** a production process, and TSMC's A16 (Super Power Rail) follows in 2H 2026–2027, depending on source. Looking further out, imec's 2026 roadmap reportedly places CFET around the A7 (0.7nm-class) generation. imec research published in July 2026 found that contacts and parasitics, not the channel material, set the gate-pitch floor at A2. That keeps selective etch and contact/via etch at the center of future scaling.
+
+### Memory: DRAM-led etch demand and NAND layer counts
+
+DRAM is leading 2026–2027 equipment growth on HBM demand from AI accelerators. HBM4 entered mass production in 2026, and per Counterpoint, in Q2 2026 SK hynix held ~50% HBM share, Samsung ~33% and Micron ~18%. DRAM capacitor and buried-word-line etches, plus TSV etch for HBM stacks, benefit directly. In NAND, layer counts are past 300, and the move toward 400-plus layers and multi-deck stacking continues to raise HAR etch intensity per wafer.
+
+### China
+
+| Indicator | Data point (2025–2026) | Source / status |
+|---|---|---|
+| AMEC total 2025 revenue | ~RMB 12.4B (+~37%) | Company preliminary figures, per press |
+| AMEC 2025 etch revenue | ~RMB 9.8B (+35%) | Per press reports |
+| AMEC Q1 2026 revenue | ~RMB 2.9B (+34% YoY) | Per press reports |
+| AMEC CCP etch in CXMT DRAM | Volume production in multiple key steps | Reported, Aug 2026 |
+| NAURA etch | 28nm-class etch in mass production | Industry reports |
+| Domestic tool share in China | ~35% of equipment used in 2025 (vs ~25% in 2024) | Industry-body figure (reported) |
+
+AMEC reportedly aims to cover around 60% of the high-end etch market within five years. US controls on SME and components remain in force. The Affiliates ("50%") Rule is suspended under the US–China truce, which Treasury Secretary Bessent said in September 2026 would be extended to 10 January 2027, so Western etch vendors face a fluid China outlook. China accounted for 28% of Applied Materials' fiscal Q3 2026 revenue, down from 35% a year earlier.
+
+**What to watch (late 2026–2027)**
+- Whether TEL's cryogenic channel-hole etch wins production share from Lam at major NAND makers.
+- Etch intensity of TSMC A16/A14 and Intel 14A (backside vias, selective release), and early CFET-related etch development.
+- DRAM-led 2027 WFE (>$200B per Lam's preliminary view) and whether cleanroom and component shortages cap etch tool output.
+- AMEC and NAURA progress in advanced dielectric and HAR etch, and any change to US export rules after the truce period.
+- HBM4E/HBM5 TSV and stacking etch requirements as hybrid bonding approaches.

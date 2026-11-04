@@ -116,12 +116,13 @@ As beamline implantation has reached its limits for three-dimensional, ultra-sha
 | Vendor | Position |
 |---|---|
 | **Applied Materials (AMAT)** | A major force across both implant (the VIISta family of high-current, high-energy, and medium-current implanters) and thermal processing (RTP, and laser anneal via its DSA/Vantage platforms); a broad, integrated portfolio. |
-| **Axcelis Technologies** | The **specialist ion-implant leader** (the Purion platform spanning high-current, high-energy, and medium-current), with particularly strong positions in memory and power-device implantation; implant is its entire business and core moat. |
+| **Axcelis Technologies** | The **specialist ion-implant leader** (the Purion platform spanning high-current, high-energy, and medium-current), with particularly strong positions in memory and power-device implantation; implant is its entire business and core moat. Launched the Purion Power Series+ for SiC (Sep 2025) and the Purion H6 high-current implanter (Feb 2026); an all-stock merger with Veeco announced in Oct 2025 is now expected to close by end of Q1 2027, pending China SAMR approval. |
 | **ULVAC, Sumitomo Heavy Industries (Japan)** | Implant suppliers serving the Japanese and memory markets. |
+| **Veeco Instruments** | Laser anneal (laser spike anneal from the former Ultratech, plus nanosecond laser anneal aimed at low-thermal-budget contact and backside-power applications); merging with Axcelis (see above). |
 | **Mattson Technology** | RTP/thermal and strip (now part of a China-linked group). |
 | **SCREEN, Kokusai, TEL** | Thermal-processing and furnace suppliers (overlapping with the thermal coverage in File 09). |
 
-The implant market is notable for Axcelis's success as a focused pure-play competing against the much larger Applied Materials, sustained by deep specialization and strong positions in the memory and power segments. Annealing, especially the high-value laser-anneal segment, is dominated by Applied Materials.
+The implant market is notable for Axcelis's success as a focused pure-play competing against the much larger Applied Materials, sustained by deep specialization and strong positions in the memory and power segments. Annealing, especially the high-value laser-anneal segment, is led by Applied Materials, with Veeco (ex-Ultratech) the main laser-anneal challenger; the pending Axcelis–Veeco combination would for the first time pair a leading implant specialist with a laser-anneal supplier. Chinese domestic implant suppliers are also qualifying tools in China's mature-node fabs (see the 2025–2026 update below).
 
 ---
 
@@ -130,7 +131,7 @@ The implant market is notable for Axcelis's success as a focused pure-play compe
 The implant-and-anneal roadmap is driven by the same forces reshaping the rest of the front end:
 
 - **Junction depth scaling to below 3nm:** extensions and contacts must be ever shallower yet more highly doped, pushing the limits of low-energy implant, in-situ epitaxy, and ultra-short anneals.
-- **Contact-resistance minimization:** widely regarded as the single binding constraint at 2nm and below, this demands maximum active dopant concentration precisely at the contact interface — driving in-situ doped epitaxy, advanced silicides, and millisecond/nanosecond laser anneal.
+- **Contact-resistance minimization:** widely regarded as the single binding constraint at 2nm (in volume production at TSMC since Q4 2025) and below, this demands maximum active dopant concentration precisely at the contact interface — driving in-situ doped epitaxy, advanced silicides, and millisecond/nanosecond laser anneal.
 - **Three-dimensional doping for GAA and CFET:** conformally and controllably doping stacked nanosheet channels and the dual tiers of CFET requires conformal doping methods (PLAD, MLD) and a continued shift from channel doping toward work-function engineering.
 - **Ultra-low thermal budget for 3D integration:** as sequential 3D integration and backside processing spread, dopant activation must increasingly be achieved with localized, surface-confined anneals (laser, flash) that do not disturb already-formed lower tiers — making the lowest-thermal-budget activation methods strategically critical.
 
@@ -158,7 +159,7 @@ The annealing roadmap is defined by an intensifying demand for **localized, ultr
 
 ### E. Equipment Landscape Reprised
 
-The doping-and-annealing equipment landscape reflects these shifts. **Implant** remains a two-player market (Applied Materials' VIISta and Axcelis's Purion), with Axcelis especially strong in the memory and SiC-power segments that remain implant-intensive (memory and power devices use far more implant than leading-edge logic, where in-situ epitaxy has taken over much of the critical doping). **Annealing** is led by Applied Materials, particularly in the high-value laser-anneal segment that has become strategically central. As leading-edge logic shifts critical doping toward epitaxy and its activation needs toward localized laser anneal, while memory and power devices sustain robust implant demand, the doping-and-annealing equipment market splits along application lines — a microcosm of the broader industry pattern in which the hardest, highest-value problems migrate toward the three-dimensional, contact-resistance-limited, thermal-budget-constrained frontier.
+The doping-and-annealing equipment landscape reflects these shifts. **Implant** remains essentially a two-player market outside China (Applied Materials' VIISta and Axcelis's Purion, with Japanese suppliers in niches and Chinese domestic implanters growing inside China), with Axcelis especially strong in the memory and SiC-power segments that remain implant-intensive (memory and power devices use far more implant than leading-edge logic, where in-situ epitaxy has taken over much of the critical doping). **Annealing** is led by Applied Materials, particularly in the high-value laser-anneal segment that has become strategically central. As leading-edge logic shifts critical doping toward epitaxy and its activation needs toward localized laser anneal, while memory and power devices sustain robust implant demand, the doping-and-annealing equipment market splits along application lines — a microcosm of the broader industry pattern in which the hardest, highest-value problems migrate toward the three-dimensional, contact-resistance-limited, thermal-budget-constrained frontier.
 
 ---
 
@@ -170,8 +171,50 @@ Although in-situ doped epitaxy has taken over much of the *critical* source/drai
 
 ### B. The SiC Power Tailwind for Implant
 
-The growth of **silicon carbide power devices** deserves emphasis as a significant tailwind for the implant market. SiC device fabrication is unusually implant-intensive: because SiC's extremely low dopant-diffusion coefficients make diffusion-based doping impractical, virtually all SiC doping is done by **ion implantation** (often high-dose, high-energy, and sometimes hot implantation), followed by the extreme high-temperature activation anneals (1,600–1,800°C) that SiC requires. As SiC power devices ramp rapidly to serve EV electrification, fast charging, and grid applications (File 12), the demand for SiC-capable implanters grows correspondingly — a tailwind that benefits the implant specialists (Axcelis has a strong SiC-power position) and that exemplifies how the electrification megatrend creates equipment demand beyond the silicon-logic mainstream. The SiC power tailwind, together with the resilient memory implant demand, ensures that ion implantation — though displaced from some leading-edge logic roles by epitaxy — remains a large, growing, and strategically important equipment market, tied to the electrification and memory megatrends as much as to logic scaling.
+The growth of **silicon carbide power devices** deserves emphasis as a significant tailwind for the implant market. SiC device fabrication is unusually implant-intensive: because SiC's extremely low dopant-diffusion coefficients make diffusion-based doping impractical, virtually all SiC doping is done by **ion implantation** (often high-dose, high-energy, and sometimes hot implantation), followed by the extreme high-temperature activation anneals (1,600–1,800°C) that SiC requires. As SiC power devices ramp to serve EV electrification, fast charging, and grid applications (File 12), the demand for SiC-capable implanters grows correspondingly over the long term (although, after the 2023–2024 capacity build-out, SiC implant demand was muted through 2025–2026 as customers absorbed capacity, per Axcelis management) — a tailwind that benefits the implant specialists (Axcelis has a strong SiC-power position) and that exemplifies how the electrification megatrend creates equipment demand beyond the silicon-logic mainstream. The SiC power tailwind, together with the resilient memory implant demand, ensures that ion implantation — though displaced from some leading-edge logic roles by epitaxy — remains a large, growing, and strategically important equipment market, tied to the electrification and memory megatrends as much as to logic scaling.
 
 ### C. The Doping-and-Annealing Synthesis
 
 The synthesis of this file is that doping and annealing, though less visible than lithography or etch, are increasingly the **limiting factors** in how fast and how efficiently the smallest transistors can be made to switch — and that they have evolved in profound ways as devices have gone three-dimensional. The critical source/drain doping that most affects contact resistance (the binding constraint at 2nm and below) has shifted toward **in-situ doped epitaxy**; the threshold-voltage setting has shifted toward **work-function engineering** of the metal gate; conformal doping of three-dimensional surfaces uses **plasma doping** and research-stage methods; and activation increasingly demands **localized, ultra-low-thermal-budget laser anneal** that can activate dopants without damaging the buried structures of three-dimensional and stacked devices. Meanwhile, **beamline implantation** remains essential and resilient across logic (wells, Vt, halo), memory (heavily implant-intensive), and power devices (especially SiC, with its electrification tailwind). The doping-and-annealing equipment market thus splits along application lines — leading-edge logic shifting toward epitaxy and laser anneal, memory and power sustaining robust implant demand — in a pattern that mirrors the broader industry: the hardest, highest-value problems migrating toward the three-dimensional, contact-resistance-limited, thermal-budget-constrained frontier, while a large and resilient base of demand persists across the diverse applications that the full breadth of the semiconductor industry serves.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+### A. Market backdrop: a memory-led upcycle that favors implant
+
+The broader equipment market has accelerated sharply since this file was first written. SEMI's July 2026 mid-year forecast put 2026 total equipment sales at a record $165.9B (+23.2%), with wafer fab equipment (WFE) at $143.9B, and projected the total to reach $229.5B in 2028. In the October 2026 earnings season, Lam Research said it sees 2026 WFE in the ~mid-$150B range and, preliminarily, more than $200B in 2027, with growth led by **DRAM**, then foundry/logic, then NAND. For doping and annealing this mix matters: memory is far more implant-intensive than leading-edge logic (Section A of "Further Analysis"), so a DRAM-led cycle — driven by HBM for AI accelerators — is a more direct tailwind for beamline implant than the logic-led cycles of the early 2020s.
+
+### B. Axcelis: new products, softer SiC, and the Veeco merger
+
+| Item | Status (Nov 2026) |
+|---|---|
+| Purion Power Series+ (SiC: H200+, M+, XE+/EXE+) | Launched Sep 2025 for SiC power-device implant |
+| Purion H6 high-current implanter | Unveiled 4 Feb 2026 (shown at SEMICON Korea); targets advanced logic, memory and image sensors |
+| 2026 outlook | Guided flat after Q4 2025 (memory growth offsetting power and mature-node declines); per secondary reports, raised to mid-single-digit growth after Q2 2026 |
+| SiC implant demand | Described by management as muted near term while customers absorb capacity; long-term outlook positive |
+| Axcelis–Veeco merger | Announced Oct 2025 (all-stock, ~$4.4B; 0.3575 ACLS share per VECO share); both shareholder votes passed 6 Feb 2026; per a 2 Nov 2026 joint update, closing now expected by **end of Q1 2027**, pending China SAMR approval and a new HSR filing |
+
+The Axcelis–Veeco combination is strategically relevant to this file: Veeco brings laser spike and nanosecond laser anneal (its NSA-class systems are positioned for low-thermal-budget contact and backside-power anneals), which together with Axcelis's implanters would create a supplier spanning both halves of the implant-and-anneal pair. Press reports indicate that SAMR's review has focused on competitive effects in China, and closing has slipped from the originally targeted 2H 2026.
+
+### C. Leading-edge logic: 2nm in production, backside power arriving
+
+- **TSMC N2** (first GAA nanosheet node) has been in volume production since Q4 2025, and **Intel 18A** — the first node with PowerVia backside power — is in high-volume manufacturing (Panther Lake launched early 2026). TSMC's **A16** with Super Power Rail backside power is slated for volume production in 2H 2026–2027 (sources differ).
+- These ramps confirm the shift described in Sections 4–6: the critical S/D doping is done by in-situ doped epitaxy, Vt is set by work-function metals, and the most valuable thermal step is localized millisecond/nanosecond anneal for contact formation.
+- **Backside power** adds new anneal requirements: dopants and silicides near backside contacts must be activated after the wafer has been bonded and thinned, with the front-side interconnect already in place. This favors surface-confined laser anneal and is one reason laser-anneal suppliers market nanosecond systems specifically for backside-power and contact applications.
+
+### D. China: localization reaches implant
+
+China remained a large buyer of implanters through 2025–2026, especially for mature-node logic, power and memory. Industry-body figures put domestic tools at ~35% of equipment used in China in 2025, and new capacity is reportedly required to source more than half of its tools domestically. Implant has historically been one of the least-localized tool categories, but Chinese implanter makers are reportedly qualifying high-current and medium-current tools at domestic fabs. The US–China trade truce (Affiliates Rule suspended from 10 Nov 2025; truce reportedly extended to 10 Jan 2027) has kept existing SME controls in place but deferred their expansion to ≥50%-owned subsidiaries.
+
+### E. Power devices and SiC
+
+The SiC power segment, which was the fastest-growing implant end market in 2022–2024, entered a digestion phase in 2025–2026 as EV demand growth slowed and earlier capacity was absorbed. Long-term drivers (EVs, fast charging, renewable and data-center power conversion) are intact, and 200mm SiC conversion continues to require high-temperature implant and 1,600–1,800°C activation anneals. AI data-center power delivery (higher-voltage rack power) is an emerging additional driver for both SiC and GaN power devices.
+
+**What to watch (late 2026–2027)**
+
+- SAMR decision and closing of the Axcelis–Veeco merger (targeted by end of Q1 2027), and any remedies imposed.
+- Whether the DRAM/HBM capex surge translates into record implant shipments in 2027.
+- Pace of SiC implant recovery and 200mm SiC conversions.
+- Laser-anneal adoption for backside power at TSMC A16 and Intel 18A-P/14A.
+- Progress of Chinese domestic implanters in high-current and high-energy tools.

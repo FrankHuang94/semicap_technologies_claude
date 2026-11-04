@@ -34,7 +34,7 @@ timeline
     ArF 193nm dry : ~2003
     ArF immersion 193i NA1.35 : ~2007
     EUV 13.5nm NA0.33 : 2019 HVM
-    High-NA EUV NA0.55 : 2025+
+    High-NA EUV NA0.55 : 2025-26 production tools, HVM ~2028+
 ```
 
 **Why EUV beat multi-patterning: passes per critical layer**
@@ -109,7 +109,7 @@ EUV masks are also reflective: a Mo/Si multilayer mirror on a low-thermal-expans
 
 ### 3.5 Scanner Evolution and HVM Reality
 
-ASML's NXE platform progressed from early low-power tools to the **NXE:3400C** (~170 wph) and **NXE:3600D** (~160–220 wph with improvements). Throughput, source power, and **availability (uptime)** — historically the Achilles' heel of EUV — improved steadily through the 2018–2023 ramp. TSMC's N7+ (2019) was the first HVM node to use EUV; N5 (2020) made it mainstream with 10+ EUV layers; N3 uses ~20+.
+ASML's NXE platform progressed from early low-power tools to the **NXE:3400C** (~170 wph) and **NXE:3600D** (~160–220 wph with improvements). Throughput, source power, and **availability (uptime)** — historically the Achilles' heel of EUV — improved steadily through the 2018–2023 ramp. TSMC's N7+ (2019) was the first HVM node to use EUV; N5 (2020) made it mainstream with 10+ EUV layers; N3 uses ~20+. The current workhorse is the **NXE:3800E** (shipping since 2024, rated up to ~220 wph), and ASML expects its mix of EUV shipments to shift further toward the 3800E by 2027.
 
 ---
 
@@ -119,7 +119,7 @@ To extend EUV resolution without resorting to EUV multi-patterning, ASML develop
 
 - **Anamorphic optics:** to keep mask shadowing manageable at the higher NA, the optics use **8× demagnification in the scan direction and 4× across the slit**. The consequence is that the printable field shrinks to **26mm × 16.5mm** (half the conventional 26×33mm field). Large chips must be **stitched** from multiple exposures — a significant design constraint for big GPUs.
 - **Resolution:** enables ~8nm half-pitch single exposure, sufficient to push several nodes without EUV double-patterning.
-- **Status:** the first EXE:5000 was installed at **IMEC (2023)** and at **Intel (2024)**, which targets first HVM High-NA insertion on **Intel 18A/14A**. Tool cost is ~**$380M+**, limiting early adoption to a few layers at the most advanced fabs. TSMC has signaled a more conservative, later adoption (A14 era).
+- **Status:** the first EXE:5000 shipped to **Intel** (assembled in Oregon in 2024), and ASML and **IMEC** opened a joint High-NA lab in Veldhoven in 2024; five EXE:5000 R&D systems were built in total. The production version, **EXE:5200B** (~175 wph), first shipped in 2025, and Intel completed acceptance of an EXE:5200B at its D1X fab in Oregon (reported early 2026). Intel plans first HVM High-NA insertion on **Intel 14A** (18A uses 0.33 NA EUV). Tool cost is ~**$380M+**, limiting early adoption to a few layers at the most advanced fabs. Per summaries of ASML's October 2026 earnings call, Samsung plans High-NA high-volume use around 2028 and TSMC around 2030 — TSMC having signaled that A16 and A14 can be built without it.
 - **Challenges:** thinner resists (<20nm) to control mask 3D and absorption, stitching accuracy <1nm, new metal-oxide resists, and the economics of a $380M tool delivering fewer dies per shot.
 
 ---
@@ -128,7 +128,7 @@ To extend EUV resolution without resorting to EUV multi-patterning, ASML develop
 
 ### 5.1 Nanoimprint Lithography (NIL)
 
-NIL physically stamps a pattern into resist using a mask ("template") in direct contact, then cures it — eliminating optics entirely. **Canon's FPA-1200NZ2C** is the leading commercial system. Advantages: very low cost-per-layer, no expensive optics, sub-10nm resolution demonstrated. Disadvantages: defectivity (contact process), template wear, throughput, and overlay. Its first real production foothold is **3D NAND** (Kioxia/SK Hynix interest) where the regular, periodic patterns suit NIL; logic adoption remains a research question due to defect and overlay demands.
+NIL physically stamps a pattern into resist using a mask ("template") in direct contact, then cures it — eliminating optics entirely. **Canon's FPA-1200NZ2C** is the leading commercial system. Advantages: very low cost-per-layer, no expensive optics, sub-10nm resolution demonstrated. Disadvantages: defectivity (contact process), template wear, throughput, and overlay. Its first real production foothold is **3D NAND** (Kioxia/SK Hynix interest) where the regular, periodic patterns suit NIL; logic adoption remains a research question due to defect and overlay demands. In October 2024 Canon shipped an FPA-1200NZ2C to the **Texas Institute for Electronics (TIE)** for R&D and prototyping, and has said it hopes to sell roughly 10–20 NIL units a year within five years.
 
 ### 5.2 Directed Self-Assembly (DSA)
 
@@ -149,7 +149,7 @@ As k₁ approached its limits, the **computation** behind each exposure became a
 - **OPC (Optical Proximity Correction):** modifies mask shapes (adding serifs, biasing edges) to compensate for diffraction and process effects.
 - **SMO (Source-Mask Optimization):** jointly optimizes the illumination pupil and the mask pattern.
 - **ILT (Inverse Lithography Technology):** computes the ideal (often curvilinear) mask shape by solving the inverse imaging problem — extremely compute-intensive but increasingly used, especially with curvilinear EUV masks.
-- **AI / GPU acceleration:** **NVIDIA cuLitho** (announced 2023, with TSMC, ASML, and Synopsys) accelerates computational-lithography workloads — including ILT and RCWA-based simulation — by orders of magnitude on GPUs, addressing the exploding compute cost of mask synthesis at advanced nodes.
+- **AI / GPU acceleration:** **NVIDIA cuLitho** (announced 2023, with TSMC, ASML, and Synopsys) accelerates computational-lithography workloads — including ILT and RCWA-based simulation — by orders of magnitude on GPUs, addressing the exploding compute cost of mask synthesis at advanced nodes. TSMC has since adopted cuLitho in its computational-lithography flow, and GPU-accelerated, AI-assisted mask synthesis is becoming standard practice.
 
 EDA leaders **Synopsys, Siemens EDA (Mentor Calibre), and ASML's Brion** dominate computational-litho software.
 
@@ -166,6 +166,7 @@ EDA leaders **Synopsys, Siemens EDA (Mentor Calibre), and ASML's Brion** dominat
 | **Gigaphoton (Japan)** | Independent DUV (and historically EUV-source) light-source supplier, primarily for Nikon/Canon scanners. |
 | **ZEISS SMT (Germany)** | Exclusive supplier of EUV and High-NA projection optics to ASML; a co-equal technical partner (ASML took a stake in ZEISS SMT). |
 | **TRUMPF (Germany)** | Supplier of the high-power CO₂ drive laser for the EUV source. |
+| **SMEE (China)** | China's domestic scanner maker; strongest in i-line/KrF/ArF dry for mature nodes and packaging; a 28nm-class ArF immersion scanner is reported to be in verification, though independent confirmation of volume use is lacking. China's overall lithography localization remains below ~5% (reported). |
 
 ASML's monopoly arises from this tightly held ecosystem: even if a competitor obtained the patents, replicating the ZEISS optics, TRUMPF laser, Cymer source, and the integration know-how is a multi-decade undertaking.
 
@@ -183,7 +184,7 @@ ASML's monopoly arises from this tightly held ecosystem: even if a competitor ob
 ## 9. Roadmap: Toward the 1nm Class
 
 - **EUV layer expansion:** N3 uses ~20+ EUV layers; N2 and Intel 18A push further, with **EUV double-patterning (LELE-EUV / SAOP)** appearing for the tightest pitches until High-NA single-exposure takes over.
-- **High-NA adoption curve:** Intel 18A/14A first (limited layers, 2025+); TSMC A16/A14 later (2026–2028); broad High-NA usage for critical layers by ~2028–2030.
+- **High-NA adoption curve:** Intel 14A first (limited layers; customer decisions on 14A expected 2H 2026–1H 2027); Samsung around 2028; TSMC around 2030 (A16 and A14 planned on 0.33 NA EUV); broad High-NA usage for critical layers by ~2028–2030.
 - **Backside power delivery (BSPDN)** reshapes lithography by **freeing frontside metal layers** (power moves to the backside), but adds new patterning challenges: backside via lithography aligned to frontside transistors through a thinned wafer (IR alignment), and ultra-tight overlay requirements.
 - **Mask infrastructure:** EUV mask-blank supply (AGC, Shin-Etsu, Hoya — only three suppliers) and **actinic mask inspection** (ZEISS AIMS EUV) are critical bottlenecks; stochastic-defect detection at 2nm pitch demands faster actinic inspection.
 - **Overlay** requirements tighten to <2nm, driving the metrology side (ASML YieldStar, KLA Archer) as hard as the scanners themselves.
@@ -217,7 +218,7 @@ A theme that recurs across the lithography roadmap is that the **scanner is only
 
 ### A. Why DUV Immersion Remains the Workhorse
 
-Amid the focus on EUV and High-NA, it is easy to forget that **DUV (ArF immersion, 193i) remains the workhorse of the entire industry** — the tool that patterns the majority of layers even at the most advanced nodes, and the dominant tool for the vast mature-node market. The reasons are economic and physical. Most layers on a chip do not require the finest resolution, and for those layers a single (or multi-patterned) DUV exposure is far cheaper than EUV — so even leading-edge fabs use DUV for the majority of their layers, reserving EUV for the critical few. The entire **mature-node market** (28nm and older, File 15) — which serves automotive, industrial, IoT, analog, power, and the vast majority of chips by volume — runs almost entirely on DUV, often on refurbished immersion scanners. This makes DUV an enormous, enduring market, and it is the segment where **Chinese domestic lithography (SMEE)** is focused (mature-node DUV being achievable without the EUV capability China lacks). The enduring role of DUV is a reminder that the leading edge, though it captures attention, is only part of the industry — and that the workhorse tools serving the bulk of production are as commercially important as the exotic EUV scanners serving the cutting edge.
+Amid the focus on EUV and High-NA, it is easy to forget that **DUV (ArF immersion, 193i) remains the workhorse of the entire industry** — the tool that patterns the majority of layers even at the most advanced nodes, and the dominant tool for the vast mature-node market. The reasons are economic and physical. Most layers on a chip do not require the finest resolution, and for those layers a single (or multi-patterned) DUV exposure is far cheaper than EUV — so even leading-edge fabs use DUV for the majority of their layers, reserving EUV for the critical few. The entire **mature-node market** (28nm and older, File 15) — which serves automotive, industrial, IoT, analog, power, and the vast majority of chips by volume — runs almost entirely on DUV, often on refurbished immersion scanners. This makes DUV an enormous, enduring market, and it is the segment where **Chinese domestic lithography (SMEE)** is focused (mature-node DUV being achievable without the EUV capability China lacks). ASML itself plans to raise DUV immersion capacity (alongside low-NA EUV) by ~30% in 2027, underscoring how much DUV demand remains. The enduring role of DUV is a reminder that the leading edge, though it captures attention, is only part of the industry — and that the workhorse tools serving the bulk of production are as commercially important as the exotic EUV scanners serving the cutting edge.
 
 ### B. The Patterning Toolbox
 
@@ -226,3 +227,62 @@ A useful way to understand modern lithography is as a **toolbox** of complementa
 ### C. Lithography as the Pacing Technology
 
 The deepest point about lithography is that it remains the **pacing technology of the entire industry** — the capability that, more than any other, sets the limit on what can be manufactured and gates the leading edge. Whoever controls the most advanced lithography controls the leading edge: this is why ASML's EUV monopoly is the single most strategically important position in all of semiconductors, why EUV access is the central lever of export controls (File 18), and why the High-NA transition is so consequential. Lithography's pacing role flows from its place in the manufacturing flow: it defines the smallest features, which set transistor density, which bounds performance and power — so the resolution of the available scanner sets the ceiling on everything downstream. As scaling slows and turns three-dimensional, lithography's role evolves (from "shrink everything" toward "pattern the critical layers, and let architecture, materials, and packaging do the rest"), but it does not diminish: the critical layers still require the most advanced patterning, the overlay requirements tighten, and the new architectures (backside power, CFET) bring new patterning challenges. Lithography thus remains at the heart of the industry's progress and its geopolitics — the pacing technology, the strategic chokepoint, and the capability around which the entire equipment industry and the global contest for technological supremacy revolve.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+Lithography moved from "can the industry absorb EUV?" to "can ASML build enough of it?" over 2025–2026. AI-driven logic and a DRAM-led memory upcycle pushed demand for both EUV and DUV immersion above ASML's planned output, while High-NA EUV crossed from R&D into qualified production tools — but with high-volume insertion still several years out for most customers.
+
+### ASML: record results and a supply ceiling
+
+ASML reported on 14 Oct 2026 record Q3 net sales of **€11.7B** (gross margin 57.5%, net income €5.0B), including **€4.1B of EUV system sales with one High-NA system**. It guided FY2026 net sales to **€44–45B** (vs. ~€32.7B in 2025) and Q4 to €14.2–15.2B. The most important message was about capacity:
+
+- Planned supply will **not fully meet customer demand in 2027 and 2028**.
+- Low-NA EUV and DUV immersion capacity is planned to rise ~30% in 2027, with further increases under study for 2028.
+- Customers are reportedly asking to place orders for 2029–2030 delivery.
+- ASML will hold a Capital Markets Day on 10 June 2027.
+
+| Indicator | Q4 2025 | Q1 2026 | Q2 2026 | Q3 2026 |
+|---|---|---|---|---|
+| China share of ASML system sales | 36% | 19% | 14% | ~23% |
+
+ASML expects China to account for ~20% of FY2026 total net sales, down from the pull-in-driven levels of 2024–2025. (Separately, ASML led Mistral AI's Series C in September 2025 with ~€1.3B, a sign of its interest in applying AI across its products.)
+
+### High-NA EUV: from lab to production tool
+
+| Milestone | Timing | Notes |
+|---|---|---|
+| EXE:5000 R&D systems | 2023–2025 | Five built; Intel (Oregon) and the ASML–imec High-NA lab among the first users |
+| EXE:5200B production tool first shipped | 2025 | ~175 wph; ~60% productivity improvement over EXE:5000 (per ASML) |
+| Intel acceptance of EXE:5200B at D1X | Early 2026 (reported) | Intel 14A is the first node planned to use High-NA |
+| High-NA in Samsung HVM | ~2028 | Per ASML Q3 2026 call summaries |
+| High-NA in TSMC HVM | ~2030 | TSMC's A16/A14 planned on 0.33 NA EUV |
+
+The field-size halving and ~$380M+ price discussed in Section 4 and Extended Analysis C remain the core adoption hurdles; whether Intel wins external 14A customers (decisions expected 2H 2026–1H 2027) is the near-term test of High-NA economics.
+
+### China: localization and the EUV question
+
+- Domestic lithography remains China's weakest equipment category: localization is reported below ~5%, versus ~35% for domestic tools overall in 2025 (industry-body figure).
+- SMEE's 28nm-class ArF immersion scanner is reported to be in verification; independent confirmation of production use and throughput is lacking.
+- Reuters reported in December 2025 that a team including former ASML engineers had assembled a **prototype EUV machine** in Shenzhen, partly using components from older ASML systems. It generates EUV light but had not produced working chips; the reported target is 2028, with insiders suggesting ~2030 is more realistic.
+- SMIC/Huawei reportedly produced 5nm-class (N+3) chips (Kirin 9030, late 2025) with DUV multi-patterning at low yields and high cost — illustrating Section 2's point that multi-patterning can extend DUV, but at a steep price.
+- China is pushing domestic KrF/ArF photoresists; late-2025 rumours of Japanese photoresist shipment curbs to China were not verified.
+
+### Export controls affecting lithography
+
+EUV exports to China remain prohibited, and advanced DUV immersion exports and servicing remain tightly controlled by the U.S., the Netherlands and Japan. In Congress, the proposed **MATCH Act** would ban DUV sales to China and the servicing of installed tools there; it was still pending as of November 2026. The Affiliates (50%) Rule, suspended under the U.S.–China truce, could widen the set of restricted Chinese customers if reinstated.
+
+### Alternatives and new entrants
+
+- **Nanoimprint:** Canon's FPA-1200NZ2C remains the leading NIL system (TIE shipment, Oct 2024); memory remains its most realistic production market.
+- **New light sources and approaches (early stage):** U.S. startup xLight, developing a free-electron-laser EUV source, reportedly finalized a $150M CHIPS incentives agreement in June 2026; Substrate is pursuing accelerator-based X-ray lithography, though its claims are not yet verified at scale. Neither is expected to affect HVM before the 2030s.
+- **Computational lithography:** GPU acceleration (Nvidia cuLitho, adopted by TSMC) and AI-assisted OPC/ILT are spreading as curvilinear masks and High-NA raise compute demands.
+
+### What to watch (late 2026–2027)
+
+- ASML Q4 2026 results and 2027 guidance; whether the planned ~30% capacity increase eases allocation.
+- ASML's 10 June 2027 Capital Markets Day: long-term capacity, High-NA roadmap and any Hyper-NA signals.
+- Intel 14A customer wins and the first High-NA production layers.
+- Fate of the MATCH Act and of the Affiliates Rule suspension after the truce's 10 January 2027 date.
+- Credible evidence (or not) of working-chip output from China's EUV prototype and production use of SMEE's immersion scanner.

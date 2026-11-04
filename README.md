@@ -16,6 +16,22 @@ The unifying thesis of the database is that the slowing of classical dimensional
 
 ---
 
+## 🆕 What's New in the November 2026 Update
+
+Every content file now carries a **"🆕 2025–2026 Update: Latest Developments (as of November 2026)"** section, and stale statements in the body (forecast rows, "expected in 2025" milestones, node timelines) have been refreshed in place. The headline changes since the original build:
+
+- **A record, AI- and memory-driven equipment cycle.** SEMI put 2025 total equipment sales at ~$133B (+13.7%), then in July 2026 raised its 2026 forecast to a record **~$165.9B (+23.2%)**, with WFE ~$143.9B, and projected **~$229.5B by 2028**. In the October 2026 earnings season Lam Research guided 2026 WFE to the mid-$150Bs and, preliminarily, **>$200B for 2027**, led by DRAM; ASML (record €11.7B Q3 sales, FY2026 €44–45B) warned that EUV/DUV supply will not fully meet 2027–2028 demand. Cleanroom space and subsystem components have become binding constraints.
+- **The 2nm/GAA era is in production.** TSMC N2 has been in volume production since Q4 2025 (A16 with backside power next, A14 targeted for 2028) and TSMC raised 2026 capex to $60–64B; Intel 18A (PowerVia) is shipping, with 14A — the first node planned around High-NA EUV — awaiting external customer commitments; Samsung SF2 and Rapidus (2nm pilot line in Hokkaido, HVM target FY2027) are ramping.
+- **Memory supercycle and HBM4.** DRAM now leads WFE growth; HBM4 entered volume production for AI accelerators, while JEDEC's relaxed 775 µm stack height pushed most hybrid-bonding adoption out to HBM4E/HBM5.
+- **Advanced packaging and photonics.** CoWoS capacity keeps expanding, co-packaged optics (TSMC COUPE, Nvidia photonics switches) began shipping, and panel-level/glass-core packaging moved onto foundry roadmaps.
+- **Geopolitics in flux.** The US "Affiliates (50%) Rule" (Sep 2025) was suspended under the Oct 2025 US–China Busan truce (now extended to Jan 2027); Samsung/SK hynix China fabs lost VEU status and operate on annual licenses; a 25% Section 232 tariff on certain advanced chips took effect in Jan 2026; China's domestic-tool share reached ~35% of 2025 purchases, and a Chinese EUV prototype was reported (Dec 2025). The Axcelis–Veeco merger awaits Chinese approval (expected close by Q1 2027).
+
+## 🇨🇳 Simplified Chinese Translation (for reference)
+
+A complete Simplified Chinese reference translation of this database (all 26 files plus this index, including the November 2026 updates) is in **[`zh-CN/`](zh-CN/README.md)**, with a print-ready, bookmarked A4 PDF: **[`zh-CN/SemiCap_Knowledge_Database_zh-CN.pdf`](zh-CN/SemiCap_Knowledge_Database_zh-CN.pdf)**. The translation is provided for reference only; where it differs from the English original, the English text prevails. The PDF can be rebuilt with `zh-CN/_build` (see its README).
+
+---
+
 ## Table of Contents
 
 | # | File | Description |
@@ -64,7 +80,7 @@ The files are designed to be read in order but are also self-contained, with cro
 
 This database was generated as a structured, comprehensive knowledge synthesis of the semiconductor capital-equipment field, organized into 26 thematic files plus this index. Content is written for technical depth and breadth, using tables, structured lists, detailed prose, and **original diagrams** throughout. Each file opens with a **📊 Visual Overview** containing process flow charts and schematics — built as native **Mermaid** diagrams (which GitHub renders as real figures) and ASCII/Unicode cross-sections — to make the underlying technology of each process easier to grasp. All diagrams are original schematics created for this database; no third-party copyrighted figures or images are reproduced. Numerical figures (market sizes, financials, process dimensions, research results) are representative industry estimates drawn from the public domain — industry associations (SEMI), market researchers, company disclosures, and the published research literature (IEDM, VLSI, SPIE, and the Nature/Science journal families) — and should be read as approximate; exact values vary by source and definition and evolve over time.
 
-**Last updated:** 2026-06. The semiconductor field moves quickly; node timelines, market figures, and research results should be checked against current sources for time-sensitive use. To contribute updates, revise the relevant file, preserving its structure and cross-references, and update this index if the scope of a file changes materially.
+**Last updated:** 2026-11 (November 2026 update: latest developments added to every file; Simplified Chinese translation added). The semiconductor field moves quickly; node timelines, market figures, and research results should be checked against current sources for time-sensitive use. To contribute updates, revise the relevant file, preserving its structure and cross-references, and update this index if the scope of a file changes materially.
 
 ---
 

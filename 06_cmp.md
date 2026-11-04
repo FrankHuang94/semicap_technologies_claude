@@ -67,7 +67,7 @@ The consumables — **slurry** and **pad** — are as important as the polishing
 - **Copper (Cu) CMP** for BEOL interconnect — a multi-step process (bulk Cu removal, then barrier removal, then a soft-landing buff) using oxidizer-based slurries, where controlling dishing and erosion is paramount.
 - **Cobalt (Co) CMP** for lower-metal layers and contacts at advanced nodes.
 
-Each metal demands its own slurry chemistry and selectivity to the surrounding dielectric and barrier. As interconnect transitions to ruthenium and molybdenum, entirely new CMP chemistries are being developed.
+Each metal demands its own slurry chemistry and selectivity to the surrounding dielectric and barrier. As interconnect transitions to ruthenium and molybdenum, entirely new CMP chemistries are being developed. Molybdenum has already begun replacing tungsten in some 3D NAND word lines and leading-edge logic contacts (2025–2026), so Mo CMP has moved from research into production.
 
 ---
 
@@ -113,9 +113,9 @@ CMP is unusual in that the **tool** market and the **consumables** (slurry and p
 
 | Category | Leaders |
 |---|---|
-| **CMP polishing tools** | **Applied Materials** (the Reflexion platform; the overall CMP tool leader) and **Ebara** (Japan; the strong number two, with particular strength in metal and packaging CMP). KCTECH (Korea) serves the domestic Korean market. |
-| **Slurries** | **Cabot Microelectronics / CMC Materials** (now part of **Entegris** after the 2022 acquisition), **Fujimi**, **Versum/Merck**, **Dow/DuPont**, and Hitachi/Resonac. |
-| **Pads** | **DuPont** (the dominant pad supplier, including the IC1000 family) and **3M**, with Cabot/CMC also active. |
+| **CMP polishing tools** | **Applied Materials** (the Reflexion platform; the overall CMP tool leader) and **Ebara** (Japan; the strong number two, with particular strength in metal and packaging CMP). KCTECH (Korea) serves the domestic Korean market; **Hwatsing** (China) has become the leading domestic Chinese CMP tool supplier (it reportedly shipped its 1,000th CMP system in April 2026). |
+| **Slurries** | **Cabot Microelectronics / CMC Materials** (now part of **Entegris** after the 2022 acquisition), **Fujimi**, **Fujifilm**, **Versum/Merck**, **DuPont** (electronics business spun off as **Qnity Electronics** in November 2025), and Resonac (formerly Hitachi Chemical). |
+| **Pads** | **DuPont / Qnity** (the dominant pad supplier, including the IC1000 and IKONIC families; the business moved to Qnity Electronics with DuPont's November 2025 electronics spin-off) and **3M**, with Cabot/CMC (Entegris) also active. |
 
 The consumables business is highly recurring and strategically important: slurry and pad formulation is deeply co-engineered with the specific process and material, creating sticky, high-margin relationships. Entegris's acquisition of CMC Materials reflects the strategic value of controlling the slurry supply chain alongside other critical materials.
 
@@ -128,7 +128,7 @@ The CMP roadmap is defined by the relentless tightening of planarity requirement
 - **Atomic-scale planarity at 2nm and beyond:** as feature sizes and depth-of-focus budgets shrink, the allowable post-CMP topography approaches the atomic scale, demanding ever-better dishing/erosion control and uniformity.
 - **New-material CMP:** ruthenium, molybdenum, and cobalt interconnects, plus new high-k and channel materials, each require bespoke slurry and pad development.
 - **Hybrid-bonding precision:** as bond pitches shrink toward and below one micron, the surface preparation requirements (sub-nanometer roughness, precisely controlled copper recess) become even more stringent, making CMP a pacing technology for 3D integration.
-- **Backside processing:** the spread of backside power delivery makes ultra-thin wafer thinning a mainstream high-volume requirement, with its attendant uniformity and stress challenges.
+- **Backside processing:** the spread of backside power delivery — in volume production with Intel 18A (PowerVia) since 2025–2026 and following with TSMC A16 from 2H 2026–2027 — makes ultra-thin wafer thinning a mainstream high-volume requirement, with its attendant uniformity and stress challenges.
 - **In-situ, AI-driven control:** tighter tolerances drive deeper integration of real-time metrology and machine-learning-based endpoint and process control to hold the process within ever-narrower windows.
 
 Once regarded as a comparatively mundane, mature step, CMP has thus re-emerged as a critical enabler at two frontiers at once — the atomic-scale planarity of leading-edge logic and the sub-nanometer surface perfection of hybrid bonding — ensuring its continued importance in the SemiCap landscape.
@@ -139,11 +139,11 @@ Once regarded as a comparatively mundane, mature step, CMP has thus re-emerged a
 
 ### A. The Consumable-Centric Economics of CMP
 
-CMP is unusual among process steps in that its ongoing cost is dominated by **consumables** — the slurry and the pad — rather than by the tool. A high-volume fab consumes enormous quantities of slurry (each formulation precisely matched to the material being polished) and replaces pads frequently (a pad has a limited life and must be periodically **conditioned** with a diamond disk to maintain consistent removal). This makes the **slurry and pad suppliers** (Entegris/CMC, Fujimi, DuPont, 3M, Resonac) central to CMP economics and performance, and it makes slurry/pad formulation a deep, co-engineered discipline: the chemistry must be tuned to the specific material, the desired selectivity, the defect requirements, and the pad mechanics, with the result often protected as trade secret. Entegris's acquisition of CMC Materials reflected the strategic value of controlling this consumable supply, and the recurring, high-margin nature of slurry and pad sales makes CMP consumables an attractive business independent of the tool.
+CMP is unusual among process steps in that its ongoing cost is dominated by **consumables** — the slurry and the pad — rather than by the tool. A high-volume fab consumes enormous quantities of slurry (each formulation precisely matched to the material being polished) and replaces pads frequently (a pad has a limited life and must be periodically **conditioned** with a diamond disk to maintain consistent removal). This makes the **slurry and pad suppliers** (Entegris/CMC, Fujimi, DuPont/Qnity, 3M, Resonac) central to CMP economics and performance, and it makes slurry/pad formulation a deep, co-engineered discipline: the chemistry must be tuned to the specific material, the desired selectivity, the defect requirements, and the pad mechanics, with the result often protected as trade secret. Entegris's acquisition of CMC Materials reflected the strategic value of controlling this consumable supply, and the recurring, high-margin nature of slurry and pad sales makes CMP consumables an attractive business independent of the tool.
 
 ### B. The Hybrid-Bonding Imperative
 
-The single most important development elevating CMP's strategic importance is **hybrid bonding** (Files 11, 23). In Cu-Cu hybrid bonding, two surfaces — each an array of copper pads inlaid in dielectric — are bonded directly, and the success of the bond depends almost entirely on the **CMP-prepared surface**: the dielectric must be planarized to **sub-nanometer roughness** (so the dielectric surfaces bond on contact), and the copper pads must be given a precisely controlled, slight **dishing** (a few nanometers of recess, so the copper does not protrude but expands to make contact during the post-bond anneal). This is a far tighter and more exacting CMP specification than conventional BEOL CMP, with the roughness and recess controlled at the atomic scale across the entire wafer. As hybrid bonding spreads — in HBM, in 3D logic (AMD 3D V-Cache, TSMC SoIC), in CMOS image sensors, and toward sub-micron bond pitches — it makes CMP a **pacing technology for 3D integration**, and it has driven intense development of new slurries, pads, and process control specifically for bonding-surface preparation. CMP has, in effect, become a packaging-critical technology, expanding its market and its strategic importance well beyond its traditional front-end role.
+The single most important development elevating CMP's strategic importance is **hybrid bonding** (Files 11, 23). In Cu-Cu hybrid bonding, two surfaces — each an array of copper pads inlaid in dielectric — are bonded directly, and the success of the bond depends almost entirely on the **CMP-prepared surface**: the dielectric must be planarized to **sub-nanometer roughness** (so the dielectric surfaces bond on contact), and the copper pads must be given a precisely controlled, slight **dishing** (a few nanometers of recess, so the copper does not protrude but expands to make contact during the post-bond anneal). This is a far tighter and more exacting CMP specification than conventional BEOL CMP, with the roughness and recess controlled at the atomic scale across the entire wafer. As hybrid bonding spreads — in 3D logic (AMD 3D V-Cache, TSMC SoIC), in CMOS image sensors, prospectively in HBM (where adoption has been pushed out to HBM4E/HBM5 at the earliest after JEDEC relaxed the HBM4 package-height limit to 775 µm), and toward sub-micron bond pitches — it makes CMP a **pacing technology for 3D integration**, and it has driven intense development of new slurries, pads, and process control specifically for bonding-surface preparation. CMP has, in effect, become a packaging-critical technology, expanding its market and its strategic importance well beyond its traditional front-end role.
 
 ### C. New-Material CMP Challenges
 
@@ -167,4 +167,45 @@ Because over-polishing destroys the device and under-polishing leaves shorts or 
 
 ### C. The Renaissance Summarized
 
-The deepest theme of CMP at the leading edge is its **renaissance** — its transformation from a mature, almost commoditized step into a critical enabler at two frontiers at once. At the **logic frontier**, atomic-scale planarity requirements, new-material polishing (Ru, Mo, Co), and fragile GAA-stack planarization keep CMP an area of active innovation. At the **3D-integration frontier**, hybrid-bonding surface preparation (sub-nanometer roughness, precisely controlled copper recess) and ultra-thin backside thinning (below 5μm for backside power) make CMP a pacing technology for the three-dimensional future. These two frontiers — atomic-scale planarity and sub-nanometer bonding-surface perfection — have elevated CMP from a step once taken for granted into one whose strategic importance is rising, and they have driven intense development of new slurries, pads, processes, and control. The CMP renaissance is a microcosm of a pattern seen throughout this database: as the industry pushes toward atomic-scale and three-dimensional integration, even the most mature-seeming steps re-emerge as critical, innovating, yield-determining enablers — and the equipment and consumables that perform them (Applied, Ebara for tools; Entegris, DuPont, Fujimi for consumables) regain strategic significance.
+The deepest theme of CMP at the leading edge is its **renaissance** — its transformation from a mature, almost commoditized step into a critical enabler at two frontiers at once. At the **logic frontier**, atomic-scale planarity requirements, new-material polishing (Ru, Mo, Co), and fragile GAA-stack planarization keep CMP an area of active innovation. At the **3D-integration frontier**, hybrid-bonding surface preparation (sub-nanometer roughness, precisely controlled copper recess) and ultra-thin backside thinning (below 5μm for backside power) make CMP a pacing technology for the three-dimensional future. These two frontiers — atomic-scale planarity and sub-nanometer bonding-surface perfection — have elevated CMP from a step once taken for granted into one whose strategic importance is rising, and they have driven intense development of new slurries, pads, processes, and control. The CMP renaissance is a microcosm of a pattern seen throughout this database: as the industry pushes toward atomic-scale and three-dimensional integration, even the most mature-seeming steps re-emerge as critical, innovating, yield-determining enablers — and the equipment and consumables that perform them (Applied, Ebara for tools; Entegris, DuPont/Qnity, Fujimi for consumables) regain strategic significance.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+### Market backdrop
+
+CMP has benefited from the broad 2025–2026 equipment upcycle and from its growing role in advanced packaging. Per SEMI's July 2026 mid-year forecast, total equipment sales are expected to reach **$165.9B in 2026 (+23.2%)**, with WFE at **$143.9B**. Lam Research said in October 2026 that it sees, preliminarily, more than $200B of WFE in 2027, led by DRAM. More metal layers at 2nm, HBM-driven DRAM, TSV and bonding steps in AI packaging, and backside thinning all add CMP passes per wafer. On the consumables side, TECHCET estimated the CMP slurry-and-pad market at about **$3.4B in 2024** (slurries ~$2.0B, pads ~$1.39B, +1.6% overall) and projected about $3.6B for 2025. Specialty slurries for new metals and bonding surfaces are growing faster than standard products, according to market-research estimates.
+
+### Hybrid bonding: progress, but HBM timing pushed out
+
+- **Logic and SoIC:** hybrid bonding is in volume production for 3D logic stacking, with TSMC SoIC reportedly at bond pitches of around 6 µm. CMP surface preparation (sub-nm roughness, controlled Cu recess) remains the gating step.
+- **Equipment alliances:** Applied Materials took a ~9% stake in BE Semiconductor (Besi) in 2025. The two co-develop hybrid-bonding systems, including Applied's **Kinex** integrated die-to-wafer hybrid bonder (launched 2025). SK hynix has reportedly placed a first production order for an Applied–Besi inline hybrid-bonding system.
+- **HBM timing:** JEDEC raised the HBM4 package-height limit to **775 µm** (from 720 µm), which eased the pressure to adopt hybrid bonding. SK hynix is keeping MR-MUF/thermo-compression bonding for HBM4 and said at Hot Chips 2026 that hybrid bonding is not ready for HBM4E, pointing to HBM5 at the earliest. Samsung is reportedly more aggressive. For CMP, HBM hybrid bonding therefore looks like a 2027+ demand driver rather than a 2026 one.
+- **Consumables for bonding:** Fujifilm launched a slurry for Cu/oxide hybrid-bonding surfaces in September 2025 and said a major chipmaker had adopted it. Qnity has reportedly introduced an HBM-oriented CMP pad platform under a supply agreement with SK hynix.
+
+### New metals and backside thinning
+
+Molybdenum's move into 3D NAND word lines (Lam ALTUS Halo, 2025) and leading-edge logic contacts (2026) makes Mo CMP a production requirement. Its removal behavior, oxidation control and defect sensitivity differ from tungsten processes, so new slurry formulations are needed. Backside power — Intel 18A PowerVia in high-volume manufacturing and TSMC A16 Super Power Rail from 2H 2026–2027 — turns sub-5 µm wafer thinning by grinding plus CMP into a leading-edge logic step.
+
+### Corporate and supply-chain changes
+
+| Date | Company | Development |
+|---|---|---|
+| Jan 2025 | Ebara | Showed panel-level packaging CMP and plating equipment for advanced packaging |
+| 2025 | Applied Materials / Besi | ~9% Applied stake in Besi; Kinex hybrid bonder launched |
+| Sep 2025 | Fujifilm | Hybrid-bonding CMP slurry launched; adopted by a major device maker (per Fujifilm) |
+| Nov 2025 | DuPont → Qnity | Electronics business (incl. IKONIC CMP pads) spun off as Qnity Electronics, listed 3 Nov 2025 |
+| Apr 2026 | Hwatsing | Reportedly shipped its 1,000th CMP system |
+| 2026 | Ebara | Record FY2025 results; expects record operating profit in 2026 on AI-related demand (per company outlook summaries) |
+
+### China
+
+Hwatsing is China's main domestic CMP tool supplier. Per Georgetown CSET analysis, China's share of the CMP tool market rose from ~1.5% in 2022 to almost 11% in 2023, driven almost entirely by Hwatsing. CMP is one of the segments, along with cleaning, thermal and PVD, where domestic Chinese tools have made the most progress. That fits the broader industry-body estimate that domestic tools made up ~35% of equipment used in Chinese fabs in 2025.
+
+**What to watch (late 2026–2027)**
+- Whether HBM4E or HBM5 brings hybrid bonding — and its CMP requirements — into high-volume memory production, and how far Samsung moves ahead of SK hynix.
+- Bond-pitch scaling below ~6 µm in SoIC-type logic stacking and the CMP and metrology needed to support it.
+- Mo and (later) Ru CMP slurry qualification, and consumables pricing as specialty slurries gain share.
+- Panel-level (CoPoS) and glass-core packaging creating demand for large-format CMP.
+- Domestic Chinese CMP share gains (Hwatsing) under continued export controls.

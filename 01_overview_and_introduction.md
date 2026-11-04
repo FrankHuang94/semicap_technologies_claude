@@ -85,18 +85,19 @@ Because a few tools gate the entire advanced-chip supply chain, governments have
 - **U.S. Export Administration Regulations (EAR)** administered by the Bureau of Industry and Security (BIS). The landmark **October 7, 2022** rules restricted the export to China of equipment capable of producing logic at ≤16/14nm (FinFET), DRAM at ≤18nm half-pitch, and NAND at ≥128 layers. These rules directly curtailed China-bound sales by Applied Materials, Lam Research, and KLA.
 - **The Foreign Direct Product Rule (FDPR)**, which extends U.S. jurisdiction to foreign-made goods that incorporate U.S. technology — a powerful lever given that essentially every tool, including ASML's EUV scanners, contains U.S.-origin components or software.
 - **The Netherlands and Japan**, the home countries of ASML and of TEL/Nikon/Canon/Screen respectively, have aligned their own controls with U.S. policy. ASML has not been permitted to ship EUV to China since 2018 (license never granted), and DUV immersion restrictions tightened through 2023–2024. Japan's **March 2023** controls covered 23 categories of equipment.
+- **Successive U.S. rule packages** have widened the net since 2022: the October 2023 update, the **December 2024** package (HBM controls, ~140 new Entity List additions, expanded FDPRs), the **September 2025 "Affiliates" (50%) Rule** extending Entity List restrictions to majority-owned subsidiaries (suspended for one year from 10 November 2025 under the U.S.–China trade truce), and the revocation of Validated End-User status for Samsung's and SK hynix's China fabs effective 31 December 2025 (replaced by annual licenses for 2026 that permit maintenance but not expansion or upgrades).
 - **ITAR (International Traffic in Arms Regulations)** governs a narrower slice — primarily defense-grade and radiation-hardened components — but reinforces the dual-use sensitivity of the sector.
 
 ### Industrial Policy: The Subsidy Era
 
 In parallel with restrictions, major economies launched enormous subsidy programs to localize capacity:
 
-- **U.S. CHIPS and Science Act (2022)** — ~US$52 billion, including ~$39B in manufacturing incentives and ~$11B for R&D (including the National Semiconductor Technology Center, NSTC). It anchored TSMC Arizona, Intel Ohio/Arizona, Samsung Texas, and Micron New York. "Guardrails" prohibit recipients from expanding advanced capacity in China for ten years.
+- **U.S. CHIPS and Science Act (2022)** — ~US$52 billion, including ~$39B in manufacturing incentives and ~$11B for R&D (including the National Semiconductor Technology Center, NSTC). It anchored TSMC Arizona, Intel Ohio/Arizona, Samsung Texas, and Micron New York. "Guardrails" prohibit recipients from expanding advanced capacity in China for ten years. In August 2025 the U.S. government converted Intel's CHIPS grants into a ~10% equity stake (~US$8.9B), signalling a more direct, ownership-based form of industrial policy.
 - **EU Chips Act (2023)** — ~€43 billion mobilized, supporting ASML, IMEC, Infineon, STMicroelectronics, and new fabs (e.g., the TSMC/ESMC Dresden joint venture and Intel's planned Magdeburg site).
 - **China's "Big Fund" (National IC Industry Investment Fund)** — Phase I (~¥139B / ~$22B, 2014), Phase II (~¥204B / ~$30B, 2019), and Phase III (~¥344B / ~$47B, 2024) — funding both fabs (SMIC, CXMT, YMTC) and domestic equipment makers (NAURA, AMEC, Piotech, SiCarrier).
 - **Japan, South Korea, India, and others** launched parallel programs (e.g., Japan's support for Rapidus and the TSMC Kumamoto fab; Korea's mega-cluster plans; India's incentive scheme).
 
-The net effect is that SemiCap has become an instrument of statecraft. Equipment OEMs now operate under simultaneous pressure to capture subsidy-fueled demand in the West while managing the loss of Chinese revenue — historically 20–45% of sales for the major WFE firms.
+The net effect is that SemiCap has become an instrument of statecraft. Equipment OEMs now operate under simultaneous pressure to capture subsidy-fueled demand in the West while managing the loss of Chinese revenue — historically 20–45% of sales for the major WFE firms, and peaking above 40% for several of them in 2024. By 2026 that share had fallen back (e.g., ~28% of Applied Materials' revenue in its July 2026 quarter, and 14–23% of ASML's quarterly system sales in Q2–Q3 2026) as China's pull-in buying normalized and controls tightened.
 
 ## 4. The SemiCap Value Chain: From OEM to High-Volume Manufacturing
 
@@ -108,7 +109,7 @@ A new process tool travels a long road from concept to productive use in a fab. 
 4. **Tool qualification ("qual").** The tool must demonstrate stability, repeatability, and yield within tight statistical bounds. Qualification metrics include uptime, mean time between failures (MTBF), particle adders, and process capability indices (Cpk).
 5. **High-Volume Manufacturing (HVM) ramp.** Only after qualification does the tool enter production, often in fleets of dozens of identical chambers to provide capacity. "Copy-exactly" methodology (pioneered by Intel) demands that every tool in a fleet behave identically.
 
-This pipeline is why a node like 2nm requires equipment decisions made 5–7 years earlier, and why High-NA EUV — shipping to customers in 2024 — was under development at ASML and ZEISS for well over a decade beforehand.
+This pipeline is why a node like 2nm requires equipment decisions made 5–7 years earlier, and why High-NA EUV — first shipped to customers in 2024 and, by 2026, accepted at Intel's Oregon development fab in its EXE:5200B production version — was under development at ASML and ZEISS for well over a decade beforehand. Even so, per ASML's October 2026 commentary, lead customers expect High-NA in high-volume manufacturing only around 2028 (Samsung) to 2030 (TSMC).
 
 ## 5. Market Size: Global SemiCap TAM, 2015–2030
 
@@ -126,8 +127,10 @@ The wafer fab equipment market is large, fast-growing over the long run, and hig
 | 2022 | ~107 | Record; logic/foundry leading-edge spend |
 | 2023 | ~106 | China DUV pull-in offsets memory downturn |
 | 2024 | ~113 | AI-driven leading-edge + advanced packaging |
-| 2025 (est.) | ~120–130 | AI capex, 2nm ramp, HBM |
-| 2030 (proj.) | ~160–200+ | Driven by AI, 2nm/CFET, advanced packaging |
+| 2025 | ~133 | Record; +13.7% YoY per SEMI (Dec 2025): AI capex, 2nm ramp, HBM |
+| 2026 (fcst.) | ~166 | SEMI mid-year forecast (Jul 2026), +23.2%; WFE ~$144B; DRAM-led |
+| 2028 (proj.) | ~230 | SEMI projection of a record ~$229.5B |
+| 2030 (proj.) | ~160–200+ (earlier view) | Pre-2025 projection, now superseded — SEMI's 2028 forecast already exceeds it |
 
 ### Breakdown by Process Step (typical leading-edge logic fab WFE allocation)
 
@@ -158,7 +161,7 @@ The SemiCap industry coordinates through several institutions:
 Equipment "generations" are defined less by calendar time than by **process-capability inflection points**. A new tool generation is born when a physical scaling limit forces a fundamentally new approach. Key historical drivers:
 
 - **Wavelength transitions in lithography:** g-line (436nm) → i-line (365nm) → KrF (248nm) → ArF dry (193nm) → ArF immersion (193i) → EUV (13.5nm) → High-NA EUV. Each transition required an essentially new scanner platform and a new ecosystem of resists, masks, and metrology.
-- **Architecture transitions in transistors:** planar → FinFET (≈2011, 22nm) → gate-all-around (GAA) nanosheet (≈2022–2025) → CFET (research). Each demanded new deposition (ALD inner spacers), etch (selective channel release), and metrology (in-cell 3D) capabilities.
+- **Architecture transitions in transistors:** planar → FinFET (≈2011, 22nm) → gate-all-around (GAA) nanosheet (Samsung 2022; TSMC N2 and Intel 18A in volume production from late 2025) → CFET (research; imec places it around the A7 generation). Each demanded new deposition (ALD inner spacers), etch (selective channel release), and metrology (in-cell 3D) capabilities.
 - **Material transitions:** SiO₂ → SiON → high-k/metal gate; aluminum → copper → cobalt/ruthenium/molybdenum interconnect; new low-k dielectrics. Each new material often requires a new tool or chamber.
 - **Wafer-size transitions:** 150mm → 200mm → 300mm (≈2001). The long-anticipated 450mm transition was abandoned around 2017 because the cost could not be justified against slowing density scaling.
 
@@ -184,9 +187,9 @@ The modern model is therefore **collaborative**: a new node is co-developed acro
 SemiCap demand is fundamentally driven by **fab construction waves**, which are themselves driven by end-market cycles. The pattern is recognizable across decades:
 
 - **Memory super-cycles.** DRAM and NAND are commodity markets prone to violent price swings. When prices spike (e.g., 2017–2018), Samsung, SK Hynix, and Micron pour capital into new capacity, and memory-tilted equipment demand (deposition, etch, especially high-aspect-ratio tools) surges. When prices crash, capex is slashed almost overnight.
-- **Leading-edge logic/foundry waves.** TSMC's capex, which has run in the $30–40B+ range annually in recent years, anchors leading-edge equipment demand. Each new node (N5, N3, N2) triggers a wave of EUV, etch, deposition, and metrology orders.
+- **Leading-edge logic/foundry waves.** TSMC's capex, which ran in the $30–40B+ range annually through 2025 and was raised to a guided $60–64B for 2026, anchors leading-edge equipment demand. Each new node (N5, N3, N2) triggers a wave of EUV, etch, deposition, and metrology orders.
 - **Trailing-edge / specialty waves.** The 2020–2022 chip shortage triggered a wave of mature-node (28nm–180nm) capacity investment for automotive, industrial, and power applications — benefiting DUV immersion (often refurbished), older deposition/etch tools, and Chinese domestic OEMs.
-- **The AI / advanced-packaging wave (2023–present).** The generative-AI boom created unprecedented demand for leading-edge logic (NVIDIA/AMD GPUs on TSMC N4/N3), HBM (DRAM stacked via TSV and bonding), and **advanced packaging** (CoWoS, SoIC). This has made advanced-packaging equipment — wafer bonders, thinning/grinding tools, TSV etch and fill — one of the fastest-growing SemiCap segments, and pushed CoWoS capacity at TSMC into a multi-year expansion.
+- **The AI / advanced-packaging wave (2023–present).** The generative-AI boom created unprecedented demand for leading-edge logic (NVIDIA/AMD GPUs on TSMC N4/N3), HBM (DRAM stacked via TSV and bonding), and **advanced packaging** (CoWoS, SoIC). This has made advanced-packaging equipment — wafer bonders, thinning/grinding tools, TSV etch and fill — one of the fastest-growing SemiCap segments, and pushed CoWoS capacity at TSMC into a multi-year expansion. From late 2025 the wave broadened into a DRAM-led **memory upcycle** — often called a "memory supercycle" — as HBM and conventional DRAM prices rose sharply, making DRAM the fastest-growing WFE segment of 2026–2027 per Lam Research.
 
 These waves rarely align, which both smooths and complicates the aggregate. A memory downturn can coincide with a leading-edge logic boom, partly buffering the WFE OEMs whose product portfolios span both. This diversification is a key reason the largest WFE firms (AMAT, Lam, TEL) maintain broad product lines spanning logic, memory, and increasingly packaging.
 
@@ -206,7 +209,7 @@ It is worth dwelling on just how extraordinary the concentration of the SemiCap 
 
 ### B. Why the Concentration Is So Durable
 
-The concentration is not a transient accident but a stable equilibrium, sustained by the deepest moats in any industry (Files 14, 17). The barriers to entry are measured in **decades and tens of billions of dollars**: an EUV scanner integrates ~100,000 components from ~5,000 suppliers, with optics polished to sub-nanometer figure error, a source generating light from laser-pulsed tin plasma, and integration know-how accumulated over a quarter-century. No nation or company, however well-funded, can quickly replicate this — China's massive, determined, state-backed effort has, after years and tens of billions of dollars, not yet produced a domestic EUV capability. The same durability, in lesser degree, protects the leaders in every category: the combination of accumulated process know-how, customer co-development relationships, installed-base lock-in, R&D scale, and patent/trade-secret protection creates moats that direct competition cannot quickly breach. This durability is why the SemiCap competitive order changes so slowly, why the leaders remain so profitable, and why control over these chokepoints translates into such durable strategic leverage.
+The concentration is not a transient accident but a stable equilibrium, sustained by the deepest moats in any industry (Files 14, 17). The barriers to entry are measured in **decades and tens of billions of dollars**: an EUV scanner integrates ~100,000 components from ~5,000 suppliers, with optics polished to sub-nanometer figure error, a source generating light from laser-pulsed tin plasma, and integration know-how accumulated over a quarter-century. No nation or company, however well-funded, can quickly replicate this — China's massive, determined, state-backed effort has, after years and tens of billions of dollars, not yet produced a production-worthy domestic EUV capability (a December 2025 Reuters report described a prototype EUV machine in Shenzhen that generates EUV light but had not yet produced working chips). The same durability, in lesser degree, protects the leaders in every category: the combination of accumulated process know-how, customer co-development relationships, installed-base lock-in, R&D scale, and patent/trade-secret protection creates moats that direct competition cannot quickly breach. This durability is why the SemiCap competitive order changes so slowly, why the leaders remain so profitable, and why control over these chokepoints translates into such durable strategic leverage.
 
 ### C. The Paradox of Slowing Scaling
 
@@ -215,3 +218,53 @@ A central paradox runs through this entire database, and it is worth stating pla
 ### D. The Geopolitical Permanence
 
 Finally, the elevation of SemiCap to the center of geopolitics (File 18) is not a passing phase but a permanent change. Once governments discovered that controlling a handful of tools could gate the entire advanced-chip supply chain — and thus the AI, military, and economic capabilities that depend on it — semiconductor capital equipment became a permanent instrument of statecraft. The export controls, subsidy races, and supply-chain-security efforts of recent years are not a temporary disruption but the new normal, and they will shape the industry's structure, geography, and economics for the foreseeable future. For anyone seeking to understand the modern world — its technology, its economy, its balance of power — the SemiCap industry is no longer a niche concern but a central one, because it is the physical foundation on which the digital and AI age is built, and the chokepoint through which the competition for that age's commanding heights is increasingly fought. The chapters that follow descend from this strategic overview into the technical and commercial detail of how this most consequential of industries works — but the strategic stakes established here should be kept in mind throughout, for they are what make the machinery described in this database matter so profoundly.
+
+---
+
+## 🆕 2025–2026 Update: Latest Developments (as of November 2026)
+
+The strategic picture painted above has been reinforced, not overturned, since early 2025. Three themes dominate the period: an AI-driven equipment boom far larger than forecasters expected, a DRAM-led memory upcycle layered on top of the 2nm ramp, and a geopolitical regime that oscillated between escalation and truce without loosening the core controls on equipment.
+
+### Market size: forecasts repeatedly revised upward
+
+| Source (date) | Year | Figure | Comment |
+|---|---|---|---|
+| SEMI year-end forecast (Dec 2025) | 2025 | ~$133B total equipment (+13.7%) | New record |
+| SEMI year-end forecast (Dec 2025) | 2026 / 2027 | $145B / $156B | First forecast of >$150B |
+| SEMI mid-year forecast (14 Jul 2026) | 2026 | $165.9B total (+23.2%); WFE ~$143.9B; test ~$15.3B | Sharp upward revision |
+| SEMI mid-year forecast (14 Jul 2026) | 2028 | ~$229.5B | Projected record |
+| Lam Research (21 Oct 2026) | 2026 / 2027 WFE | ~mid-$150Bs / >$200B (preliminary) | DRAM leads, then foundry/logic, then NAND |
+| KLA (Oct 2026) | 2026 WFE | ~low-$150Bs | "Significant growth" expected in 2027 |
+
+Definitions differ (WFE vs. total equipment including test and assembly), so the figures are not strictly comparable, but the direction is unambiguous: the industry is on course to grow well beyond the ~$160–200B "2030" range that earlier projections (including the table in Section 5) contemplated. On the demand side, Gartner put 2026 total semiconductor capex at ~$237B, and WSTS expects 2026 semiconductor revenue near ~$975B, with Omdia suggesting the $1 trillion mark could be crossed.
+
+### The leaders: record results, capacity as the binding constraint
+
+- **ASML** reported record Q3 2026 net sales of €11.7B (14 Oct 2026), guided FY2026 to €44–45B, and warned that planned supply will **not fully meet customer demand in 2027 and 2028**, despite plans to raise low-NA EUV and DUV immersion capacity by ~30% in 2027. Customers are reportedly asking to place orders for 2029–2030.
+- **Applied Materials** posted record fiscal Q3 2026 revenue of ~$9.1B (+25% YoY), with China down to ~28% of revenue; export controls are estimated to cut ~$600M from its FY2026 revenue.
+- **Lam Research** (21 Oct 2026) reported record foundry sales and flagged **cleanroom space shortages and component supply constraints** as possible limits on industry output — a striking reversal from the overcapacity worries of 2023.
+- **Consolidation**: the all-stock Axcelis–Veeco merger (announced Oct 2025, ~$4.4B) was approved by both sets of shareholders in February 2026 and is now expected to close by the end of Q1 2027, pending China SAMR approval and a new HSR filing. Applied Materials agreed in May 2026 to acquire ASMPT's NEXX advanced-packaging deposition business (reported) and took a ~9% stake in Besi in 2025.
+
+### Customers and nodes
+
+TSMC's N2, its first GAA nanosheet node, has been in volume production since Q4 2025, and the company raised its 2026 capex guide to $60–64B. Intel's 18A — the first node with backside power (PowerVia) — entered high-volume manufacturing with Panther Lake, while the U.S. government (~10%), Nvidia (US$5B) and SoftBank (US$2B) became shareholders in 2025. Samsung's SF2 is in production, and Japan's Rapidus has had 2nm GAA prototype transistors working since July 2025, targeting high-volume manufacturing in 2H FY2027.
+
+### Geopolitics: truce without loosening
+
+- The U.S. "Affiliates" (50%) Rule of September 2025 was suspended for a year from 10 November 2025 as part of the U.S.–China truce; in September 2026 the truce was reportedly extended to 10 January 2027.
+- Validated End-User status for Samsung's and SK hynix's China fabs ended on 31 December 2025, replaced by annual 2026 licenses for maintenance-only operations.
+- A Section 232 tariff of 25% on a narrow set of advanced chips took effect 15 January 2026, with exemptions for imports supporting U.S. manufacturing.
+- China's domestic toolmakers supplied an estimated ~35% of equipment used in Chinese fabs in 2025 (industry-body figure), but lithography localization remains below ~5%. Reuters reported a prototype EUV machine in Shenzhen (Dec 2025) that had not yet produced working chips.
+- The Nexperia dispute between the Dutch government and Chinese parent Wingtech, which disrupted automotive chip supply from October 2025, showed that even mature-node supply chains are now subject to state intervention.
+
+### AI inside the fab
+
+AI is now both the dominant driver of equipment demand and a tool used by fabs and OEMs — from AI-assisted inspection and digital twins to GPU-accelerated computational lithography (e.g., TSMC's adoption of Nvidia cuLitho).
+
+### What to watch (late 2026–2027)
+
+- Whether 2027 WFE reaches the >$200B preliminarily indicated by Lam and others, and whether cleanroom space, components or ASML capacity cap the upturn.
+- ASML's Capital Markets Day (10 June 2027) and any updated long-term capacity and High-NA adoption targets.
+- Customer commitments for Intel 14A, the first node planned to use High-NA EUV.
+- The fate of the U.S.–China truce after 10 January 2027, including the Affiliates Rule suspension and China's rare-earth and gallium/germanium export controls.
+- Closing of the Axcelis–Veeco merger and further consolidation in advanced packaging equipment.

@@ -1,0 +1,126 @@
+/* Print stylesheet for the Simplified Chinese SemiCap book (A4). */
+:root {
+  --ink: #1d2129;
+  --muted: #5f6672;
+  --accent: #1f4e79;
+  --accent-soft: #e8eff7;
+  --rule: #c9d1db;
+  --code-bg: #f6f8fa;
+}
+@page { size: A4; }
+html { font-size: 10.5pt; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #fff;
+  font-family: "Noto Serif SC", "Source Han Serif SC", "WenQuanYi Zen Hei", serif;
+  line-height: 1.75;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  orphans: 3; widows: 3;
+}
+h1, h2, h3, h4, h5, h6, .chapter-kicker, .front-title, table, .toc, .cover {
+  font-family: "Noto Sans SC", "WenQuanYi Zen Hei", sans-serif;
+}
+a { color: var(--accent); text-decoration: none; }
+strong { font-weight: 700; }
+
+/* ---------- Cover ---------- */
+.cover {
+  height: 297mm; box-sizing: border-box; padding: 38mm 24mm 22mm;
+  display: flex; flex-direction: column;
+  background: linear-gradient(160deg, #0f2a44 0%, #1f4e79 55%, #2f6ea5 100%);
+  color: #fff; text-align: left;
+}
+.cover-top { font-size: 9pt; letter-spacing: 0.22em; opacity: .75; }
+.cover-title { margin-top: 48mm; font-size: 32pt; font-weight: 700; line-height: 1.35; }
+.cover-sub { margin-top: 6mm; font-size: 18pt; font-weight: 500; opacity: .92; }
+.cover-rule { margin: 12mm 0 10mm; width: 36mm; height: 3px; background: #9cc3e6; }
+.cover-desc { font-size: 11pt; line-height: 1.9; opacity: .9; }
+.cover-meta { margin-top: 10mm; font-size: 10.5pt; opacity: .85; }
+.cover-bottom { margin-top: auto; font-size: 9pt; opacity: .7; letter-spacing: .05em; }
+
+/* ---------- Front matter ---------- */
+.front { break-after: page; }
+.front-title {
+  font-size: 20pt; font-weight: 700; color: var(--accent);
+  padding-bottom: 4mm; margin: 6mm 0 8mm; border-bottom: 2px solid var(--accent);
+}
+.notice-page p { text-indent: 2em; margin: 0 0 1em; }
+.toc { list-style: none; padding: 0; margin: 0; }
+.toc li { margin: 0; }
+.toc a { display: flex; align-items: baseline; color: var(--ink); padding: 1.6mm 0; font-size: 10.5pt; }
+.toc-num { flex: 0 0 22mm; color: var(--accent); font-weight: 700; font-size: 9.5pt; }
+.toc-title { flex: 0 1 auto; }
+.toc-dots { flex: 1 1 auto; border-bottom: 1px dotted #9aa3ad; margin: 0 2mm; transform: translateY(-1.2mm); min-width: 8mm; }
+.toc-page { flex: 0 0 auto; font-variant-numeric: tabular-nums; color: var(--muted); }
+
+/* ---------- Chapters ---------- */
+.chapter { break-before: page; }
+.chapter-kicker {
+  font-size: 8.5pt; letter-spacing: .18em; color: var(--muted);
+  margin-top: 2mm;
+}
+h1 {
+  font-size: 19pt; line-height: 1.4; color: var(--accent); font-weight: 700;
+  margin: 2mm 0 7mm; padding-bottom: 4mm; border-bottom: 2.5px solid var(--accent);
+  text-align: left;
+}
+h2 {
+  font-size: 14pt; line-height: 1.45; font-weight: 700; color: var(--ink);
+  margin: 9mm 0 3.5mm; padding: 1.2mm 0 1.2mm 3mm; border-left: 4px solid var(--accent);
+  background: var(--accent-soft); text-align: left;
+  break-after: avoid;
+}
+h3 { font-size: 12pt; font-weight: 700; color: var(--accent); margin: 6mm 0 2.5mm; break-after: avoid; text-align: left; }
+h4, h5, h6 { font-size: 10.5pt; font-weight: 700; margin: 4mm 0 2mm; break-after: avoid; text-align: left; }
+p { margin: 0 0 2.6mm; }
+ul, ol { margin: 0 0 3mm; padding-left: 6mm; }
+li { margin: .6mm 0; }
+li > p { margin: 0; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 6mm 0; }
+blockquote {
+  margin: 3mm 0 4mm; padding: 2.5mm 4mm; border-left: 3px solid #9cc3e6;
+  background: #f4f8fc; color: #333a44; font-size: 9.8pt;
+}
+blockquote p:last-child { margin-bottom: 0; }
+
+/* ---------- Tables ---------- */
+table {
+  width: 100%; border-collapse: collapse; margin: 3mm 0 5mm;
+  font-size: 8.6pt; line-height: 1.5; text-align: left;
+  break-inside: auto;
+}
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+th, td { border: 0.6pt solid var(--rule); padding: 1.4mm 2mm; vertical-align: top; word-break: break-word; }
+th:first-child, td:first-child { min-width: 24mm; }
+th { background: var(--accent); color: #fff; font-weight: 700; }
+tbody tr:nth-child(even) td { background: #f7f9fb; }
+
+/* ---------- Code & diagrams ---------- */
+code {
+  font-family: "JetBrains Mono", "CJK Mono Fallback", "DejaVu Sans Mono", monospace;
+  font-size: .88em; background: var(--code-bg); padding: 0 .25em; border-radius: 2px;
+}
+pre {
+  font-family: "JetBrains Mono", "CJK Mono Fallback", "DejaVu Sans Mono", monospace;
+  font-size: 7.6pt; line-height: 1.38; text-align: left;
+  background: var(--code-bg); border: 0.6pt solid #e1e5ea; border-radius: 3px;
+  padding: 3mm 3.5mm; margin: 3mm 0 4.5mm; white-space: pre; overflow: hidden;
+  break-inside: avoid;
+}
+pre code { background: none; padding: 0; font-size: inherit; }
+.mermaid-figure {
+  margin: 3mm 0 5mm; padding: 3mm; text-align: center;
+  border: 0.6pt solid #e1e5ea; border-radius: 3px; background: #fcfdfe;
+  break-inside: avoid;
+}
+.mermaid-figure svg { max-width: 100% !important; height: auto; max-height: 150mm; }
+.fig-caption { break-after: avoid; margin-top: 4mm; color: var(--accent); }
+em { font-style: normal; color: var(--muted); }
+blockquote em { color: inherit; }
+pre.mermaid-failed { white-space: pre-wrap; }
+img { max-width: 100%; }

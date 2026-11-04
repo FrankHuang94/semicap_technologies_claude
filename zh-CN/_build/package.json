@@ -1,0 +1,12 @@
+{
+  "name": "semicap-zh-cn-pdf-build",
+  "private": true,
+  "description": "Builds the print PDF of the Simplified Chinese translation (pandoc + Chromium/Playwright + Mermaid).",
+  "type": "module",
+  "scripts": { "build": "node build_pdf.mjs" },
+  "dependencies": {
+    "@fontsource/noto-sans-sc": "5.3.1",
+    "@fontsource/noto-serif-sc": "5.3.1",
+    "mermaid": "11.4.1"
+  }
+}
